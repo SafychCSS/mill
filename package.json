@@ -7,7 +7,9 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "browserslist": [
-    "last 3 versions"
+    "last 2 version",
+    "> 1%",
+    "maintained node versions"
   ],
   "keywords": [],
   "author": "",

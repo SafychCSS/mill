@@ -67,6 +67,8 @@ const stylesDev = () => {
                 title: 'SASS',
                 message: error.message
             };
+        })).pipe(autoprefixer({
+            cascade: false
         }))
         .pipe(sourcemaps.write())
         .pipe(rename({suffix: '.min'}))  // переименовываем (просто чтобы в разработке сразу указать минифицированный файл и при билде не менять)
