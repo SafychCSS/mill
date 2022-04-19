@@ -1,0 +1,98 @@
+* {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+*::before,
+*::after {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+}
+
+body {
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-size: 16px;
+  font-weight: 400;
+  font-family: "Montserrat Alternates", sans-serif;
+  line-height: 1.25;
+  color: #fff;
+  background: radial-gradient(100% 53.56% at 0% 50%, #5300DA 0%, #16002D 100%);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+button {
+  border: 0;
+  margin: 0;
+  padding: 0;
+  background-color: transparent;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+a:hover,
+a:focus {
+  text-decoration: none;
+}
+
+p {
+  margin: 0;
+}
+
+input,
+button,
+select,
+textarea {
+  font-family: inherit;
+  font-size: inherit;
+  line-height: inherit;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+  padding: 0;
+}
+
+.visibility-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  border: 0;
+  clip: rect(0 0 0 0);
+}
+
+.text-gradient {
+  background: #8000FF;
+  background: -webkit-gradient(linear, left top, left bottom, from(#8000FF), to(#DB00FF));
+  background: linear-gradient(to bottom, #8000FF 0%, #DB00FF 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-fill-color: transparent;
+}
+
+.text-gradient_dark {
+  background: #5500AA;
+  background: -webkit-gradient(linear, left top, left bottom, from(#5500AA), to(#9900B1));
+  background: linear-gradient(to bottom, #5500AA 0%, #9900B1 100%);
+}

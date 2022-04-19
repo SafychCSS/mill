@@ -67,8 +67,6 @@ const stylesDev = () => {
                 title: 'SASS',
                 message: error.message
             };
-        })).pipe(autoprefixer({
-            cascade: false
         }))
         .pipe(sourcemaps.write())
         .pipe(rename({suffix: '.min'}))  // переименовываем (просто чтобы в разработке сразу указать минифицированный файл и при билде не менять)
@@ -232,7 +230,7 @@ exports.default = series(
     parallel(stylesDev, scriptDev, html, fonts, imagesDev),
     parallel(watchFile, serve)
 );
-exports.build = series(clean, parallel(stylesBuild, scriptBuild, html, fonts, imagesBuild));
+exports.build = series(clean, parallel(stylesBuild, scriptBuild, html, fonts, /*imagesBuild*/));
 
 exports.spritepng = createSpritePng;
 exports.spritesvgcolor = createSpriteSvgColor;
