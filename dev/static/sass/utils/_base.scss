@@ -10,6 +10,7 @@
 html,
 body {
     margin: 0;
+    min-height: 100%;
 }
 
 body {
@@ -23,6 +24,8 @@ body {
     font-family: 'Montserrat Alternates', sans-serif;
     line-height: 1.25;
     color: getcolor(base, white);
+
+    background: radial-gradient(100% 53.56% at 0% 50%, #5300DA 0%, #16002D 100%);
 }
 
 button {
@@ -73,8 +76,6 @@ h1, h2, h3, h4, h5, h6 {
 
 .text-gradient {
     background: #8000FF;
-    background: -webkit-linear-gradient(to bottom, #8000FF 0%, #DB00FF 100%);
-    background: -moz-linear-gradient(to bottom, #8000FF 0%, #DB00FF 100%);
     background: linear-gradient(to bottom, #8000FF 0%, #DB00FF 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -83,8 +84,6 @@ h1, h2, h3, h4, h5, h6 {
 
     &_dark {
         background: #5500AA;
-        background: -webkit-linear-gradient(to bottom, #5500AA 0%, #9900B1 100%);
-        background: -moz-linear-gradient(to bottom, #5500AA 0%, #9900B1 100%);
         background: linear-gradient(to bottom, #5500AA 0%, #9900B1 100%);
     }
 }
