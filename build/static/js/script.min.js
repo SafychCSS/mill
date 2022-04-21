@@ -1,3 +1,9 @@
 document.addEventListener('DOMContentLoaded', function () {
-    console.log("it's work");
+    /* btn answer */
+    const btnAnswers = document.querySelectorAll('.btn-answer');
+    btnAnswers.forEach(btn => {
+        btn.addEventListener('click', () => {
+            // btn.classList.add('active');
+        });
+    });
 });
