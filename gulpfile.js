@@ -207,6 +207,7 @@ const createSpriteSvgBlack = () => {
 				}
 			}
 		}))
+        .pipe(dest('dev/static/img/'))
 		.pipe(dest('build/static/img'));
 }
 
