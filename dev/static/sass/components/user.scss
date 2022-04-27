@@ -1,0 +1,189 @@
+.user {
+    position: relative;
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 8px 17px;
+    align-items: center;
+    grid-template-areas:
+        "user-picture user-name"
+        "user-picture user-block"
+        "user-picture user-exp";
+
+    &.-header {
+        display: flex;
+    }
+
+    &__avatar {
+        position: relative;
+        width: 64px;
+        height: 64px;
+        grid-column: 1/3;
+
+        cursor: pointer;
+
+        &:hover {
+            .user__default {
+                fill: rgba(108, 137, 169, 0.1);
+            }
+
+            .user__hover {
+                opacity: 1;
+            }
+        }
+
+        &.-active {
+            .user__default {
+                position: absolute;
+
+                fill: rgba(108, 137, 169, 0.1);
+                opacity: 0;
+            }
+
+            &:hover {
+                .user__current-pic {
+                    opacity: 0;
+                }
+
+                .user__default {
+                    opacity: 1;
+                }
+            }
+        }
+    }
+
+    form {
+        width: 100%;
+        height: 100%;
+    }
+
+    &__set-pic {
+        position: relative;
+
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        height: 100%;
+
+        overflow: hidden;
+        border-radius: 100%;
+        background-color: getcolor(base, white);
+
+        cursor: pointer;
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+
+    &__default {
+        width: 100%;
+        height: 100%;
+
+        fill: getcolor(blue, medium);
+
+        transition: fill .3s;
+    }
+
+    &__hover {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+
+        width: 24px;
+        height: 24px;
+
+        fill: getcolor(blue, medium);
+        opacity: 0;
+
+        transform: translate(-50%, -50%);
+        transition: opacity .3s;
+    }
+
+    &__current-pic {
+        opacity: 1;
+        transition: opacity .3s;
+    }
+
+    &__picture {
+        width: 112px;
+        height: 112px;
+
+        grid-area: user-picture;
+
+        border: 3px solid getcolor(yellow, base);
+        border-radius: 100%;
+
+        img {
+            width: 100%;
+            height: 100%;
+
+            object-fit: cover;
+        }
+    }
+
+    &__name {
+        grid-area: user-name;
+        margin-top: -8px;
+
+        font-size: 32px;
+        font-weight: 600;
+        line-height: 1.2;
+    }
+
+    &__block {
+        display: flex;
+        align-items: center;
+        grid-area: user-block;
+    }
+
+    &__status {
+        padding-left: 30px;
+        grid-area: user-status;
+
+        font-weight: 500;
+        font-size: 19px;
+        color: getcolor(yellow, base);
+
+        &.icon-status-gold {
+            &::before {
+                top: 50%;
+                bottom: auto;
+                transform: translateY(-50%);
+            }
+        }
+    }
+
+    &__games-number {
+        margin-left: 32px;
+        padding-left: 30px;
+        font-size: 19px;
+    }
+
+    &__status-expires {
+        grid-area: user-exp;
+        font-weight: 500;
+    }
+
+    &.-silver {
+        .user__picture {
+            border-color: getcolor(base, white);
+        }
+
+        .user__status {
+            color: getcolor(base, white);
+        }
+    }
+
+    &.-demo {
+        .user__picture {
+            border-color: getcolor(blue, medium);
+        }
+
+        .user__status {
+            color: getcolor(blue, medium);
+        }
+    }
+}

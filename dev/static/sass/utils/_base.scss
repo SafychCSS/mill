@@ -76,7 +76,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .text-gradient {
     background: #8000FF;
-    background: linear-gradient(to bottom, #8000FF 0%, #DB00FF 100%);
+    background: $gd-base;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
@@ -85,5 +85,68 @@ h1, h2, h3, h4, h5, h6 {
     &_dark {
         background: #5500AA;
         background: linear-gradient(to bottom, #5500AA 0%, #9900B1 100%);
+    }
+}
+
+.link {
+    @extend .text-gradient;
+
+    &:hover {
+        background: $gd-base-reverse;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+        text-fill-color: transparent;
+    }
+}
+
+.icon-status-gold,
+.icon-status-silver,
+.icon-status-demo,
+.icon-medal-game {
+    position: relative;
+
+    &::before {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        content: '';
+        z-index: 2;
+
+        width: 24px;
+        height: 24px;
+
+        background-position: center;
+        background-repeat: no-repeat;
+        border-radius: 100%;
+        pointer-events: none;
+    }
+}
+
+.icon-status-gold {
+    &::before {
+        background-color: getcolor(yellow, base);
+        background-image: url(../img/icon/crown.svg);
+    }
+}
+
+.icon-status-silver {
+    &::before {
+        background-color: getcolor(base, white);
+        background-image: url(../img/icon/silver-member.svg);
+    }
+}
+
+.icon-status-demo {
+    &::before {
+        background-color: getcolor(base, white);
+        background-image: url(../img/icon/demo-member.svg);
+    }
+}
+
+.icon-medal-game {
+    &::before {
+        background-color: getcolor(base, white);
+        background-image: url(../img/icon/medal-game-gd.svg);
     }
 }

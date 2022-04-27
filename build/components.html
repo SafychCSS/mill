@@ -6,7 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@300;400;500;600;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@300;400;500;600;800&display=swap"
+          rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="./static/css/style.min.css">
     <title>Document</title>
     <style>
@@ -14,6 +15,7 @@
             max-width: 1000px;
             margin: 20px auto;
         }
+
         .stub-block {
             margin: 20px 0;
         }
@@ -84,7 +86,150 @@
     </div>
 
     <div class="stub-block">
-        <h2>хз</h2>
+        <h2>user</h2>
+        <div class="stub-block" style="display: flex">
+            <div class="user -header">
+                <div class="user__avatar icon-status-gold">
+                    <form action="/" method="post" enctype="multipart/form-data">
+                        <label class="user__set-pic" for="user">
+                            <svg class="user__default">
+                                <use xlink:href="static/img/sprite.svg#menu-profile"></use>
+                            </svg>
+                            <svg class="user__hover">
+                                <use xlink:href="static/img/sprite.svg#image-edit"></use>
+                            </svg>
+                        </label>
+                        <input name="user-ava" id="user-ava" type="file" class="visibility-hidden">
+                    </form>
+                </div>
+            </div>
+
+            <div class="user -header">
+                <div class="user__avatar icon-status-silver">
+                    <form action="/" method="post" enctype="multipart/form-data">
+                        <label class="user__set-pic" for="user">
+                            <svg class="user__default">
+                                <use xlink:href="static/img/sprite.svg#menu-profile"></use>
+                            </svg>
+                            <svg class="user__hover">
+                                <use xlink:href="static/img/sprite.svg#image-edit"></use>
+                            </svg>
+                        </label>
+                        <input name="user-ava" id="user-ava" type="file" class="visibility-hidden">
+                    </form>
+                </div>
+            </div>
+
+            <div class="user -header">
+                <div class="user__avatar icon-status-demo">
+                    <form action="/" method="post" enctype="multipart/form-data">
+                        <label class="user__set-pic" for="user">
+                            <svg class="user__default">
+                                <use xlink:href="static/img/sprite.svg#menu-profile"></use>
+                            </svg>
+                            <svg class="user__hover">
+                                <use xlink:href="static/img/sprite.svg#image-edit"></use>
+                            </svg>
+                        </label>
+                        <input name="user-ava" id="user-ava" type="file" class="visibility-hidden">
+                    </form>
+                </div>
+            </div>
+
+            <div class="user -header">
+                <div class="user__avatar -active icon-status-gold">
+                    <form action="/" method="post" enctype="multipart/form-data">
+                        <label class="user__set-pic" for="user">
+                            <img class="user__current-pic" src="static/img/stub/ava.png" alt="user">
+                            <svg class="user__default">
+                                <use xlink:href="static/img/sprite.svg#menu-profile"></use>
+                            </svg>
+                            <svg class="user__hover">
+                                <use xlink:href="static/img/sprite.svg#image-edit"></use>
+                            </svg>
+                        </label>
+                        <input name="user-ava" id="user-ava" type="file" class="visibility-hidden">
+                    </form>
+                </div>
+            </div>
+
+            <div class="user -header">
+                <div class="user__avatar -active icon-status-silver">
+                    <form action="/" method="post" enctype="multipart/form-data">
+                        <label class="user__set-pic" for="user">
+                            <img class="user__current-pic" src="static/img/stub/ava.png" alt="user">
+                            <svg class="user__default">
+                                <use xlink:href="static/img/sprite.svg#menu-profile"></use>
+                            </svg>
+                            <svg class="user__hover">
+                                <use xlink:href="static/img/sprite.svg#image-edit"></use>
+                            </svg>
+                        </label>
+                        <input name="user-ava" id="user-ava" type="file" class="visibility-hidden">
+                    </form>
+                </div>
+            </div>
+
+            <div class="user -header">
+                <div class="user__avatar -active icon-status-demo">
+                    <form action="/" method="post" enctype="multipart/form-data">
+                        <label class="user__set-pic" for="user">
+                            <img class="user__current-pic" src="static/img/stub/ava.png" alt="user">
+                            <svg class="user__default">
+                                <use xlink:href="static/img/sprite.svg#menu-profile"></use>
+                            </svg>
+                            <svg class="user__hover">
+                                <use xlink:href="static/img/sprite.svg#image-edit"></use>
+                            </svg>
+                        </label>
+                        <input name="user-ava" id="user-ava" type="file" class="visibility-hidden">
+                    </form>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="stub-block">
+        <div class="user">
+            <div class="user__picture">
+                <img src="static/img/stub/ava.png" alt="aleha">
+            </div>
+            <p class="user__name">Юзернэйм Юзернеймович</p>
+            <div class="user__block">
+                <p class="user__status icon-status-gold">Золотой член клуба</p>
+                <p class="user__games-number icon-medal-game">Сыграно игр 35</p>
+            </div>
+            <p class="user__status-expires">Статус действует до 12.03.2022 <a class="link" href="#">Продлить</a></p>
+        </div>
+    </div>
+
+    <div class="stub-block">
+        <div class="user -silver">
+            <div class="user__picture">
+                <img src="static/img/stub/ava.png" alt="aleha">
+            </div>
+            <p class="user__name">Юзернэйм Юзернеймович</p>
+            <div class="user__block">
+                <p class="user__status icon-status-silver">Серебрный член клуба</p>
+                <p class="user__games-number icon-medal-game">Сыграно игр 35</p>
+            </div>
+            <p class="user__status-expires">Статус действует до 12.03.2022 <a class="link" href="#">Продлить</a></p>
+        </div>
+    </div>
+
+    <div class="stub-block">
+        <div class="user -demo">
+            <div class="user__picture">
+                <img src="static/img/stub/ava.png" alt="aleha">
+            </div>
+            <p class="user__name">Юзернэйм Юзернеймович</p>
+            <div class="user__block">
+                <p class="user__status icon-status-demo">Демо аккаунт</p>
+                <p class="user__games-number icon-medal-game">Сыграно игр 35</p>
+            </div>
+            <p class="user__status-expires">Статус действует до 12.03.2022 <a class="link" href="#">Продлить</a></p>
+        </div>
     </div>
 </div>
 
