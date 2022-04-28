@@ -1,0 +1,32 @@
+.user-line {
+    display: flex;
+    justify-content: space-between;
+
+    &__withdraw,
+    &__deposit {
+        display: flex;
+        align-items: center;
+    }
+
+    &__balance {
+        display: flex;
+        flex-direction: column;
+        gap: 32px;
+    }
+
+    &__balance-info {
+        margin-right: 26px;
+    }
+
+    &__balance-name {
+        font-size: 12px;
+        font-weight: 300;
+        color: getcolor(base, white);
+    }
+
+    &__money {
+        font-weight: 600;
+        letter-spacing: 0.01em;
+        color: getcolor(yellow, base);
+    }
+}

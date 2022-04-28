@@ -12,7 +12,7 @@
     <title>Document</title>
     <style>
         .stub-wrapper {
-            max-width: 1000px;
+            max-width: 2000px;
             margin: 20px auto;
         }
 
@@ -88,7 +88,7 @@
     <div class="stub-block">
         <h2>user</h2>
         <div class="stub-block" style="display: flex">
-            <div class="user -header">
+            <div class="user user_photo">
                 <div class="user__avatar icon-status-gold">
                     <form action="/" method="post" enctype="multipart/form-data">
                         <label class="user__set-pic" for="user">
@@ -104,7 +104,7 @@
                 </div>
             </div>
 
-            <div class="user -header">
+            <div class="user user_photo">
                 <div class="user__avatar icon-status-silver">
                     <form action="/" method="post" enctype="multipart/form-data">
                         <label class="user__set-pic" for="user">
@@ -120,7 +120,7 @@
                 </div>
             </div>
 
-            <div class="user -header">
+            <div class="user user_photo">
                 <div class="user__avatar icon-status-demo">
                     <form action="/" method="post" enctype="multipart/form-data">
                         <label class="user__set-pic" for="user">
@@ -136,7 +136,7 @@
                 </div>
             </div>
 
-            <div class="user -header">
+            <div class="user user_photo">
                 <div class="user__avatar -active icon-status-gold">
                     <form action="/" method="post" enctype="multipart/form-data">
                         <label class="user__set-pic" for="user">
@@ -153,7 +153,7 @@
                 </div>
             </div>
 
-            <div class="user -header">
+            <div class="user user_photo">
                 <div class="user__avatar -active icon-status-silver">
                     <form action="/" method="post" enctype="multipart/form-data">
                         <label class="user__set-pic" for="user">
@@ -170,7 +170,7 @@
                 </div>
             </div>
 
-            <div class="user -header">
+            <div class="user user_photo">
                 <div class="user__avatar -active icon-status-demo">
                     <form action="/" method="post" enctype="multipart/form-data">
                         <label class="user__set-pic" for="user">
@@ -229,6 +229,59 @@
                 <p class="user__games-number icon-medal-game">Сыграно игр 35</p>
             </div>
             <p class="user__status-expires">Статус действует до 12.03.2022 <a class="link" href="#">Продлить</a></p>
+        </div>
+    </div>
+
+    <div class="stub-block" style="display: flex">
+        <div class="user -demo user_photo">
+            <div class="user__picture icon-status-demo">
+                <img src="static/img/stub/ava.png" alt="aleha">
+            </div>
+        </div>
+        <div class="user -silver user_photo">
+            <div class="user__picture icon-status-silver">
+                <img src="static/img/stub/ava.png" alt="aleha">
+            </div>
+        </div>
+        <div class="user user_photo">
+            <div class="user__picture icon-status-gold">
+                <img src="static/img/stub/ava.png" alt="aleha">
+            </div>
+        </div>
+    </div>
+
+    <div class="stub-block">
+        <h2>user line</h2>
+        <div class="user-line">
+            <div class="user">
+                <div class="user__picture">
+                    <img src="static/img/stub/ava.png" alt="aleha">
+                </div>
+                <p class="user__name">Юзернэйм Юзернеймович</p>
+                <div class="user__block">
+                    <p class="user__status icon-status-gold">Золотой член клуба</p>
+                    <p class="user__games-number icon-medal-game">Сыграно игр 35</p>
+                </div>
+                <p class="user__status-expires">Статус действует до 12.03.2022 <a class="link" href="#">Продлить</a></p>
+            </div>
+
+            <div class="user-line__balance">
+                <div class="user-line__withdraw">
+                    <div class="user-line__balance-info">
+                        <p class="user-line__balance-name">Свободный баланс:</p>
+                        <p class="user-line__money">3 000 ₽</p>
+                    </div>
+                    <a href="#" class="btn btn_money -withdraw">Вывести</a>
+                </div>
+
+                <div class="user-line__deposit">
+                    <div class="user-line__balance-info">
+                        <p class="user-line__balance-name">Игровой баланс:</p>
+                        <p class="user-line__money">1 500 ₽</p>
+                    </div>
+                    <a href="#" class="btn btn_money -deposit">Пополнить</a>
+                </div>
+            </div>
         </div>
     </div>
 </div>
