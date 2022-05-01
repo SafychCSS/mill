@@ -1,0 +1,61 @@
+.top-line {
+    $this: &;
+
+    display: grid;
+    grid-template-columns: 1fr auto;
+    align-items: center;
+    justify-content: space-between;
+    gap: 15px;
+
+    &.-all-time {
+        grid-template-columns: auto 1fr repeat(4, auto);
+
+        #{$this}__name {
+            font-size: 14px;
+        }
+
+        #{$this}__value {
+            font-size: 18px;
+        }
+
+        .user__name {
+            font-size: 18px;
+        }
+    }
+
+    &__place {
+        width: 40px;
+        display: inline-block;
+
+        font-size: 18px;
+        font-weight: 600;
+        text-align: center;
+    }
+
+    &__item {
+        text-align: right;
+
+        &.-prize-today {
+            margin-left: 35px;
+        }
+
+        &.-prize-main {
+            margin-left: 40px;
+        }
+    }
+
+    &__name {
+        margin: 0;
+    }
+
+    &__value {
+        margin: 8px 0 0;
+
+        font-size: 22px;
+        font-weight: 600;
+
+        span {
+            color: getcolor(yellow, base);
+        }
+    }
+}

@@ -150,3 +150,50 @@ h1, h2, h3, h4, h5, h6 {
         background-image: url(../img/icon/medal-game-gd.svg);
     }
 }
+
+.icon-sound {
+    position: relative;
+
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+
+    cursor: pointer;
+
+    &::after {
+        position: absolute;
+        top: 0;
+        left: 0;
+        content: '';
+
+        width: 100%;
+        height: 100%;
+
+        background: url(../img/icon/volume-on.svg) center no-repeat;
+    }
+
+    &.-mute {
+        &::after {
+            background: url(../img/icon/volume-off.svg) center no-repeat;
+        }
+    }
+}
+
+.icon-question {
+    position: relative;
+    cursor: pointer;
+
+    svg {
+        width: 24px;
+        height: 24px;
+
+        fill: getcolor(base, white);
+    }
+
+    &:hover {
+        .tooltip {
+            opacity: 1;
+            visibility: visible;
+        }
+    }
+}

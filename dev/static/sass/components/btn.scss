@@ -36,6 +36,16 @@
         transition: opacity .3s;
     }
 
+    &_login {
+        padding: 12px 13px;
+    }
+
+    &_sound {
+        width: 48px;
+        height: 48px;
+        padding: 0;
+    }
+
     &_gold {
         padding: 12px 20px;
 

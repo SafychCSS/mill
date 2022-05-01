@@ -2,8 +2,13 @@
 @import './utils/vars';
 @import './utils/base';
 
+@import './components/tooltip';
 @import './components/btn';
 @import './components/user';
 @import './components/user-line';
+@import './components/top-line';
+
+@import './components/rules';
+@import './components/helper';
 
 @import './blocks/header.scss';

@@ -31,6 +31,9 @@
         <a href="#" class="btn btn_border">Сохранить</a>
         <button class="btn btn_border -white"><span class="text-gradient">Сохранить</span></button>
         <a href="#" class="btn btn_border -white"><span class="text-gradient">Сохранить</span></a>
+        <a href="#" class="btn btn_border btn_login">Вход</a>
+        <button class="btn btn_border btn_sound"><span class="icon-sound">&nbsp;</span></button>
+        <button class="btn btn_border btn_sound -mute"><span class="icon-sound -mute">&nbsp;</span></button>
 
         <div class="stub-block">
             <a href="#" class="btn btn_money -withdraw">Вывести</a>
@@ -83,6 +86,71 @@
             </button>
         </div>
 
+    </div>
+
+    <hr>
+
+    <style>
+        .tlp {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+        .tlp > div {
+            position: relative;
+
+            width: 340px;
+            height: 150px;
+        }
+
+        .tlp span {
+            top: unset !important;
+            right: unset !important;
+            bottom: unset !important;
+            left: unset !important;
+            opacity: 1;
+            visibility: visible;
+            transform: translate(0) !important;
+        }
+    </style>
+    <h2>tooltip</h2>
+    <div class="stub-block tlp">
+        <div>
+            <span class="tooltip tooltip_top">Этот значок значит, что юзер — член</span>
+        </div>
+        <div>
+            <span class="tooltip tooltip_right">Этот значок значит, что юзер — член</span>
+        </div>
+        <div>
+            <span class="tooltip tooltip_bottom">Этот значок значит, что юзер — член</span>
+        </div>
+        <div>
+            <span class="tooltip tooltip_left">Этот значок значит, что юзер — член</span>
+        </div>
+        <div>
+            <span class="tooltip tooltip_top -left">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet explicabo iusto nesciunt nihil quisquam sint!</span>
+        </div>
+        <div>
+            <span class="tooltip tooltip_top -right">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet explicabo iusto nesciunt nihil quisquam sint!</span>
+        </div>
+        <div>
+            <span class="tooltip tooltip_bottom -left">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet explicabo iusto nesciunt nihil quisquam sint!</span>
+        </div>
+        <div>
+            <span class="tooltip tooltip_bottom -right">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet explicabo iusto nesciunt nihil quisquam sint!</span>
+        </div>
+        <div>
+            <span class="tooltip tooltip_left -top">Lorem ipsum dolor sit amet, consectetur adipisicing elit. amet, consectetur adipisicing elit. Amet explicabo iusto nesciunt nihil quisquam sint!</span>
+        </div>
+        <div>
+            <span class="tooltip tooltip_left -bottom">Lorem ipsum dolor sit amet, consectetur adipisicing elit. amet, consectetur adipisicing elit. Amet explicabo iusto nesciunt nihil quisquam sint!</span>
+        </div>
+        <div>
+            <span class="tooltip tooltip_right -top">Lorem ipsum dolor sit amet, consectetur adipisicing elit. amet, consectetur adipisicing elit. Amet explicabo iusto nesciunt nihil quisquam sint!</span>
+        </div>
+        <div>
+            <span class="tooltip tooltip_right -bottom">Lorem ipsum dolor sit amet, consectetur adipisicing elit. amet, consectetur adipisicing elit. Amet explicabo iusto nesciunt nihil quisquam sint!</span>
+        </div>
     </div>
 
     <div class="stub-block">
@@ -250,6 +318,8 @@
         </div>
     </div>
 
+    <hr>
+
     <div class="stub-block">
         <h2>user line</h2>
         <div class="user-line">
@@ -280,6 +350,219 @@
                         <p class="user-line__money">1 500 ₽</p>
                     </div>
                     <a href="#" class="btn btn_money -deposit">Пополнить</a>
+                </div>
+            </div>
+        </div>
+
+        <hr>
+
+        <div class="stub-block">
+            <div class="top-line">
+                <div class="user -list">
+                    <div class="user__picture">
+                        <img src="static/img/stub/ava.png" alt="aleha">
+                    </div>
+                    <p class="user__name">Юзернэйм Юзернеймович</p>
+                    <div class="user__block">
+                        <p class="user__status icon-status-gold">Золотой член клуба</p>
+                    </div>
+                </div>
+                <div class="top-line__item">
+                    <p class="top-line__name">Выигрыш за сегодня:</p>
+                    <p class="top-line__value">31 500 ₽</p>
+                </div>
+            </div>
+        </div>
+        <div class="stub-block">
+            <div class="top-line">
+                <div class="user -silver -list">
+                    <div class="user__picture">
+                        <img src="static/img/stub/ava.png" alt="aleha">
+                    </div>
+                    <p class="user__name">Юзернэйм Юзернеймович</p>
+                    <div class="user__block">
+                        <p class="user__status icon-status-silver">Золотой член клуба</p>
+                    </div>
+                </div>
+                <div class="top-line__item">
+                    <p class="top-line__name">Выигрыш за сегодня:</p>
+                    <p class="top-line__value">31 500 ₽</p>
+                </div>
+            </div>
+        </div>
+        <div class="stub-block">
+            <div class="top-line">
+                <div class="user -demo -list">
+                    <div class="user__picture">
+                        <img src="static/img/stub/ava.png" alt="aleha">
+                    </div>
+                    <p class="user__name">Юзернэйм Юзернеймович</p>
+                    <div class="user__block">
+                        <p class="user__status icon-status-demo">Золотой член клуба</p>
+                    </div>
+                </div>
+                <div class="top-line__item">
+                    <p class="top-line__name">Выигрыш за сегодня:</p>
+                    <p class="top-line__value">31 500 ₽</p>
+                </div>
+            </div>
+        </div>
+
+        <hr>
+
+        <div class="stub-block">
+            <div class="top-line -all-time">
+                <span class="top-line__place">1</span>
+                <div class="user -list">
+                    <div class="user__picture">
+                        <img src="static/img/stub/ava.png" alt="aleha">
+                    </div>
+                    <p class="user__name">Юзернэйм Юзернеймович</p>
+                    <div class="user__block">
+                        <p class="user__status icon-status-gold">Золотой член клуба</p>
+                    </div>
+                </div>
+                <div class="top-line__item">
+                    <p class="top-line__name">Игр сыграно:</p>
+                    <p class="top-line__value">134</p>
+                </div>
+                <div class="top-line__item">
+                    <p class="top-line__name">Игровых дней подряд:</p>
+                    <p class="top-line__value">52</p>
+                </div>
+                <div class="top-line__item -prize-main">
+                    <p class="top-line__name">Главных призов:</p>
+                    <p class="top-line__value">5 х <span>50 000 ₽</span></p>
+                </div>
+                <div class="top-line__item -prize-today">
+                    <p class="top-line__name">Всего выиграно:</p>
+                    <p class="top-line__value"><span>31 500 ₽</span></p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <hr>
+
+    <div class="stub-block" style="max-width: 720px;">
+        <h2>rules</h2>
+        <div class="rules">
+            <h2 class="rules__title -font-500">Описание игры:</h2>
+
+            <div class="rules__info">
+                <p class="rules__info-inner">Здесь вы можете заработать реальные деньги за правильные ответы на вопросы.</p>
+            </div>
+            <p class="rules__text">Игра ведётся до 15 раундов. За прохождение каждого из раундов ваш баланс увеличивается.</p>
+
+            <div class="rules__info">
+                <p class="rules__info-inner">Есть три несгораемых суммы - 100, 1 000, 50 000 рублей.</p>
+            </div>
+            <p class="rules__text">Промежутки между ними - называются “этап” и влияют на стоимость подсказки.</p>
+            <p class="rules__text">На ответ на каждый из вопросов даётся одна минута. Если вы не успеваете нажать кнопку с выбранным ответом в течение минуты, раунд считается проигранным.</p>
+
+            <div class="rules__block">
+                <div class="rules__info">
+                    <p class="rules__info-inner">Стоимость одной попытки участия - всего 100 рублей.</p>
+                </div>
+            </div>
+
+            <div class="rules__helper">
+                <h2 class="rules__title">У вас 3 подсказки:</h2>
+                <div class="rules__row">
+                    <div class="helper">
+                        <div class="helper__icon">
+                            <svg>
+                                <use xlink:href="static/img/sprite.svg#interview"></use>
+                            </svg>
+                        </div>
+                        <p class="helper__text">Помощь аудитории сайта</p>
+                        <div class="icon-question">
+                            <svg>
+                                <use xlink:href="static/img/sprite.svg#question"></use>
+                            </svg>
+                            <span class="tooltip tooltip_bottom -right">Этот значок значит, что юзер — член</span>
+                        </div>
+                    </div>
+
+                    <div class="helper">
+                        <div class="helper__icon">
+                            <svg>
+                                <use xlink:href="static/img/sprite.svg#remove-answer"></use>
+                            </svg>
+                        </div>
+                        <p class="helper__text">Убрать 1 неправильный ответ</p>
+                        <div class="icon-question">
+                            <svg>
+                                <use xlink:href="static/img/sprite.svg#question"></use>
+                            </svg>
+                            <span class="tooltip tooltip_bottom -right">Этот значок значит, что юзер — член</span>
+                        </div>
+                    </div>
+
+                    <div class="helper">
+                        <div class="helper__icon">
+                            <svg>
+                                <use xlink:href="static/img/sprite.svg#remove-half"></use>
+                            </svg>
+                        </div>
+                        <p class="helper__text">Убрать 2 неправильных ответа</p>
+                        <div class="icon-question">
+                            <svg>
+                                <use xlink:href="static/img/sprite.svg#question"></use>
+                            </svg>
+                            <span class="tooltip tooltip_right -bottom">Этот значок значит, что юзер — члентот значок значит, что юзер — член</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="rules__helper">
+                <h2 class="rules__title">Помощь:</h2>
+                <div class="rules__row">
+                    <div class="helper">
+                        <div class="helper__icon">
+                            <svg>
+                                <use xlink:href="static/img/sprite.svg#thumbs-down"></use>
+                            </svg>
+                        </div>
+                        <p class="helper__text">Пропуск 1 вопроса</p>
+                        <div class="icon-question">
+                            <svg>
+                                <use xlink:href="static/img/sprite.svg#question"></use>
+                            </svg>
+                            <span class="tooltip tooltip_bottom -right">Этот значок значит, что юзер — член</span>
+                        </div>
+                    </div>
+
+                    <div class="helper">
+                        <div class="helper__icon">
+                            <svg>
+                                <use xlink:href="static/img/sprite.svg#time-loading"></use>
+                            </svg>
+                        </div>
+                        <p class="helper__text">+ 1 минута на ответ</p>
+                        <div class="icon-question">
+                            <svg>
+                                <use xlink:href="static/img/sprite.svg#question"></use>
+                            </svg>
+                            <span class="tooltip tooltip_bottom -right">Этот значок значит, что юзер — член</span>
+                        </div>
+                    </div>
+
+                    <div class="helper">
+                        <div class="helper__icon">
+                            <svg>
+                                <use xlink:href="static/img/sprite.svg#message-read"></use>
+                            </svg>
+                        </div>
+                        <p class="helper__text">Поставить игру на паузу</p>
+                        <div class="icon-question">
+                            <svg>
+                                <use xlink:href="static/img/sprite.svg#question"></use>
+                            </svg>
+                            <span class="tooltip tooltip_bottom -right">Этот значок значит, что юзер — член</span>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
