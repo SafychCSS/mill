@@ -20,6 +20,20 @@
 
             fill: getcolor(base, white);
         }
+
+        &.-remove {
+            svg {
+                width: 23px;
+                height: 20px;
+            }
+        }
+
+        &.-half {
+            svg {
+                width: 29px;
+                height: 30px;
+            }
+        }
     }
 
     &__text {

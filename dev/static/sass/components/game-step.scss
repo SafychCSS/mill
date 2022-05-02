@@ -1,0 +1,71 @@
+.game-step {
+    max-width: 492px;
+
+    &__title {}
+
+    &__row {
+        display: flex;
+
+        &.-inactive {
+            opacity: .3;
+
+            .hint,
+            .icon-question {
+                cursor: default;
+            }
+
+            .tooltip {
+                display: none;
+            }
+        }
+    }
+
+    &__heading {
+        font-weight: 400;
+    }
+
+    &__column {
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+
+        &.-help {
+            margin-left: auto;
+        }
+    }
+
+    &__tooltip {
+        width: 13px;
+        height: 13px;
+        margin-left: 2px;
+        flex-shrink: 0;
+
+        .tooltip {
+            &_bottom,
+            &_top {
+                &.-right {
+                    right: -26px;
+                }
+
+                &.-left {
+                    left: -24px;
+                }
+            }
+
+            &_left,
+            &_right {
+                &.-top {
+                    top: calc(50% + 5px);
+                }
+
+                &.-bottom {
+                    bottom: calc(50% + 1px);
+                }
+            }
+        }
+    }
+
+    &__btn {
+        width: 100%;
+    }
+}

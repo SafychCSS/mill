@@ -101,11 +101,3 @@ $gd-yellow-reverse: linear-gradient(180deg, #FF8A00 0%, #FFC700 100%);
 
 // box-shadow count mails in tg
 $box-base-btn: 0 0 24px rgba(255, 0, 229, 0.55);
-
-@function getcolor($color, $tone: '') {
-    @if $tone != '' {
-        @return map-get(map-get($colors, $color), $tone);
-    } @else {
-        @return map-get($colors, $color);
-    }
-}

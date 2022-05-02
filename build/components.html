@@ -476,6 +476,158 @@
     </div>
 
     <hr>
+    <div class="stub-block">
+        <h2>form elements</h2>
+        <form class="form" action="/" method="post">
+            <div class="form__wrapper">
+                <div class="form__field">
+                    <label class="form__label" for="name">Имя</label>
+                    <input class="input" id="name" type="text" placeholder="aasd asd">
+                    <span class="form__error">Ошибка</span>
+                </div>
+                <div class="form__field -error">
+                    <label class="form__label" for="email">Почта</label>
+                    <input class="input" id="email" type="email" inputmode="email">
+                    <span class="form__error">Ошибка</span>
+                </div>
+                <div class="form__field">
+                    <label class="form__label" for="phone">Телефон</label>
+                    <input class="input" id="phone" type="tel" inputmode="tel">
+                    <span class="form__error">Ошибка</span>
+                </div>
+                <div class="form__field">
+                    <label class="form__label" for="password">Пароль</label>
+                    <input class="input" id="password" type="password">
+                    <div class="icon-show-pwd form__show-pwd">
+                        <svg>
+                            <use xlink:href="static/img/sprite.svg#show-pwd"></use>
+                        </svg>
+                    </div>
+                    <span class="form__error">Ошибка</span>
+                </div>
+            </div>
+        </form>
+        <div class="stub-block">
+            <div class="form">
+                <div class="form__field">
+                    <div class="btn-social">
+                        <a href="#" class="btn-social__link">
+                            <span class="btn-social__icon -vk">
+                                <svg>
+                                    <use xlink:href="static/img/sprite.svg#social-vk"></use>
+                                </svg>
+                            </span>
+                            <span class="btn-social__name">Вконтакте</span>
+                        </a>
+                    </div>
+                </div>
+                <div class="form__field">
+                    <div class="btn-social">
+                        <a href="#" class="btn-social__link">
+                            <span class="btn-social__icon -fb">
+                                <svg>
+                                    <use xlink:href="static/img/sprite.svg#social-fb"></use>
+                                </svg>
+                            </span>
+                            <span class="btn-social__name">Facebook</span>
+                        </a>
+                        <button class="icon-clear btn-social__clear" type="button">
+                            <svg>
+                                <use xlink:href="static/img/sprite.svg#clear"></use>
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+                <div class="form__field">
+                    <div class="btn-social">
+                        <a href="#" class="btn-social__link">
+                            <span class="btn-social__icon -google">
+                                <svg>
+                                    <use xlink:href="static/img/sprite.svg#social-google"></use>
+                                </svg>
+                            </span>
+                            <span class="btn-social__name">Google</span>
+                        </a>
+                        <button class="icon-clear btn-social__clear" type="button">
+                            <svg>
+                                <use xlink:href="static/img/sprite.svg#clear"></use>
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+                <div class="form__field">
+                    <div class="btn-social">
+                        <a href="#" class="btn-social__link">
+                            <span class="btn-social__icon -mail">
+                                <svg>
+                                    <use xlink:href="static/img/sprite.svg#social-mail"></use>
+                                </svg>
+                            </span>
+                            <span class="btn-social__name">Mail.ru</span>
+                        </a>
+                        <button class="icon-clear btn-social__clear" type="button">
+                            <svg>
+                                <use xlink:href="static/img/sprite.svg#clear"></use>
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+                <div class="form__field">
+                    <div class="btn-social">
+                        <a href="#" class="btn-social__link">
+                            <span class="btn-social__icon -yandex">
+                                <svg>
+                                    <use xlink:href="static/img/sprite.svg#social-yandex"></use>
+                                </svg>
+                            </span>
+                            <span class="btn-social__name">Яндекс</span>
+                        </a>
+                        <button class="icon-clear btn-social__clear" type="button">
+                            <svg>
+                                <use xlink:href="static/img/sprite.svg#clear"></use>
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+                <div class="form__field">
+                    <div class="btn-social">
+                        <a href="#" class="btn-social__link">
+                            <span class="btn-social__icon -letter">
+                                <svg>
+                                    <use xlink:href="static/img/sprite.svg#social-letter"></use>
+                                </svg>
+                            </span>
+                            <span class="btn-social__name">Через почту</span>
+                        </a>
+                        <button class="icon-clear btn-social__clear" type="button">
+                            <svg>
+                                <use xlink:href="static/img/sprite.svg#clear"></use>
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+                <div class="form__field">
+                    <div class="btn-social">
+                        <a href="#" class="btn-social__link">
+                            <span class="btn-social__icon -phone">
+                                <svg>
+                                    <use xlink:href="static/img/sprite.svg#phone"></use>
+                                </svg>
+                            </span>
+                            <span class="btn-social__name">Через телефон</span>
+                        </a>
+                        <button class="icon-clear btn-social__clear" type="button">
+                            <svg>
+                                <use xlink:href="static/img/sprite.svg#clear"></use>
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <hr>
 
     <div class="stub-block" style="max-width: 720px;">
         <h2>rules</h2>
@@ -516,7 +668,7 @@
                     </div>
 
                     <div class="helper">
-                        <div class="helper__icon">
+                        <div class="helper__icon -remove">
                             <svg>
                                 <use xlink:href="static/img/sprite.svg#remove-answer"></use>
                             </svg>
@@ -531,7 +683,7 @@
                     </div>
 
                     <div class="helper">
-                        <div class="helper__icon">
+                        <div class="helper__icon -half">
                             <svg>
                                 <use xlink:href="static/img/sprite.svg#remove-half"></use>
                             </svg>
@@ -593,6 +745,125 @@
                             </svg>
                             <span class="tooltip tooltip_bottom -right">Этот значок значит, что юзер — член</span>
                         </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <hr>
+
+    <div class="game-step">
+        <h2 class="game-step__title">Игра — 7 раунд</h2>
+        <div class="game-step__row">
+            <div class="game-step__column">
+                <h4 class="game-step__heading">Подсказки:</h4>
+
+                <div class="game-step__row -inactive">
+                    <button class="hint game-step__btn">
+                        <span class="hint__icon">
+                            <svg>
+                                <use xlink:href="static/img/sprite.svg#interview"></use>
+                            </svg>
+                        </span>
+                        <span class="hint__cost">- 500₽</span>
+                    </button>
+                    <div class="icon-question game-step__tooltip">
+                        <svg>
+                            <use xlink:href="static/img/sprite.svg#question"></use>
+                        </svg>
+                        <span class="tooltip tooltip_bottom -right">Этот значок значит, что юзер — член</span>
+                    </div>
+                </div>
+
+                <div class="game-step__row">
+                    <button class="hint game-step__btn">
+                        <span class="hint__icon -remove">
+                            <svg>
+                                <use xlink:href="static/img/sprite.svg#remove-answer-xs"></use>
+                            </svg>
+                        </span>
+                        <span class="hint__cost">- 500₽</span>
+                    </button>
+                    <div class="icon-question game-step__tooltip">
+                        <svg>
+                            <use xlink:href="static/img/sprite.svg#question"></use>
+                        </svg>
+                        <span class="tooltip tooltip_bottom -right">Этот значок значит, что юзер — член</span>
+                    </div>
+                </div>
+
+                <div class="game-step__row">
+                    <button class="hint game-step__btn">
+                        <span class="hint__icon -half">
+                            <svg>
+                                <use xlink:href="static/img/sprite.svg#remove-half"></use>
+                            </svg>
+                        </span>
+                        <span class="hint__cost">- 500₽</span>
+                    </button>
+                    <div class="icon-question game-step__tooltip">
+                        <svg>
+                            <use xlink:href="static/img/sprite.svg#question"></use>
+                        </svg>
+                        <span class="tooltip tooltip_bottom -right">Этот значок значит, что юзер — член</span>
+                    </div>
+                </div>
+            </div>
+            <div class="game-step__column -help">
+                <h4 class="game-step__heading">Помощь:</h4>
+
+                <div class="game-step__row">
+                    <button class="hint game-step__btn">
+                        <span class="hint__icon">
+                            <svg>
+                                <use xlink:href="static/img/sprite.svg#thumbs-down"></use>
+                            </svg>
+                        </span>
+                        <span class="hint__name">Пропуск вопроса</span>
+                        <span class="hint__cost">- 500₽</span>
+                    </button>
+                    <div class="icon-question game-step__tooltip">
+                        <svg>
+                            <use xlink:href="static/img/sprite.svg#question"></use>
+                        </svg>
+                        <span class="tooltip tooltip_bottom -right">Этот значок значит, что юзер — член</span>
+                    </div>
+                </div>
+
+                <div class="game-step__row">
+                    <button class="hint game-step__btn">
+                        <span class="hint__icon">
+                            <svg>
+                                <use xlink:href="static/img/sprite.svg#time-loading"></use>
+                            </svg>
+                        </span>
+                        <span class="hint__name">Еще минуту</span>
+                        <span class="hint__cost">- 500₽</span>
+                    </button>
+                    <div class="icon-question game-step__tooltip">
+                        <svg>
+                            <use xlink:href="static/img/sprite.svg#question"></use>
+                        </svg>
+                        <span class="tooltip tooltip_bottom -right">Этот значок значит, что юзер — член</span>
+                    </div>
+                </div>
+
+                <div class="game-step__row -inactive">
+                    <button class="hint game-step__btn">
+                        <span class="hint__icon">
+                            <svg>
+                                <use xlink:href="static/img/sprite.svg#message-read"></use>
+                            </svg>
+                        </span>
+                        <span class="hint__name">Игру на паузу</span>
+                        <span class="hint__cost">- 500₽</span>
+                    </button>
+                    <div class="icon-question game-step__tooltip">
+                        <svg>
+                            <use xlink:href="static/img/sprite.svg#question"></use>
+                        </svg>
+                        <span class="tooltip tooltip_bottom -right">Этот значок значит, что юзер — член</span>
                     </div>
                 </div>
             </div>

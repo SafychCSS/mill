@@ -1,0 +1,63 @@
+.hint {
+    display: inline-flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 8px 11px;
+
+    font-size: 14px;
+    color: getcolor(base, white);
+
+    background: $gd-base;
+    border: 2px solid getcolor(base, white);
+    border-radius: 50px;
+
+    cursor: pointer;
+
+    &_inactive {
+        opacity: .3;
+    }
+
+    &__icon {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 24px;
+        height: 24px;
+
+        svg {
+            fill: getcolor(base, white);
+        }
+
+        &.-remove {
+            svg {
+                width: 16px;
+            }
+        }
+    }
+
+    &__name {
+        padding-left: 11px;
+        margin-right: auto;
+    }
+
+    &__cost {
+        position: relative;
+
+        margin-left: 14px;
+        padding-left: 14px;
+
+        &::before {
+            position: absolute;
+            top: 50%;
+            left: 0;
+            content: '';
+
+            width: 1px;
+            height: 17px;
+
+            background-color: getcolor(base, white);
+
+            transform: translate(0, -50%);
+        }
+    }
+}

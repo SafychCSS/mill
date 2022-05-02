@@ -238,6 +238,8 @@
         background: $gd-answer-disabled;
         opacity: .2;
 
+        cursor: default;
+
         &::after {
             content: unset;
         }
