@@ -156,7 +156,7 @@
     <div class="stub-block">
         <h2>user</h2>
         <div class="stub-block" style="display: flex">
-            <div class="user user_photo">
+            <div class="user">
                 <div class="user__avatar icon-status-gold">
                     <form action="/" method="post" enctype="multipart/form-data">
                         <label class="user__set-pic" for="user">
@@ -172,7 +172,7 @@
                 </div>
             </div>
 
-            <div class="user user_photo">
+            <div class="user">
                 <div class="user__avatar icon-status-silver">
                     <form action="/" method="post" enctype="multipart/form-data">
                         <label class="user__set-pic" for="user">
@@ -188,7 +188,7 @@
                 </div>
             </div>
 
-            <div class="user user_photo">
+            <div class="user">
                 <div class="user__avatar icon-status-demo">
                     <form action="/" method="post" enctype="multipart/form-data">
                         <label class="user__set-pic" for="user">
@@ -204,7 +204,7 @@
                 </div>
             </div>
 
-            <div class="user user_photo">
+            <div class="user">
                 <div class="user__avatar -active icon-status-gold">
                     <form action="/" method="post" enctype="multipart/form-data">
                         <label class="user__set-pic" for="user">
@@ -221,7 +221,7 @@
                 </div>
             </div>
 
-            <div class="user user_photo">
+            <div class="user">
                 <div class="user__avatar -active icon-status-silver">
                     <form action="/" method="post" enctype="multipart/form-data">
                         <label class="user__set-pic" for="user">
@@ -238,7 +238,7 @@
                 </div>
             </div>
 
-            <div class="user user_photo">
+            <div class="user">
                 <div class="user__avatar -active icon-status-demo">
                     <form action="/" method="post" enctype="multipart/form-data">
                         <label class="user__set-pic" for="user">
@@ -255,6 +255,39 @@
                 </div>
             </div>
 
+        </div>
+        <div class="stub-block">
+            <div class="user user_header">
+                <div class="user__avatar -active icon-status-gold">
+                    <form action="/" method="post" enctype="multipart/form-data">
+                        <label class="user__set-pic" for="user">
+                            <img class="user__current-pic" src="static/img/stub/ava.png" alt="user">
+                            <svg class="user__default">
+                                <use xlink:href="static/img/sprite.svg#menu-profile"></use>
+                            </svg>
+                            <svg class="user__hover">
+                                <use xlink:href="static/img/sprite.svg#image-edit"></use>
+                            </svg>
+                        </label>
+                        <input name="user-ava" id="user-ava" type="file" class="visibility-hidden">
+                    </form>
+                </div>
+                <div class="user__info">
+                    <p class="user__line">
+                        <span class="user__name">Юзернэйм Юзернеймович</span>
+                        <button class="icon-logout user__logout">
+                            <svg>
+                                <use xlink:href="static/img/sprite.svg#logout"></use>
+                            </svg>
+                        </button>
+                    </p>
+                    <div class="game-balance user__money">
+                        <span class="game-balance__name">Игровой баланс:</span>
+                        <span class="game-balance__money">1 500 ₽</span>
+                        <button class="btn game-balance__deposit">+</button>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 
@@ -460,10 +493,8 @@
             <p class="rules__text">Промежутки между ними - называются “этап” и влияют на стоимость подсказки.</p>
             <p class="rules__text">На ответ на каждый из вопросов даётся одна минута. Если вы не успеваете нажать кнопку с выбранным ответом в течение минуты, раунд считается проигранным.</p>
 
-            <div class="rules__block">
-                <div class="rules__info">
-                    <p class="rules__info-inner">Стоимость одной попытки участия - всего 100 рублей.</p>
-                </div>
+            <div class="rules__info">
+                <p class="rules__info-inner">Стоимость одной попытки участия - всего 100 рублей.</p>
             </div>
 
             <div class="rules__helper">
@@ -475,7 +506,7 @@
                                 <use xlink:href="static/img/sprite.svg#interview"></use>
                             </svg>
                         </div>
-                        <p class="helper__text">Помощь аудитории сайта</p>
+                        <p class="helper__text">Помощь<br> аудитории<br> сайта</p>
                         <div class="icon-question">
                             <svg>
                                 <use xlink:href="static/img/sprite.svg#question"></use>
@@ -490,7 +521,7 @@
                                 <use xlink:href="static/img/sprite.svg#remove-answer"></use>
                             </svg>
                         </div>
-                        <p class="helper__text">Убрать 1 неправильный ответ</p>
+                        <p class="helper__text">Убрать 1<br> неправильный<br> ответ</p>
                         <div class="icon-question">
                             <svg>
                                 <use xlink:href="static/img/sprite.svg#question"></use>
@@ -505,12 +536,12 @@
                                 <use xlink:href="static/img/sprite.svg#remove-half"></use>
                             </svg>
                         </div>
-                        <p class="helper__text">Убрать 2 неправильных ответа</p>
+                        <p class="helper__text">Убрать 2<br> неправильных<br> ответа</p>
                         <div class="icon-question">
                             <svg>
                                 <use xlink:href="static/img/sprite.svg#question"></use>
                             </svg>
-                            <span class="tooltip tooltip_right -bottom">Этот значок значит, что юзер — члентот значок значит, что юзер — член</span>
+                            <span class="tooltip tooltip_bottom -right">Этот значок значит, что юзер — члентот значок значит, что юзер — член</span>
                         </div>
                     </div>
                 </div>
@@ -525,7 +556,7 @@
                                 <use xlink:href="static/img/sprite.svg#thumbs-down"></use>
                             </svg>
                         </div>
-                        <p class="helper__text">Пропуск 1 вопроса</p>
+                        <p class="helper__text">Пропуск<br> 1 вопроса</p>
                         <div class="icon-question">
                             <svg>
                                 <use xlink:href="static/img/sprite.svg#question"></use>
@@ -540,7 +571,7 @@
                                 <use xlink:href="static/img/sprite.svg#time-loading"></use>
                             </svg>
                         </div>
-                        <p class="helper__text">+ 1 минута на ответ</p>
+                        <p class="helper__text">+ 1 минута<br> на ответ</p>
                         <div class="icon-question">
                             <svg>
                                 <use xlink:href="static/img/sprite.svg#question"></use>
@@ -555,7 +586,7 @@
                                 <use xlink:href="static/img/sprite.svg#message-read"></use>
                             </svg>
                         </div>
-                        <p class="helper__text">Поставить игру на паузу</p>
+                        <p class="helper__text">Поставить<br> игру на паузу</p>
                         <div class="icon-question">
                             <svg>
                                 <use xlink:href="static/img/sprite.svg#question"></use>

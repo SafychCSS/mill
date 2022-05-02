@@ -35,8 +35,36 @@
         }
     }
 
+    &_header {
+        display: flex;
+
+        .user__name {
+            max-width: 300px;
+            overflow: hidden;
+
+            font-size: 18px;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+        }
+    }
+
     &_photo {
         display: flex;
+    }
+
+    &__info {}
+
+    &__line {
+        display: flex;
+        align-items: center;
+    }
+
+    &__money {
+        margin-top: 8px;
+    }
+
+    &__logout {
+        margin-left: 16px;
     }
 
     &__avatar {
@@ -211,5 +239,37 @@
         .user__status {
             color: getcolor(blue, medium);
         }
+    }
+}
+
+.game-balance {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    height: 29px;
+    padding-left: 16px;
+
+    font-size: 14px;
+
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 30px;
+
+    &__name {}
+
+    &__money {
+        font-weight: 600;
+    }
+
+    &__deposit {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100%;
+        padding: 6px 12px;
+
+        font-size: 14px;
+        line-height: 17px;
+        font-weight: 600;
+        text-align: center;
     }
 }

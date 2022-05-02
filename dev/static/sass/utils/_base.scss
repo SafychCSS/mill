@@ -197,3 +197,17 @@ h1, h2, h3, h4, h5, h6 {
         }
     }
 }
+
+.icon-logout {
+    width: 16px;
+    height: 16px;
+
+    cursor: pointer;
+
+    svg {
+        width: 100%;
+        height: 100%;
+
+        fill: getcolor(blue, medium);
+    }
+}
