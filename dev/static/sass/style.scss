@@ -9,16 +9,19 @@
 
 
 @import './blocks/header.scss'; // ??position
+@import './components/user';
+@import './components/user-line';
+
+/* page game */
+@import "./components/game";
 @import "./components/game-step";
 @import "./components/hint";
 @import "./components/round";
+@import './components/rules';
+@import './components/helper';
+/* end page game */
 
-
-@import './components/user';
-@import './components/user-line';
 @import './components/top-line';
 
 @import './components/form-elements';
 
-@import './components/rules';
-@import './components/helper';
