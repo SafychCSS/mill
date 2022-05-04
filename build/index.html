@@ -11,20 +11,192 @@
     <title>Document</title>
 </head>
 <body>
-    <div class="wrapper">
-        <!-- begin header -->
+    <div class="game">
+        <div class="game__bg"></div>
+        <!-- begin header-guest -->
         <header class="header">
-            header
+            <div class="header__info">
+                <p class="header__game">Онлайн игра</p>
+                <h1 class="header__title">Клуб миллионеров</h1>
+            </div>
+            
+            <div class="header__action">
+                <a href="#" class="btn btn_border btn_login">Вход</a>
+                <button class="btn btn_border btn_sound -mute header__sound"><span class="icon-sound -mute">&nbsp;</span></button>
+            </div>
         </header>
-        <!-- end header -->
-        <main class="main">
-            main
+        <!-- end header-guest -->
+        <main class="main -guest">
+            <div class="game-logo">
+                <picture>
+                    <source srcset="./static/img/circle-opt.webp, ./static/img/circle@2x-opt.webp 2x" type="image/webp">
+                    <img src="./static/img/circle-opt.png" srcset="./static/img/circle-opt.png 1x, ./static/img/circle@2x-opt.png 2x" alt="game logo">
+                </picture>
+
+                <p class="game-logo__title">Клуб миллионеров</p>
+            </div>
+            <a href="#" class="btn btn_border btn_full -white"><span class="text-gradient">Бесплатная пробная игра</span></a>
+            <a href="#" class="btn btn_border btn_full -white"><span class="text-gradient">Полные правила игры</span></a>
+            <a href="#" class="btn btn_full">Начать игру</a>
         </main>
         <!-- begin footer -->
         <footer class="footer">
-            footer
+            <div class="footer__container">
+                <nav class="footer-menu">
+                    <ul class="footer-menu__list">
+                        <li class="footer-menu__item">
+                            <a class="footer-menu__link" href="#">Членство</a>
+                        </li>
+                        <li class="footer-menu__item">
+                            <a class="footer-menu__link" href="#">FAQ</a>
+                        </li>
+                        <li class="footer-menu__item">
+                            <a class="footer-menu__link" href="#">Договор оферта</a>
+                        </li>
+                        <li class="footer-menu__item">
+                            <a class="footer-menu__link" href="#">Лицензионное соглашение</a>
+                        </li>
+                        <li class="footer-menu__item">
+                            <a class="footer-menu__link" href="#">Поддержка</a>
+                            <a class="footer-menu__link -tg" href="#">
+                                <svg>
+                                    <use xlink:href="static/img/sprite.svg#social-tg"></use>
+                                </svg>
+                            </a>
+                            <a class="footer-menu__link -vk" href="#">
+                                <svg>
+                                    <use xlink:href="static/img/sprite.svg#social-vk"></use>
+                                </svg>
+                            </a>
+                        </li>
+                        <li class="footer-menu__item">
+                            <button class="icon-sound -mute"></button>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
         </footer>
         <!-- end footer -->
+        <div class="game__sidebar -guest">
+                <div class="rules">
+                    <h2 class="rules__title -font-500">Описание игры:</h2>
+
+                    <div class="rules__info">
+                        <p class="rules__info-inner">Здесь вы можете заработать реальные деньги за правильные ответы на вопросы.</p>
+                    </div>
+                    <p class="rules__text">Игра ведётся до 15 раундов. За прохождение каждого из раундов ваш баланс увеличивается.</p>
+
+                    <div class="rules__info">
+                        <p class="rules__info-inner">Есть три несгораемых суммы - 100, 1 000, 50 000 рублей.</p>
+                    </div>
+                    <p class="rules__text">Промежутки между ними - называются “этап” и влияют на стоимость подсказки.</p>
+                    <p class="rules__text">На ответ на каждый из вопросов даётся одна минута. Если вы не успеваете нажать кнопку с выбранным ответом в течение минуты, раунд считается проигранным.</p>
+
+                    <div class="rules__info">
+                        <p class="rules__info-inner">Стоимость одной попытки участия - всего 100 рублей.</p>
+                    </div>
+
+                    <div class="rules__helper">
+                        <h2 class="rules__title">У вас 3 подсказки:</h2>
+                        <div class="rules__row">
+                            <div class="helper">
+                                <div class="helper__icon">
+                                    <svg>
+                                        <use xlink:href="static/img/sprite.svg#interview"></use>
+                                    </svg>
+                                </div>
+                                <p class="helper__text">Помощь<br> аудитории<br> сайта</p>
+                                <div class="icon-question">
+                                    <svg>
+                                        <use xlink:href="static/img/sprite.svg#question"></use>
+                                    </svg>
+                                    <span class="tooltip tooltip_bottom -right">Этот значок значит, что юзер — член</span>
+                                </div>
+                            </div>
+
+                            <div class="helper">
+                                <div class="helper__icon -remove">
+                                    <svg>
+                                        <use xlink:href="static/img/sprite.svg#remove-answer"></use>
+                                    </svg>
+                                </div>
+                                <p class="helper__text">Убрать 1<br> неправильный<br> ответ</p>
+                                <div class="icon-question">
+                                    <svg>
+                                        <use xlink:href="static/img/sprite.svg#question"></use>
+                                    </svg>
+                                    <span class="tooltip tooltip_bottom -right">Этот значок значит, что юзер — член</span>
+                                </div>
+                            </div>
+
+                            <div class="helper">
+                                <div class="helper__icon -half">
+                                    <svg>
+                                        <use xlink:href="static/img/sprite.svg#remove-half"></use>
+                                    </svg>
+                                </div>
+                                <p class="helper__text">Убрать 2<br> неправильных<br> ответа</p>
+                                <div class="icon-question">
+                                    <svg>
+                                        <use xlink:href="static/img/sprite.svg#question"></use>
+                                    </svg>
+                                    <span class="tooltip tooltip_bottom -right">Этот значок значит, что юзер — члентот значок значит, что юзер — член</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="rules__helper">
+                        <h2 class="rules__title">Помощь:</h2>
+                        <div class="rules__row">
+                            <div class="helper">
+                                <div class="helper__icon">
+                                    <svg>
+                                        <use xlink:href="static/img/sprite.svg#thumbs-down"></use>
+                                    </svg>
+                                </div>
+                                <p class="helper__text">Пропуск<br> 1 вопроса</p>
+                                <div class="icon-question">
+                                    <svg>
+                                        <use xlink:href="static/img/sprite.svg#question"></use>
+                                    </svg>
+                                    <span class="tooltip tooltip_bottom -right">Этот значок значит, что юзер — член</span>
+                                </div>
+                            </div>
+
+                            <div class="helper">
+                                <div class="helper__icon">
+                                    <svg>
+                                        <use xlink:href="static/img/sprite.svg#time-loading"></use>
+                                    </svg>
+                                </div>
+                                <p class="helper__text">+ 1 минута<br> на ответ</p>
+                                <div class="icon-question">
+                                    <svg>
+                                        <use xlink:href="static/img/sprite.svg#question"></use>
+                                    </svg>
+                                    <span class="tooltip tooltip_bottom -right">Этот значок значит, что юзер — член</span>
+                                </div>
+                            </div>
+
+                            <div class="helper">
+                                <div class="helper__icon">
+                                    <svg>
+                                        <use xlink:href="static/img/sprite.svg#message-read"></use>
+                                    </svg>
+                                </div>
+                                <p class="helper__text">Поставить<br> игру на паузу</p>
+                                <div class="icon-question">
+                                    <svg>
+                                        <use xlink:href="static/img/sprite.svg#question"></use>
+                                    </svg>
+                                    <span class="tooltip tooltip_bottom -right">Этот значок значит, что юзер — член</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
     </div>
     <script src="./static/js/script.min.js"></script>
 </body>

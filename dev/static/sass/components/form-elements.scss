@@ -100,15 +100,15 @@
         display: inline-flex;
         align-items: center;
         justify-content: center;
-        width: 22px;
-        height: 20px;
+        width: 24px;
+        height: 24px;
 
         transform: translate(0, -50%);
 
         &.-vk {
             svg {
-                width: 20px;
-                height: 12px;
+                width: 100%;
+                height: 100%;
 
                 fill: #2787F5;
             }
@@ -116,8 +116,8 @@
 
         &.-fb {
             svg {
-                width: 7px;
-                height: 14px;
+                width: 100%;
+                height: 100%;
 
                 fill: #4267B2;
             }
@@ -125,8 +125,8 @@
 
         &.-google {
             svg {
-                width: 14px;
-                height: 14px;
+                width: 100%;
+                height: 100%;
 
                 fill: #EA4335;
             }
@@ -134,8 +134,8 @@
 
         &.-mail {
             svg {
-                width: 16px;
-                height: 16px;
+                width: 100%;
+                height: 100%;
 
                 fill: #FF9E00;
             }
@@ -143,8 +143,8 @@
 
         &.-yandex {
             svg {
-                width: 10px;
-                height: 14px;
+                width: 100%;
+                height: 100%;
 
                 fill: #FC3F1D;
             }
@@ -152,8 +152,8 @@
 
         &.-letter {
             svg {
-                width: 22px;
-                height: 20px;
+                width: 100%;
+                height: 100%;
 
                 fill: #6C89A9;
             }
@@ -161,8 +161,8 @@
 
         &.-phone {
             svg {
-                width: 18px;
-                height: 18px;
+                width: 100%;
+                height: 100%;
 
                 fill: #6C89A9;
             }
