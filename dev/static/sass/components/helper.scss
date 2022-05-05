@@ -53,4 +53,30 @@
             margin-left: auto;
         }
     }
+
+    @media (max-width: $screen-xs) {
+        &__icon {
+            width: 48px;
+            height: 48px;
+
+            svg {
+                width: 24px;
+                height: 24px;
+            }
+
+            &.-remove {
+                svg {
+                    width: 18px;
+                    height: 16px;
+                }
+            }
+
+            &.-half {
+                svg {
+                    width: 20px;
+                    height: 19px;
+                }
+            }
+        }
+    }
 }

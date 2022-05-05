@@ -66,5 +66,13 @@
         &__list {
             flex-direction: column;
         }
+
+        &__link {
+            &.-tg,
+            &.-vk {
+                width: 20px;
+                height: 20px;
+            }
+        }
     }
 }

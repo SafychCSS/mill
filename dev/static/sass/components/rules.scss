@@ -71,4 +71,19 @@
             gap: 8px;
         }
     }
+
+    @media (max-width: $screen-xs) {
+        &__title {
+            font-size: 16px;
+        }
+
+        &__info,
+        &__text {
+            margin: 10px 0;
+        }
+
+        &__info-inner {
+            font-size: 14px;
+        }
+    }
 }
