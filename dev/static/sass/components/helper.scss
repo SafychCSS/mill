@@ -43,4 +43,14 @@
 
         font-size: 12px;
     }
+
+    @media (max-width: $screen-sm) {
+        &__text {
+            max-width: 100%;
+        }
+
+        .icon-question {
+            margin-left: auto;
+        }
+    }
 }

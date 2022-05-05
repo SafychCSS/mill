@@ -23,9 +23,20 @@
         color: getcolor(yellow, base);
     }
 
-    &__action {}
+    &__action {
+        display: flex;
+        margin-left: auto;
+    }
 
     &__sound {
         margin-left: 16px;
+    }
+
+    @media (max-width: $screen-xs) {
+        padding: 8px;
+
+        &__info {
+            display: none;
+        }
     }
 }

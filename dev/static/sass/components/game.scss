@@ -1,7 +1,7 @@
 .game {
     display: grid;
     grid-template-columns: 1fr auto;
-    grid-template-rows: auto auto 1fr;
+    grid-template-rows: auto 4fr 1fr;
     height: 100%;
     /*
    &__row {
@@ -35,24 +35,96 @@
         grid-column: 1/2;
         background: url('../img/main-bg/main-bg-1920-opt.jpg') center bottom / cover no-repeat;
     }
+
+    @media (max-width: $screen-md) {
+        grid-template-columns: 1fr;
+
+        &__sidebar {
+            grid-column: 1/2;
+            grid-row: 3/4;
+
+            &.-guest {
+                max-width: 100%;
+                padding-bottom: 80px;
+            }
+        }
+
+        &__bg {
+            grid-row: 1/3;
+            background-position: center top -250px;
+            background-size: unset;
+        }
+    }
+
+    @media (max-width: $screen-xs) {
+        &__sidebar {
+
+            &.-guest {
+                padding-bottom: 240px;
+            }
+        }
+
+        &__bg {
+            background-image: url('../img/main-bg/main-bg-960-opt.jpg');
+            background-position: center top;
+            background-size: cover;
+        }
+    }
 }
 
 .main {
     grid-row: 2/3;
     grid-column: 1/2;
+
     &.-guest {
         max-width: 404px;
-        margin-left: auto;
-        margin-right: auto;
+        margin: auto;
 
         text-align: center;
+    }
 
-        .btn {
-            margin-top: 10px;
-            padding-top: 14px;
-            padding-bottom: 14px;
+    &__action {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
 
-            font-size: 18px;
+    @media (max-width: $screen-md) {
+        &.-guest {
+            max-width: 100%;
+            width: 100%;
+            padding-bottom: 35px;
+            padding-left: 60px;
+            padding-right: 60px;
+        }
+
+        &__action {
+            flex-direction: row;
+            gap: 16px;
+        }
+    }
+
+    @media (max-width: $screen-sm) {
+        &.-guest {
+            max-width: 520px;
+            padding-left: 0;
+            padding-right: 0;
+        }
+
+        &__action {
+            flex-direction: column;
+            gap: 8px;
+        }
+
+        &__btn-play {
+            order: -1;
+        }
+    }
+
+    @media (max-width: $screen-xs) {
+        &.-guest {
+            padding-left: 36px;
+            padding-right: 36px;
         }
     }
 }

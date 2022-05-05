@@ -64,4 +64,11 @@
         justify-content: space-between;
         margin-top: 8px;
     }
+
+    @media (max-width: $screen-sm) {
+        &__row {
+            flex-direction: column;
+            gap: 8px;
+        }
+    }
 }

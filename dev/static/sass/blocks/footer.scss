@@ -1,4 +1,5 @@
 .footer {
+    position: relative;
     grid-row: 3/4;
     grid-column: 1/2;
     margin-top: auto;
@@ -7,6 +8,15 @@
     font-size: 14px;
 
     background: rgba(0, 0, 0, 0.3);
+
+    @media (max-width: $screen-md) {
+        z-index: 2;
+
+        grid-row: 3/4;
+        padding-bottom: 40px;
+
+        background: transparent;
+    }
 }
 
 .footer-menu {
@@ -14,6 +24,7 @@
         display: flex;
         align-items: center;
         justify-content: center;
+        flex-wrap: wrap;
         gap: 11px;
         margin: 0;
         padding: 0;
@@ -40,8 +51,20 @@
                 width: 100%;
                 height: 100%;
 
-                fill: getcolor(base, white);
+                fill: #36ADE1;
             }
+        }
+
+        &.-vk {
+            svg {
+                fill: #2787F5;
+            }
+        }
+    }
+
+    @media (max-width: $screen-xs) {
+        &__list {
+            flex-direction: column;
         }
     }
 }

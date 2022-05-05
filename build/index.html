@@ -35,9 +35,11 @@
 
                 <p class="game-logo__title">Клуб миллионеров</p>
             </div>
-            <a href="#" class="btn btn_border btn_full -white"><span class="text-gradient">Бесплатная пробная игра</span></a>
-            <a href="#" class="btn btn_border btn_full -white"><span class="text-gradient">Полные правила игры</span></a>
-            <a href="#" class="btn btn_full">Начать игру</a>
+            <div class="main__action">
+                <a href="#" class="btn btn_border btn_full btn_big -white"><span class="text-gradient">Бесплатная пробная игра</span></a>
+                <a href="#" class="btn btn_border btn_full btn_big -white"><span class="text-gradient">Полные правила игры</span></a>
+                <a href="#" class="btn btn_full btn_big main__btn-play">Начать игру</a>
+            </div>
         </main>
         <!-- begin footer -->
         <footer class="footer">
@@ -78,125 +80,131 @@
         </footer>
         <!-- end footer -->
         <div class="game__sidebar -guest">
-                <div class="rules">
-                    <h2 class="rules__title -font-500">Описание игры:</h2>
+            <div class="rules">
+                <h2 class="rules__title -font-500">Описание игры:</h2>
 
-                    <div class="rules__info">
-                        <p class="rules__info-inner">Здесь вы можете заработать реальные деньги за правильные ответы на вопросы.</p>
-                    </div>
-                    <p class="rules__text">Игра ведётся до 15 раундов. За прохождение каждого из раундов ваш баланс увеличивается.</p>
+                <div class="rules__info">
+                    <p class="rules__info-inner">Здесь вы можете заработать реальные деньги за правильные ответы на вопросы.</p>
+                </div>
+                <p class="rules__text">Игра ведётся до 15 раундов. За прохождение каждого из раундов ваш баланс увеличивается.</p>
 
-                    <div class="rules__info">
-                        <p class="rules__info-inner">Есть три несгораемых суммы - 100, 1 000, 50 000 рублей.</p>
-                    </div>
-                    <p class="rules__text">Промежутки между ними - называются “этап” и влияют на стоимость подсказки.</p>
-                    <p class="rules__text">На ответ на каждый из вопросов даётся одна минута. Если вы не успеваете нажать кнопку с выбранным ответом в течение минуты, раунд считается проигранным.</p>
+                <div class="rules__info">
+                    <p class="rules__info-inner">Есть три несгораемых суммы - 100, 1 000, 50 000 рублей.</p>
+                </div>
+                <p class="rules__text">Промежутки между ними - называются “этап” и влияют на стоимость подсказки.</p>
+                <p class="rules__text">На ответ на каждый из вопросов даётся одна минута. Если вы не успеваете нажать кнопку с выбранным ответом в течение минуты, раунд считается проигранным.</p>
 
-                    <div class="rules__info">
-                        <p class="rules__info-inner">Стоимость одной попытки участия - всего 100 рублей.</p>
-                    </div>
+                <div class="rules__info">
+                    <p class="rules__info-inner">Стоимость одной попытки участия - всего 100 рублей.</p>
+                </div>
 
-                    <div class="rules__helper">
-                        <h2 class="rules__title">У вас 3 подсказки:</h2>
-                        <div class="rules__row">
-                            <div class="helper">
-                                <div class="helper__icon">
-                                    <svg>
-                                        <use xlink:href="static/img/sprite.svg#interview"></use>
-                                    </svg>
-                                </div>
-                                <p class="helper__text">Помощь<br> аудитории<br> сайта</p>
-                                <div class="icon-question">
-                                    <svg>
-                                        <use xlink:href="static/img/sprite.svg#question"></use>
-                                    </svg>
-                                    <span class="tooltip tooltip_bottom -right">Этот значок значит, что юзер — член</span>
-                                </div>
+                <div class="rules__helper">
+                    <h2 class="rules__title">У вас 3 подсказки:</h2>
+                    <div class="rules__row">
+                        <div class="helper">
+                            <div class="helper__icon">
+                                <svg>
+                                    <use xlink:href="static/img/sprite.svg#interview"></use>
+                                </svg>
                             </div>
-
-                            <div class="helper">
-                                <div class="helper__icon -remove">
-                                    <svg>
-                                        <use xlink:href="static/img/sprite.svg#remove-answer"></use>
-                                    </svg>
-                                </div>
-                                <p class="helper__text">Убрать 1<br> неправильный<br> ответ</p>
-                                <div class="icon-question">
-                                    <svg>
-                                        <use xlink:href="static/img/sprite.svg#question"></use>
-                                    </svg>
-                                    <span class="tooltip tooltip_bottom -right">Этот значок значит, что юзер — член</span>
-                                </div>
+                            <p class="helper__text hidden-sm">Помощь<br> аудитории<br> сайта</p>
+                            <p class="helper__text visible-sm">Помощь аудитории сайта</p>
+                            <div class="icon-question">
+                                <svg>
+                                    <use xlink:href="static/img/sprite.svg#question"></use>
+                                </svg>
+                                <span class="tooltip tooltip_bottom -right">Этот значок значит, что юзер — член</span>
                             </div>
+                        </div>
 
-                            <div class="helper">
-                                <div class="helper__icon -half">
-                                    <svg>
-                                        <use xlink:href="static/img/sprite.svg#remove-half"></use>
-                                    </svg>
-                                </div>
-                                <p class="helper__text">Убрать 2<br> неправильных<br> ответа</p>
-                                <div class="icon-question">
-                                    <svg>
-                                        <use xlink:href="static/img/sprite.svg#question"></use>
-                                    </svg>
-                                    <span class="tooltip tooltip_bottom -right">Этот значок значит, что юзер — члентот значок значит, что юзер — член</span>
-                                </div>
+                        <div class="helper">
+                            <div class="helper__icon -remove">
+                                <svg>
+                                    <use xlink:href="static/img/sprite.svg#remove-answer"></use>
+                                </svg>
+                            </div>
+                            <p class="helper__text hidden-sm">Убрать 1<br> неправильный<br> ответ</p>
+                            <p class="helper__text visible-sm">Убрать 1 неправильный ответ</p>
+                            <div class="icon-question">
+                                <svg>
+                                    <use xlink:href="static/img/sprite.svg#question"></use>
+                                </svg>
+                                <span class="tooltip tooltip_bottom -right">Этот значок значит, что юзер — член</span>
+                            </div>
+                        </div>
+
+                        <div class="helper">
+                            <div class="helper__icon -half">
+                                <svg>
+                                    <use xlink:href="static/img/sprite.svg#remove-half"></use>
+                                </svg>
+                            </div>
+                            <p class="helper__text hidden-sm">Убрать 2<br> неправильных<br> ответа</p>
+                            <p class="helper__text visible-sm">Убрать 2 неправильных ответа</p>
+                            <div class="icon-question">
+                                <svg>
+                                    <use xlink:href="static/img/sprite.svg#question"></use>
+                                </svg>
+                                <span class="tooltip tooltip_bottom -right">Этот значок значит, что юзер — члентот значок значит, что юзер — член</span>
                             </div>
                         </div>
                     </div>
+                </div>
 
-                    <div class="rules__helper">
-                        <h2 class="rules__title">Помощь:</h2>
-                        <div class="rules__row">
-                            <div class="helper">
-                                <div class="helper__icon">
-                                    <svg>
-                                        <use xlink:href="static/img/sprite.svg#thumbs-down"></use>
-                                    </svg>
-                                </div>
-                                <p class="helper__text">Пропуск<br> 1 вопроса</p>
-                                <div class="icon-question">
-                                    <svg>
-                                        <use xlink:href="static/img/sprite.svg#question"></use>
-                                    </svg>
-                                    <span class="tooltip tooltip_bottom -right">Этот значок значит, что юзер — член</span>
-                                </div>
+                <div class="rules__helper">
+                    <h2 class="rules__title">Помощь:</h2>
+                    <div class="rules__row">
+                        <div class="helper">
+                            <div class="helper__icon">
+                                <svg>
+                                    <use xlink:href="static/img/sprite.svg#thumbs-down"></use>
+                                </svg>
                             </div>
-
-                            <div class="helper">
-                                <div class="helper__icon">
-                                    <svg>
-                                        <use xlink:href="static/img/sprite.svg#time-loading"></use>
-                                    </svg>
-                                </div>
-                                <p class="helper__text">+ 1 минута<br> на ответ</p>
-                                <div class="icon-question">
-                                    <svg>
-                                        <use xlink:href="static/img/sprite.svg#question"></use>
-                                    </svg>
-                                    <span class="tooltip tooltip_bottom -right">Этот значок значит, что юзер — член</span>
-                                </div>
+                            <p class="helper__text hidden-sm">Пропуск<br> 1 вопроса</p>
+                            <p class="helper__text visible-sm">Пропуск 1 вопроса</p>
+                            <div class="icon-question">
+                                <svg>
+                                    <use xlink:href="static/img/sprite.svg#question"></use>
+                                </svg>
+                                <span class="tooltip tooltip_bottom -right">Этот значок значит, что юзер — член</span>
                             </div>
+                        </div>
 
-                            <div class="helper">
-                                <div class="helper__icon">
-                                    <svg>
-                                        <use xlink:href="static/img/sprite.svg#message-read"></use>
-                                    </svg>
-                                </div>
-                                <p class="helper__text">Поставить<br> игру на паузу</p>
-                                <div class="icon-question">
-                                    <svg>
-                                        <use xlink:href="static/img/sprite.svg#question"></use>
-                                    </svg>
-                                    <span class="tooltip tooltip_bottom -right">Этот значок значит, что юзер — член</span>
-                                </div>
+                        <div class="helper">
+                            <div class="helper__icon">
+                                <svg>
+                                    <use xlink:href="static/img/sprite.svg#time-loading"></use>
+                                </svg>
+                            </div>
+                            <p class="helper__text hidden-sm">+ 1 минута<br> на ответ</p>
+                            <p class="helper__text visible-sm">+ 1 минута на ответ</p>
+                            <div class="icon-question">
+                                <svg>
+                                    <use xlink:href="static/img/sprite.svg#question"></use>
+                                </svg>
+                                <span class="tooltip tooltip_bottom -right">Этот значок значит, что юзер — член</span>
+                            </div>
+                        </div>
+
+                        <div class="helper">
+                            <div class="helper__icon">
+                                <svg>
+                                    <use xlink:href="static/img/sprite.svg#message-read"></use>
+                                </svg>
+                            </div>
+                            <p class="helper__text hidden-sm">Поставить<br> игру на паузу</p>
+                            <p class="helper__text visible-sm">Поставить игру на паузу</p>
+                            <div class="icon-question">
+                                <svg>
+                                    <use xlink:href="static/img/sprite.svg#question"></use>
+                                </svg>
+                                <span class="tooltip tooltip_bottom -right">Этот значок значит, что юзер — член</span>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
+        </div>
     </div>
     <script src="./static/js/script.min.js"></script>
 </body>

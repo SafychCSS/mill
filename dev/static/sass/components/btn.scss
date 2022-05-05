@@ -12,6 +12,7 @@
     text-decoration: none;
     text-align: center;
     color: getcolor(base, white);
+    white-space: nowrap;
 
     background: $gd-base;
     border: none;
@@ -111,6 +112,13 @@
         width: 100%;
     }
 
+    &_big {
+        padding-top: 14px;
+        padding-bottom: 14px;
+
+        font-size: 18px;
+    }
+
     &_money {
         padding: 6px 45px 6px 15px;
         letter-spacing: 0.01em;
@@ -143,6 +151,16 @@
 
                 background: url(../img/icon/money-withdraw.svg) no-repeat;
             }
+        }
+    }
+
+    @media (max-width: $screen-xs) {
+        padding: 7px 12px;
+        font-size: 12px;
+
+        &_big {
+            padding: 7px 12px;
+            font-size: 12px;
         }
     }
 }
