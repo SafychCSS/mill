@@ -221,6 +221,16 @@
         font-weight: 500;
     }
 
+    &__status-link {
+        font-size: 22px;
+        @extend .text-gradient;
+        transition: background-position .3s;
+
+        &:hover {
+            background-position: center 200%;
+        }
+    }
+
     &.-silver {
         .user__picture {
             border-color: getcolor(base, white);
