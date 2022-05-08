@@ -1,0 +1,49 @@
+<!-- begin header -->
+<header class="header">
+    <div class="user user_header">
+        <div class="user__avatar -active icon-status-gold">
+            <form action="/" method="post" enctype="multipart/form-data">
+                <label class="user__set-pic" for="user">
+                    <img class="user__current-pic" src="static/img/stub/ava.png" alt="user">
+                    <svg class="user__default">
+                        <use xlink:href="static/img/sprite.svg#menu-profile"></use>
+                    </svg>
+                    <svg class="user__hover">
+                        <use xlink:href="static/img/sprite.svg#image-edit"></use>
+                    </svg>
+                </label>
+                <input name="user-ava" id="user-ava" type="file" class="visibility-hidden">
+            </form>
+        </div>
+        <div class="user__info">
+            <p class="user__line">
+                <span class="user__name">Юзернэйм Юзернеймович</span>
+                <button class="icon-logout user__logout">
+                    <svg>
+                        <use xlink:href="static/img/sprite.svg#logout"></use>
+                    </svg>
+                </button>
+            </p>
+            <div class="game-balance user__money">
+                <span class="game-balance__name">Игровой баланс:</span>
+                <span class="game-balance__money">1 500 ₽</span>
+                <button class="btn game-balance__deposit">+</button>
+            </div>
+        </div>
+    </div>
+    <div class="header__action">
+        <ul class="header__menu">
+            <li class="header__menu-item">
+                <a class="header__menu-link" href="#">Топ победителей</a>
+            </li>
+            <li class="header__menu-item">
+                <a class="header__menu-link" href="#">Членство в клубе</a>
+            </li>
+            <li class="header__menu-item">
+                <a class="header__menu-link" href="#">FAQ</a>
+            </li>
+        </ul>
+        <button class="btn btn_border btn_sound -mute"><span class="icon-sound -mute">&nbsp;</span></button>
+    </div>
+</header>
+<!-- end header -->

@@ -8,7 +8,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@300;400;500;600;800&display=swap"
           rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="./static/css/style.min.css">
+    <link rel="stylesheet" type="text/css" href="./static/css/dev-components.min.css">
     <title>Document</title>
     <style>
         .stub-wrapper {
@@ -292,7 +292,7 @@
     </div>
 
     <div class="stub-block">
-        <div class="user">
+        <div class="user user_line">
             <div class="user__picture">
                 <img src="static/img/stub/ava.png" alt="aleha">
             </div>
@@ -306,7 +306,7 @@
     </div>
 
     <div class="stub-block">
-        <div class="user -silver">
+        <div class="user user_line -silver">
             <div class="user__picture">
                 <img src="static/img/stub/ava.png" alt="aleha">
             </div>
@@ -320,7 +320,7 @@
     </div>
 
     <div class="stub-block">
-        <div class="user -demo">
+        <div class="user user_line -demo">
             <div class="user__picture">
                 <img src="static/img/stub/ava.png" alt="aleha">
             </div>
@@ -334,19 +334,26 @@
     </div>
 
     <div class="stub-block" style="display: flex">
-        <div class="user -demo user_photo">
+        <div class="user -demo">
             <div class="user__picture icon-status-demo">
                 <img src="static/img/stub/ava.png" alt="aleha">
             </div>
         </div>
-        <div class="user -silver user_photo">
+        <div class="user -silver">
             <div class="user__picture icon-status-silver">
                 <img src="static/img/stub/ava.png" alt="aleha">
             </div>
         </div>
-        <div class="user user_photo">
+        <div class="user">
             <div class="user__picture icon-status-gold">
                 <img src="static/img/stub/ava.png" alt="aleha">
+            </div>
+        </div>
+        <div class="user">
+            <div class="user__picture icon-status-gold">
+                <svg class="user__default">
+                    <use xlink:href="static/img/sprite.svg#menu-profile"></use>
+                </svg>
             </div>
         </div>
     </div>
@@ -356,7 +363,7 @@
     <div class="stub-block">
         <h2>user line</h2>
         <div class="user-line">
-            <div class="user">
+            <div class="user user_line">
                 <div class="user__picture">
                     <img src="static/img/stub/ava.png" alt="aleha">
                 </div>
@@ -391,7 +398,7 @@
 
         <div class="stub-block">
             <div class="top-line">
-                <div class="user -list">
+                <div class="user user_line -list">
                     <div class="user__picture">
                         <img src="static/img/stub/ava.png" alt="aleha">
                     </div>
@@ -408,7 +415,7 @@
         </div>
         <div class="stub-block">
             <div class="top-line">
-                <div class="user -silver -list">
+                <div class="user user_line -silver -list">
                     <div class="user__picture">
                         <img src="static/img/stub/ava.png" alt="aleha">
                     </div>
@@ -425,7 +432,7 @@
         </div>
         <div class="stub-block">
             <div class="top-line">
-                <div class="user -demo -list">
+                <div class="user user_line -demo -list">
                     <div class="user__picture">
                         <img src="static/img/stub/ava.png" alt="aleha">
                     </div>
@@ -446,7 +453,7 @@
         <div class="stub-block">
             <div class="top-line -all-time">
                 <span class="top-line__place">1</span>
-                <div class="user -list">
+                <div class="user user_line -list">
                     <div class="user__picture">
                         <img src="static/img/stub/ava.png" alt="aleha">
                     </div>
@@ -761,7 +768,7 @@
 
     <div class="game-step">
         <h2 class="game-step__title">Игра — 7 раунд</h2>
-        <div class="game-step__row">
+        <div class="game-step__row -helpers">
             <div class="game-step__column">
                 <h4 class="game-step__heading">Подсказки:</h4>
 
@@ -774,7 +781,7 @@
                         </span>
                         <span class="hint__cost">- 500₽</span>
                     </button>
-                    <div class="icon-question game-step__tooltip">
+                    <div class="icon-question -xs">
                         <svg>
                             <use xlink:href="static/img/sprite.svg#question"></use>
                         </svg>
@@ -791,7 +798,7 @@
                         </span>
                         <span class="hint__cost">- 500₽</span>
                     </button>
-                    <div class="icon-question game-step__tooltip">
+                    <div class="icon-question -xs">
                         <svg>
                             <use xlink:href="static/img/sprite.svg#question"></use>
                         </svg>
@@ -808,7 +815,7 @@
                         </span>
                         <span class="hint__cost">- 500₽</span>
                     </button>
-                    <div class="icon-question game-step__tooltip">
+                    <div class="icon-question -xs">
                         <svg>
                             <use xlink:href="static/img/sprite.svg#question"></use>
                         </svg>
@@ -826,10 +833,10 @@
                                 <use xlink:href="static/img/sprite.svg#thumbs-down"></use>
                             </svg>
                         </span>
-                        <span class="hint__name">Пропуск вопроса</span>
+                        <span class="hint__name">Пропуск <span class="hidden-md">вопроса</span></span>
                         <span class="hint__cost">- 500₽</span>
                     </button>
-                    <div class="icon-question game-step__tooltip">
+                    <div class="icon-question -xs">
                         <svg>
                             <use xlink:href="static/img/sprite.svg#question"></use>
                         </svg>
@@ -844,10 +851,10 @@
                                 <use xlink:href="static/img/sprite.svg#time-loading"></use>
                             </svg>
                         </span>
-                        <span class="hint__name">Еще минуту</span>
+                        <span class="hint__name"><span class="hidden-md">Еще минуту</span> <span class="visible-md">+ Минута</span></span>
                         <span class="hint__cost">- 500₽</span>
                     </button>
-                    <div class="icon-question game-step__tooltip">
+                    <div class="icon-question -xs">
                         <svg>
                             <use xlink:href="static/img/sprite.svg#question"></use>
                         </svg>
@@ -862,10 +869,10 @@
                                 <use xlink:href="static/img/sprite.svg#message-read"></use>
                             </svg>
                         </span>
-                        <span class="hint__name">Игру на паузу</span>
+                        <span class="hint__name"><span class="hidden-md">Игру на паузу</span> <span class="visible-md">Пауза</span></span>
                         <span class="hint__cost">- 500₽</span>
                     </button>
-                    <div class="icon-question game-step__tooltip">
+                    <div class="icon-question -xs">
                         <svg>
                             <use xlink:href="static/img/sprite.svg#question"></use>
                         </svg>

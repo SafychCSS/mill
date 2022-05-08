@@ -30,7 +30,7 @@ const replace = require('gulp-replace');
 
 // clean
 const clean = () => {
-    return del(['build']);
+    return del(['dist']);
 }
 
 // scss
@@ -49,10 +49,10 @@ const stylesBuild = () => {
         .pipe(autoprefixer({
             cascade: false
         }))
-        .pipe(dest('build/static/css')) // сохраняем обычный (рабочий вариант)
+        .pipe(dest('dist/static/css')) // сохраняем обычный (рабочий вариант)
         .pipe(csso()) // минифицируем
         .pipe(rename({suffix: '.min'})) // переименовываем
-        .pipe(dest('build/static/css')) // минифицируем
+        .pipe(dest('dist/static/css'))
 }
 
 const stylesDev = () => {
@@ -71,7 +71,7 @@ const stylesDev = () => {
         .pipe(sourcemaps.write())
         .pipe(rename({suffix: '.min'}))  // переименовываем (просто чтобы в разработке сразу указать минифицированный файл и при билде не менять)
         .pipe(plumber.stop())
-        .pipe(dest('build/static/css'))
+        .pipe(dest('dist/static/css'))
         .pipe(browserSync.reload({
             stream: true
         }))
@@ -80,13 +80,13 @@ const stylesDev = () => {
 // js
 const scriptBuild = () => {
     return src('dev/static/js/*')
-        .pipe(dest('build/static/js/')) // сохраняем обычный (рабочий вариант)
+        .pipe(dest('dist/static/js/')) // сохраняем обычный (рабочий вариант)
         .pipe(babel({
             presets: ['@babel/env']
         })) // прогоняем через babel
         .pipe(uglifyEs()) // минификация
         .pipe(rename({suffix: '.min'})) // переименовываем
-        .pipe(dest('build/static/js/')) // сохраняем минифицированный
+        .pipe(dest('dist/static/js/')) // сохраняем минифицированный
 }
 
 const scriptDev = () => {
@@ -94,7 +94,7 @@ const scriptDev = () => {
         .pipe(plumber())
         .pipe(rename({suffix: '.min'})) // переименовываем (просто чтобы в разработке сразу указать минифицированный файл и при билде не менять)
         .pipe(plumber.stop())
-        .pipe(dest('build/static/js/'))
+        .pipe(dest('dist/static/js/'))
         .pipe(browserSync.reload({
             stream: true
         }))
@@ -106,16 +106,16 @@ const html = () => {
         .pipe(plumber())
         .pipe(fileinclude())
         .pipe(plumber.stop())
-        .pipe(dest('build/'))
+        .pipe(dest('dist/'))
         .pipe(browserSync.reload({
-            stream: true
+            stream: true,
         }))
 }
 
 // fonts
 const fonts = () => {
     return src('dev/static/fonts/**/*')
-        .pipe(dest('build/static/fonts/'))
+        .pipe(dest('dist/static/fonts/'))
 }
 
 // images
@@ -125,7 +125,7 @@ const imagesDev = () => {
         '!dev/static/img/icon-png/*.png',
         '!dev/static/img/svg/*.svg'
     ])
-        .pipe(dest('build/static/img/'));
+        .pipe(dest('dist/static/img/'));
 }
 
 const imagesBuild = () => {
@@ -145,7 +145,7 @@ const imagesBuild = () => {
                 ]
             })
         ]))
-        .pipe(dest('build/static/img/'));
+        .pipe(dest('dist/static/img/'));
 }
 
 const createSpritePng = () => {
@@ -156,7 +156,7 @@ const createSpritePng = () => {
       padding: 10
     }));
     spriteData.css.pipe(dest('dev/static/sass/utils'));
-    return spriteData.img.pipe(dest('build/static/img/'));
+    return spriteData.img.pipe(dest('dist/static/img/'));
 }
 
 const createSpriteSvgColor = () => {
@@ -177,7 +177,7 @@ const createSpriteSvgColor = () => {
 				}
 			}
 		}))
-		.pipe(dest('build/static/img'));
+		.pipe(dest('dist/static/img'));
 }
 
 const createSpriteSvgBlack = () => {
@@ -208,14 +208,17 @@ const createSpriteSvgBlack = () => {
 			}
 		}))
         .pipe(dest('dev/static/img/'))
-		.pipe(dest('build/static/img'));
+		.pipe(dest('dist/static/img'));
 }
 
 const serve = () => {
     browserSync.init({
+        port: 3001,
         server: {
-            baseDir: "./build"
-        }
+            baseDir: "./dist",
+        },
+        online: true,
+        tunnel: true,
     })
 }
 

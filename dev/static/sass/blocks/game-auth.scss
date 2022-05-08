@@ -1,0 +1,277 @@
+.game {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    grid-template-rows: auto 1fr auto;
+    width: 100%;
+
+    &__sidebar {
+        grid-row: 1/4;
+        grid-column: 2/3;
+        padding: 24px 32px;
+        background: $gd-radial;
+    }
+
+    &__bg {
+        grid-row: 1/4;
+        grid-column: 1/2;
+        background-image: url('../img/main-bg/main-bg-1920-opt.jpg');
+        background-image: -webkit-image-set(
+                        url('../img/main-bg/main-bg-1920-opt.webp') 1x,
+                        url('../img/main-bg/main-bg-1920-opt.jpg') 1x
+        );
+        background-image: image-set(
+            url('../img/main-bg/main-bg-1920-opt.webp') 1x,
+            url('../img/main-bg/main-bg-1920-opt.jpg') 1x
+        );
+        background-repeat: no-repeat;
+        background-position: center bottom;
+        background-size: cover;
+    }
+
+    &__block {
+        width: 100%;
+        padding-top: 32px;
+        padding-bottom: 32px;
+        margin-top: auto;
+
+        background: $gd-black;
+    }
+
+    &__questions {
+        padding-left: 32px;
+        padding-right: 32px;
+    }
+
+    &__answers {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 10px;
+        margin-top: 10px;
+        padding-left: 48px;
+        padding-right: 48px;
+    }
+
+    @media (max-width: $screen-md) {
+        &__bg {
+            grid-row: 2/3;
+            background-position: center bottom 60px;
+        }
+
+        &__sidebar {
+            grid-row: 2/3;
+            grid-column: 2/3;
+            padding: 24px;
+        }
+
+        &__questions,
+        &__answers {
+            padding-left: 24px;
+            padding-right: 24px;
+        }
+
+        &__answers {
+            grid-template-columns: 1fr;
+        }
+    }
+
+    @media (max-width: $screen-sm) {
+        grid-template-columns: 1fr;
+
+        .game__bg {
+            background-image: url('../img/main-bg/main-bg-1440-opt.jpg');
+            background-image: -webkit-image-set(
+                            url('../img/main-bg/main-bg-1440-opt.webp') 1x,
+                            url('../img/main-bg/main-bg-1440-opt.jpg') 1x
+            );
+            background-image: image-set(
+                            url('../img/main-bg/main-bg-1440-opt.webp') 1x,
+                            url('../img/main-bg/main-bg-1440-opt.jpg') 1x
+            );
+            background-position: center bottom;
+        }
+
+        &__sidebar {
+            grid-row: 3/4;
+            grid-column: 1/2;
+            padding: 24px;
+        }
+    }
+
+    @media (max-width: $screen-xs) {
+        .game__bg {
+            background-image: url('../img/main-bg/main-bg-960-opt.jpg');
+            background-image: -webkit-image-set(
+                            url('../img/main-bg/main-bg-960-opt.webp') 1x,
+                            url('../img/main-bg/main-bg-960-opt.jpg') 1x
+            );
+            background-image: image-set(
+                            url('../img/main-bg/main-bg-960-opt.webp') 1x,
+                            url('../img/main-bg/main-bg-960-opt.jpg') 1x
+            );
+            background-position: center bottom -90px;
+        }
+
+        &__sidebar {
+            padding: 16px;
+        }
+
+        &__block {
+            padding: 16px;
+        }
+
+        &__questions,
+        &__answers {
+            padding: 0;
+        }
+
+        &__answers {
+        }
+    }
+}
+
+.main {
+    position: relative;
+
+    grid-row: 2/3;
+    grid-column: 1/2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: auto;
+    padding-top: 170px;
+
+    .game-logo {
+        position: absolute;
+        top: 0;
+    }
+
+
+    @media (max-width: $screen-md) {
+        margin-top: 0;
+        padding-top: 220px;
+    }
+
+    @media (max-width: $screen-sm) {
+    }
+
+    @media (max-width: $screen-xs) {
+        padding-top: 20px;
+    }
+}
+
+.players {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    margin-bottom: 5%;
+
+    &__item {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    &__picture {
+        width: 174px;
+        height: 174px;
+
+        border-width: 7px;
+    }
+
+    &__name {
+        max-width: 174px;
+        margin-top: 3px;
+        padding: 8px 16px;
+        overflow: hidden;
+
+        font-size: 18px;
+        line-height: 22px;
+        font-weight: 600;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+
+        background: getcolor(base, black-rgba8);
+        border-radius: 20px;
+    }
+
+    &__action {
+        position: relative;
+        z-index: 2;
+        text-align: center;
+    }
+
+    &__row {
+        display: flex;
+        margin-top: 8px;
+    }
+
+    @media (max-width: $screen-md) {
+        &__picture {
+            width: 154px;
+            height: 154px;
+        }
+    }
+
+    @media (max-width: $screen-xs) {
+        gap: 6px;
+
+        &__picture {
+            width: 88px;
+            height: 88px;
+
+            border-width: 4px;
+        }
+
+        &__name {
+            max-width: 85px;
+            padding: 4px 8px;
+
+            font-size: 10px;
+            line-height: inherit;
+        }
+
+        .hint {
+            padding: 3px 5px;
+            font-size: 8px;
+
+            &__name {
+                padding-left: 2px;
+                font-size: 8px;
+            }
+
+            &__cost {
+                margin-left: 4px;
+                padding-left: 4px;
+            }
+        }
+
+        .icon-question {
+            display: none;
+        }
+    }
+}
+
+.question {
+    padding: 14px 32px;
+
+    font-size: 22px;
+    line-height: 27px;
+    font-weight: 700;
+    text-align: center;
+
+    background: $gd-dark;
+    border: 2px solid getcolor(base, white);
+    border-radius: 100px;
+
+    @media (max-width: $screen-md) {
+        font-size: 18px;
+        line-height: inherit;
+
+        border-radius: 10px;
+    }
+
+    @media (max-width: $screen-sm) {
+        padding: 16px;
+        font-size: 13px;
+    }
+}

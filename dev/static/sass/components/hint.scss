@@ -2,10 +2,11 @@
     display: inline-flex;
     align-items: center;
     justify-content: space-between;
-    padding: 8px 11px;
+    padding: 6px 11px;
 
     font-size: 14px;
     color: getcolor(base, white);
+    white-space: nowrap;
 
     background: $gd-base;
     border: 2px solid getcolor(base, white);
@@ -58,6 +59,39 @@
             background-color: getcolor(base, white);
 
             transform: translate(0, -50%);
+        }
+    }
+
+    @media (max-width: $screen-md) {
+        font-size: 12px;
+
+        &__name {
+            font-size: 11px;
+        }
+    }
+
+    @media (max-width: $screen-xs) {
+        font-size: 10px;
+
+        &__icon {
+            width: 16px;
+            height: 16px;
+
+            &.-remove {
+                svg {
+                    width: 12px;
+                }
+            }
+        }
+
+        &__name {
+            padding-left: 8px;
+            font-size: 10px;
+        }
+
+        &__cost {
+            margin-left: 6px;
+            padding-left: 6px;
         }
     }
 }

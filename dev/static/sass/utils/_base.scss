@@ -92,6 +92,23 @@ h1, h2, h3, h4, h5, h6 {
     clip: rect(0 0 0 0);
 }
 
+.wrapper {
+    display: flex;
+    min-height: 100%;
+}
+
+.hidden-md {
+    @media (max-width: $screen-md) {
+        display: none;
+    }
+}
+.visible-md {
+    display: none;
+    @media (max-width: $screen-md) {
+        display: inline-block;
+    }
+}
+
 .hidden-sm {
     @media (max-width: $screen-sm) {
         display: none;
@@ -231,6 +248,37 @@ h1, h2, h3, h4, h5, h6 {
         .tooltip {
             opacity: 1;
             visibility: visible;
+        }
+    }
+
+    &.-xs {
+        width: 13px;
+        height: 13px;
+        margin-left: 2px;
+        flex-shrink: 0;
+
+        .tooltip {
+            &_bottom,
+            &_top {
+                &.-right {
+                    right: -26px;
+                }
+
+                &.-left {
+                    left: -24px;
+                }
+            }
+
+            &_left,
+            &_right {
+                &.-top {
+                    top: calc(50% + 5px);
+                }
+
+                &.-bottom {
+                    bottom: calc(50% + 1px);
+                }
+            }
         }
     }
 

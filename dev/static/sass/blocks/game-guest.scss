@@ -1,33 +1,16 @@
 .game {
     display: grid;
     grid-template-columns: 1fr auto;
-    grid-template-rows: auto 4fr 1fr;
-    height: 100%;
-    /*
-   &__row {
-       display: flex;
-       justify-content: space-between;
-       height: 100%;
-   }
-
-   &__main {
-       display: flex;
-       flex-direction: column;
-       flex: 1;
-
-       background: url('../img/main-bg/main-bg-1920-opt.jpg') center bottom / cover no-repeat;
-   }
-   */
+    grid-template-rows: auto 1fr auto;
+    width: 100%;
 
     &__sidebar {
         grid-row: 1/4;
         grid-column: 2/3;
+        max-width: 720px;
         padding: 32px;
-        background: $gd-radial;
 
-        &.-guest {
-            max-width: 720px;
-        }
+        background: $gd-radial;
     }
 
     &__bg {
@@ -50,17 +33,14 @@
     @media (max-width: $screen-md) {
         grid-template-columns: 1fr;
 
-        &__sidebar {
+        .game__sidebar {
             grid-column: 1/2;
             grid-row: 3/4;
-
-            &.-guest {
-                max-width: 100%;
-                padding-bottom: 80px;
-            }
+            max-width: 100%;
+            padding-bottom: 80px;
         }
 
-        &__bg {
+        .game__bg {
             grid-row: 1/3;
             background-position: center top -250px;
             background-size: unset;
@@ -68,14 +48,11 @@
     }
 
     @media (max-width: $screen-xs) {
-        &__sidebar {
-
-            &.-guest {
-                padding-bottom: 240px;
-            }
+        .game__sidebar {
+            padding-bottom: 240px;
         }
 
-        &__bg {
+        .game__bg {
             background-image: url('../img/main-bg/main-bg-960-opt.jpg');
             background-image: -webkit-image-set(
                             url('../img/main-bg/main-bg-960-opt.webp') 1x,
@@ -88,25 +65,30 @@
             background-position: center top;
             background-size: cover;
         }
+
+        .game-logo {
+            display: inline-block;
+        }
     }
 }
 
 .main {
     grid-row: 2/3;
     grid-column: 1/2;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 404px;
+    margin: auto;
+    padding-bottom: 95px;
 
-    &.-guest {
-        width: 100%;
-        max-width: 404px;
-        margin: auto;
-
-        text-align: center;
-    }
-
+    text-align: center;
     &__action {
         display: flex;
         flex-direction: column;
         gap: 10px;
+        width: 100%;
     }
 
     &__btn-play {
@@ -125,13 +107,11 @@
     }
 
     @media (max-width: $screen-md) {
-        &.-guest {
-            max-width: 100%;
-            width: 100%;
-            padding-bottom: 35px;
-            padding-left: 60px;
-            padding-right: 60px;
-        }
+        max-width: 100%;
+        width: 100%;
+        padding-bottom: 35px;
+        padding-left: 60px;
+        padding-right: 60px;
 
         &__action {
             flex-direction: row;
@@ -140,11 +120,9 @@
     }
 
     @media (max-width: $screen-sm) {
-        &.-guest {
-            max-width: 520px;
-            padding-left: 0;
-            padding-right: 0;
-        }
+        max-width: 520px;
+        padding-left: 0;
+        padding-right: 0;
 
         &__action {
             flex-direction: column;
@@ -153,11 +131,9 @@
     }
 
     @media (max-width: $screen-xs) {
-        &.-guest {
-            max-width: 400px;
-            padding-left: 36px;
-            padding-right: 36px;
-        }
+        max-width: 400px;
+        padding-left: 36px;
+        padding-right: 36px;
 
         &__btn-play {
             padding-top: 12px;
@@ -170,51 +146,6 @@
         &__btn-guest {
             font-size: 13px;
             line-height: 17px;
-        }
-    }
-}
-
-.game-logo {
-    position: relative;
-    display: inline-flex;
-
-    &__title {
-        position: absolute;
-        top: 50%;
-        left: 50%;
-
-        padding: 10px 40px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-
-        font-size: 25px;
-        font-weight: 800;
-        line-height: 1.44;
-        text-transform: uppercase;
-        text-shadow: 0 0 9px rgba(0, 0, 0, 0.8);
-        text-align: center;
-        color: getcolor(yellow, light);
-
-        background-color: #540081;
-        border-radius: 64px;
-
-        transform: translate(-50%, -50%);
-    }
-
-    @media (max-width: $screen-md) {
-        width: 280px;
-
-        &__title {
-            font-size: 20px;
-            line-height: 1.3;
-        }
-    }
-
-    @media (max-width: $screen-xs) {
-        width: 250px;
-        &__title {
-            font-size: 18px;
         }
     }
 }

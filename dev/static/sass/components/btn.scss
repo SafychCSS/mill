@@ -41,6 +41,7 @@
 
     &_login {
         padding: 12px 13px;
+        min-height: 36px;
     }
 
     &_sound {
@@ -174,6 +175,15 @@
             padding-right: 14px;
         }
     }
+
+    @media (max-width: $screen-xs) {
+        &_border {
+            &::before,
+            &::after {
+                padding: 2px;
+            }
+        }
+    }
 }
 
 .btn-answer {
@@ -285,6 +295,23 @@
         background: $gd-answer-incorrect;
         &::after {
             content: unset;
+        }
+    }
+
+    @media (max-width: $screen-md) {
+        padding-top: 13px;
+        padding-bottom: 13px;
+
+        font-size: 16px;
+    }
+
+    @media (max-width: $screen-xs) {
+        padding: 5px 12px;
+
+        font-size: 11px;
+
+        &__variant {
+            font-size: 11px;
         }
     }
 }

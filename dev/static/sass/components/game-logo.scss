@@ -1,0 +1,47 @@
+.game-logo {
+    position: relative;
+
+    width: 314px;
+    display: inline-flex;
+
+    &__title {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+
+        padding: 10px 40px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        font-size: 25px;
+        font-weight: 800;
+        line-height: 1.44;
+        text-transform: uppercase;
+        text-shadow: 0 0 9px rgba(0, 0, 0, 0.8);
+        text-align: center;
+        color: getcolor(yellow, light);
+
+        background-color: #540081;
+        border-radius: 64px;
+
+        transform: translate(-50%, -50%);
+    }
+
+    @media (max-width: $screen-md) {
+        width: 280px;
+
+        &__title {
+            font-size: 20px;
+            line-height: 1.3;
+        }
+    }
+
+    @media (max-width: $screen-xs) {
+        display: none;
+        width: 250px;
+        &__title {
+            font-size: 18px;
+        }
+    }
+}

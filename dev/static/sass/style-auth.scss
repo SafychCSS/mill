@@ -1,0 +1,25 @@
+// @import './utils/fonts';
+@import './utils/vars';
+@import './utils/mixins';
+@import './utils/functions';
+@import './utils/base';
+
+@import './components/tooltip';
+@import './components/btn';
+
+@import './blocks/header-auth';
+@import './components/user';
+
+/* page game */
+@import "./blocks/game-auth";
+@import "./components/game-logo";
+@import "./components/game-step";
+@import "./components/hint";
+@import "./components/round";
+@import './components/round-time';
+/* end page game */
+
+@import './components/form-elements';
+
+@import './blocks/footer-auth';
+

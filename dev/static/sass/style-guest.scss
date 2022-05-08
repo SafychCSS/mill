@@ -1,0 +1,22 @@
+// @import './utils/fonts';
+@import './utils/vars';
+@import './utils/mixins';
+@import './utils/functions';
+@import './utils/base';
+
+@import './components/tooltip';
+@import './components/btn';
+
+@import './blocks/header-guest';
+
+/* page game */
+@import "./blocks/game-guest";
+@import "./components/game-logo";
+@import './components/rules';
+@import './components/helper';
+/* end page game */
+
+@import './components/form-elements';
+
+@import './blocks/footer-guest';
+

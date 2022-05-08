@@ -57,4 +57,12 @@
     &__reward {
         margin-left: auto;
     }
+
+    @media (max-width: $screen-xs) {
+        font-size: 10px;
+
+        &_guaranteed {
+            font-size: 12px;
+        }
+    }
 }
