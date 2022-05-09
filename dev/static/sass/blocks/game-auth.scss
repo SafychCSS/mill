@@ -136,6 +136,10 @@
         &__block {
             padding: 16px;
         }
+
+        &__answers {
+            grid-template-columns: 1fr 1fr;
+        }
     }
 }
 
