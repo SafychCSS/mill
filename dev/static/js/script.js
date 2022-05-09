@@ -1,4 +1,4 @@
-document.addEventListener('DOMContentLoaded', function () {
+document.addEventListener('load', function () {
     /* btn answer */
     const btnAnswers = document.querySelectorAll('.btn-answer');
     btnAnswers.forEach(btn => {

@@ -1,0 +1,53 @@
+.play-audio {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+
+    &__player {
+        display: none;
+    }
+
+    &__btn {
+        width: 24px;
+        height: 24px;
+
+        cursor: pointer;
+
+        svg {
+            width: 100%;
+            height: 100%;
+
+            fill: transparent;
+        }
+    }
+
+    &__line {
+        position: relative;
+
+        width: 100%;
+        height: 5px;
+
+        background: getcolor(base, white-rgba3);
+    }
+
+    &__line-active {
+        position: absolute;
+        top: 0;
+        left: 0;
+
+        height: 100%;
+
+        background-color: getcolor(base, white);
+    }
+
+    &__time {
+        font-size: 16px;
+        font-weight: 400;
+    }
+
+    @media (max-width: $screen-xs) {
+        &__time {
+            font-size: 12px;
+        }
+    }
+}
