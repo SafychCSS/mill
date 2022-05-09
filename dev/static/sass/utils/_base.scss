@@ -95,6 +95,7 @@ h1, h2, h3, h4, h5, h6 {
 .wrapper {
     display: flex;
     min-height: 100%;
+    overflow: hidden;
 }
 
 .hidden-md {
@@ -117,6 +118,18 @@ h1, h2, h3, h4, h5, h6 {
 .visible-sm {
     display: none;
     @media (max-width: $screen-sm) {
+        display: inline-block;
+    }
+}
+
+.hidden-xs {
+    @media (max-width: $screen-xs) {
+        display: none;
+    }
+}
+.visible-xs {
+    display: none;
+    @media (max-width: $screen-xs) {
         display: inline-block;
     }
 }

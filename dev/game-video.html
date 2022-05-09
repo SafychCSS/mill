@@ -13,9 +13,9 @@
 <body>
     <div class="wrapper">
         <div class="game">
-            <div class="game__bg"></div>
+            <div class="game__bg -video"></div>
             //= blocks/header-auth.html
-            <main class="main">
+            <main class="main -video">
                 <div class="game-logo">
                     <picture>
                         <source srcset="./static/img/circle-opt.webp, ./static/img/circle@2x-opt.webp 2x" type="image/webp">
@@ -69,26 +69,15 @@
                 </div>
 
                 <div class="game__block">
-                    <div class="game__questions">
-                        <div class="question">Как называется российская премия в области национальной географии и экологии?</div>
-                    </div>
-                    <div class="game__answers">
-                        <button class="btn-answer">
-                            <span class="btn-answer__variant">A:</span>
-                            <span class="btn-answer__name">“Хрустальный компас”</span>
-                        </button>
-                        <button class="btn-answer">
-                            <span class="btn-answer__variant">B:</span>
-                            <span class="btn-answer__name">“Медная буссоль”</span>
-                        </button>
-                        <button class="btn-answer">
-                            <span class="btn-answer__variant">C:</span>
-                            <span class="btn-answer__name">“Платиновый навигатор”</span>
-                        </button>
-                        <button class="btn-answer">
-                            <span class="btn-answer__variant">D:</span>
-                            <span class="btn-answer__name">“Бриллиантовый бинокль”</span>
-                        </button>
+                    <div class="video-question">
+                        <p class="video-question__title">Внимание, видео вопрос</p>
+                        <div class="video-question__container" style="background-image: url('./static/img/stub/video.jpg')">
+                            <button class="video-question__btn">
+                                <svg>
+                                    <use xlink:href="static/img/sprite.svg#play-video"></use>
+                                </svg>
+                            </button>
+                        </div>
                     </div>
                 </div>
             </main>
@@ -414,7 +403,7 @@
                     <div class="game-balance game-step__balance">
                         <span class="game-balance__name">Игровой баланс:</span>
                         <span class="game-balance__money">1 500 ₽</span>
-                        <button class="btn game-balance__deposit">+<span class="hidden-xs"> Попоплнить</span></button>
+                        <button class="btn game-balance__deposit">+<span class="hidden-xs"> Пополнить</span></button>
                     </div>
                     <div class="game-step__info">
                         <p class="game-step__prize">Выигрыш по раундам:</p>

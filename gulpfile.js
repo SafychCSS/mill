@@ -121,9 +121,9 @@ const fonts = () => {
 // images
 const imagesDev = () => {
     return src([
-        'dev/static/img/**/*.{gif,png,jpg,svg}',
-        '!dev/static/img/icon-png/*.png',
-        '!dev/static/img/svg/*.svg'
+        'dev/static/img/**/*.{gif,png,jpg,svg,webp}',
+        // '!dev/static/img/icon-png/*.png',
+        // '!dev/static/img/svg/*.svg'
     ])
         .pipe(dest('dist/static/img/'));
 }

@@ -8,6 +8,8 @@
         grid-row: 1/4;
         grid-column: 2/3;
         padding: 24px 32px;
+        min-width: 492px;
+
         background: $gd-radial;
     }
 
@@ -30,16 +32,13 @@
 
     &__block {
         width: 100%;
-        padding-top: 32px;
-        padding-bottom: 32px;
+        padding: 32px;
         margin-top: auto;
 
         background: $gd-black;
     }
 
     &__questions {
-        padding-left: 32px;
-        padding-right: 32px;
     }
 
     &__answers {
@@ -47,26 +46,29 @@
         grid-template-columns: 1fr 1fr;
         gap: 10px;
         margin-top: 10px;
-        padding-left: 48px;
-        padding-right: 48px;
+        padding-left: 16px;
+        padding-right: 16px;
     }
 
     @media (max-width: $screen-md) {
         &__bg {
             grid-row: 2/3;
             background-position: center bottom 60px;
+
+            &.-video {
+                background-position: center bottom;
+            }
         }
 
         &__sidebar {
             grid-row: 2/3;
             grid-column: 2/3;
+            min-width: 396px;
             padding: 24px;
         }
 
-        &__questions,
-        &__answers {
-            padding-left: 24px;
-            padding-right: 24px;
+        &__block {
+            padding: 24px;
         }
 
         &__answers {
@@ -93,6 +95,7 @@
         &__sidebar {
             grid-row: 3/4;
             grid-column: 1/2;
+            min-width: 100%;
             padding: 24px;
         }
     }
@@ -109,6 +112,10 @@
                             url('../img/main-bg/main-bg-960-opt.jpg') 1x
             );
             background-position: center bottom -90px;
+
+            &.-video {
+                background-position: center bottom;
+            }
         }
 
         &__sidebar {
@@ -117,14 +124,6 @@
 
         &__block {
             padding: 16px;
-        }
-
-        &__questions,
-        &__answers {
-            padding: 0;
-        }
-
-        &__answers {
         }
     }
 }
@@ -145,17 +144,34 @@
         top: 0;
     }
 
+    &.-video {
+        padding-top: 5px;
+    }
 
     @media (max-width: $screen-md) {
         margin-top: 0;
         padding-top: 220px;
+
+        &.-video {
+            padding-top: 150px;
+            margin-top: auto;
+
+            .game__block {
+                margin-top: 0;
+            }
+        }
     }
 
     @media (max-width: $screen-sm) {
+        padding-top: 150px;
     }
 
     @media (max-width: $screen-xs) {
         padding-top: 20px;
+
+        &.-video {
+            padding-top: 20px;
+        }
     }
 }
 

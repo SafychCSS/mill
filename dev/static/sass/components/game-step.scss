@@ -1,5 +1,5 @@
 .game-step {
-    max-width: 492px;
+    width: 100%;
 
     &__title {
         margin-bottom: 16px;
@@ -120,10 +120,6 @@
             &.-total {
                 font-size: 14px;
             }
-        }
-
-        &__btn {
-            width: calc(100% - 25px);
         }
     }
 }
