@@ -16,14 +16,14 @@
     &__bg {
         grid-row: 1/4;
         grid-column: 1/2;
-        background-image: url('../img/main-bg/main-bg-1920-opt.jpg');
+        background-image: url('../img/main-bg/bg1920-opt.jpg');
         background-image: -webkit-image-set(
-                        url('../img/main-bg/main-bg-1920-opt.webp') 1x,
-                        url('../img/main-bg/main-bg-1920-opt.jpg') 1x
+                        url('../img/main-bg/bg1920-opt.webp') 1x,
+                        url('../img/main-bg/bg1920-opt.jpg') 1x
         );
         background-image: image-set(
-            url('../img/main-bg/main-bg-1920-opt.webp') 1x,
-            url('../img/main-bg/main-bg-1920-opt.jpg') 1x
+            url('../img/main-bg/bg1920-opt.webp') 1x,
+            url('../img/main-bg/bg1920-opt.jpg') 1x
         );
         background-repeat: no-repeat;
         background-position: center bottom;
@@ -41,6 +41,10 @@
     &__questions {
     }
 
+    &__play-again {
+        margin-top: 10px;
+    }
+
     &__answers {
         display: grid;
         grid-template-columns: 1fr 1fr;
@@ -53,7 +57,15 @@
     @media (max-width: $screen-md) {
         &__bg {
             grid-row: 2/3;
-            background-position: center bottom 60px;
+            background-image: url('../img/main-bg/bg1280-opt.jpg');
+            background-image: -webkit-image-set(
+                            url('../img/main-bg/bg1280-opt.webp') 1x,
+                            url('../img/main-bg/bg1280-opt.jpg') 1x
+            );
+            background-image: image-set(
+                            url('../img/main-bg/bg1280-opt.webp') 1x,
+                            url('../img/main-bg/bg1280-opt.jpg') 1x
+            );
 
             &.-video {
                 background-position: center bottom;
@@ -73,23 +85,23 @@
 
         &__answers {
             grid-template-columns: 1fr;
+            padding: 0;
         }
     }
 
     @media (max-width: $screen-sm) {
         grid-template-columns: 1fr;
 
-        .game__bg {
-            background-image: url('../img/main-bg/main-bg-1440-opt.jpg');
+        &__bg {
+            background-image: url('../img/main-bg/bg960-opt.jpg');
             background-image: -webkit-image-set(
-                            url('../img/main-bg/main-bg-1440-opt.webp') 1x,
-                            url('../img/main-bg/main-bg-1440-opt.jpg') 1x
+                            url('../img/main-bg/bg960-opt.webp') 1x,
+                            url('../img/main-bg/bg960-opt.jpg') 1x
             );
             background-image: image-set(
-                            url('../img/main-bg/main-bg-1440-opt.webp') 1x,
-                            url('../img/main-bg/main-bg-1440-opt.jpg') 1x
+                            url('../img/main-bg/bg960-opt.webp') 1x,
+                            url('../img/main-bg/bg960-opt.jpg') 1x
             );
-            background-position: center bottom;
         }
 
         &__sidebar {
@@ -101,7 +113,7 @@
     }
 
     @media (max-width: $screen-xs) {
-        .game__bg {
+        &__bg {
             background-image: url('../img/main-bg/main-bg-960-opt.jpg');
             background-image: -webkit-image-set(
                             url('../img/main-bg/main-bg-960-opt.webp') 1x,
@@ -111,10 +123,9 @@
                             url('../img/main-bg/main-bg-960-opt.webp') 1x,
                             url('../img/main-bg/main-bg-960-opt.jpg') 1x
             );
-            background-position: center bottom -90px;
+            background-position: center bottom;
 
             &.-video {
-                background-position: center bottom;
             }
         }
 
@@ -280,14 +291,13 @@
     border-radius: 100px;
 
     @media (max-width: $screen-md) {
-        font-size: 18px;
-        line-height: inherit;
-
         border-radius: 10px;
     }
 
-    @media (max-width: $screen-sm) {
+    @media (max-width: $screen-xs) {
         padding: 16px;
+
         font-size: 13px;
+        line-height: inherit;
     }
 }

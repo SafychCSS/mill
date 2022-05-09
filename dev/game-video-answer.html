@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@300;400;500;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="./static/css/style-auth.min.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="wrapper">
+        <div class="game">
+            <div class="game__bg -video"></div>
+            //= blocks/header-auth.html
+            <main class="main">
+                <div class="game-logo">
+                    <picture>
+                        <source srcset="./static/img/circle-opt.webp, ./static/img/circle@2x-opt.webp 2x" type="image/webp">
+                        <img src="./static/img/circle-opt.png" srcset="./static/img/circle-opt.png 1x, ./static/img/circle@2x-opt.png 2x" alt="game logo">
+                    </picture>
+
+                    <p class="game-logo__title">Клуб миллионеров</p>
+                </div>
+                <div class="players">
+                    <div class="players__item">
+                        <div class="user">
+                            <div class="user__picture icon-status-gold players__picture">
+                                <img src="static/img/stub/ava.png" alt="player">
+                            </div>
+                        </div>
+                        <p class="players__name">Юзернэйм</p>
+                    </div>
+
+                    <div class="players__action">
+                        <div class="round-time -quarter">
+                            <div class="round-time__line">&nbsp;</div>
+                            <span class="round-time__second">45</span>
+                        </div>
+                        <div class="players__row">
+                            <button class="hint">
+                                <span class="hint__icon">
+                                    <svg>
+                                        <use xlink:href="static/img/sprite.svg#time-loading"></use>
+                                    </svg>
+                                </span>
+                                <span class="hint__name"><span class="hidden-md">Еще минуту</span> <span class="visible-md">+ Минута</span></span>
+                                <span class="hint__cost">- 500₽</span>
+                            </button>
+                            <div class="icon-question -xs">
+                                <svg>
+                                    <use xlink:href="static/img/sprite.svg#question"></use>
+                                </svg>
+                                <span class="tooltip tooltip_bottom -right">Этот значок значит, что юзер — член</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="players__item">
+                        <div class="user -silver">
+                            <div class="user__picture players__picture">
+                                <img src="static/img/stub/ava.png" alt="host">
+                            </div>
+                        </div>
+                        <p class="players__name">Ведущий</p>
+                    </div>
+                </div>
+
+                <div class="game__block">
+                    <div class="game__questions">
+                        <div class="question">Как называется российская премия в области национальной географии и экологии?</div>
+                        <button class="btn btn_full game__play-again">Смотреть еще раз</button>
+                    </div>
+                    <div class="game__answers">
+                        <button class="btn-answer">
+                            <span class="btn-answer__variant">A:</span>
+                            <span class="btn-answer__name">“Хрустальный компас”</span>
+                        </button>
+                        <button class="btn-answer">
+                            <span class="btn-answer__variant">B:</span>
+                            <span class="btn-answer__name">“Медная буссоль”</span>
+                        </button>
+                        <button class="btn-answer">
+                            <span class="btn-answer__variant">C:</span>
+                            <span class="btn-answer__name">“Платиновый навигатор”</span>
+                        </button>
+                        <button class="btn-answer">
+                            <span class="btn-answer__variant">D:</span>
+                            <span class="btn-answer__name">“Бриллиантовый бинокль”</span>
+                        </button>
+                    </div>
+                </div>
+            </main>
+            <div class="game__sidebar">
+                <div class="game-step">
+                    <h2 class="game-step__title">Игра — 7 раунд</h2>
+                    <div class="game-step__row -helpers">
+                        <div class="game-step__column">
+                            <h4 class="game-step__heading">Подсказки:</h4>
+
+                            <div class="game-step__row -inactive">
+                                <button class="hint game-step__btn">
+                        <span class="hint__icon">
+                            <svg>
+                                <use xlink:href="static/img/sprite.svg#interview"></use>
+                            </svg>
+                        </span>
+                                    <span class="hint__cost">- 500₽</span>
+                                </button>
+                                <div class="icon-question -xs">
+                                    <svg>
+                                        <use xlink:href="static/img/sprite.svg#question"></use>
+                                    </svg>
+                                    <span class="tooltip tooltip_bottom -right">Этот значок значит, что юзер — член</span>
+                                </div>
+                            </div>
+
+                            <div class="game-step__row">
+                                <button class="hint game-step__btn">
+                        <span class="hint__icon -remove">
+                            <svg>
+                                <use xlink:href="static/img/sprite.svg#remove-answer-xs"></use>
+                            </svg>
+                        </span>
+                                    <span class="hint__cost">- 500₽</span>
+                                </button>
+                                <div class="icon-question -xs">
+                                    <svg>
+                                        <use xlink:href="static/img/sprite.svg#question"></use>
+                                    </svg>
+                                    <span class="tooltip tooltip_bottom -right">Этот значок значит, что юзер — член</span>
+                                </div>
+                            </div>
+
+                            <div class="game-step__row">
+                                <button class="hint game-step__btn">
+                        <span class="hint__icon -half">
+                            <svg>
+                                <use xlink:href="static/img/sprite.svg#remove-half"></use>
+                            </svg>
+                        </span>
+                                    <span class="hint__cost">- 500₽</span>
+                                </button>
+                                <div class="icon-question -xs">
+                                    <svg>
+                                        <use xlink:href="static/img/sprite.svg#question"></use>
+                                    </svg>
+                                    <span class="tooltip tooltip_bottom -right">Этот значок значит, что юзер — член</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="game-step__column -help">
+                            <h4 class="game-step__heading">Помощь:</h4>
+
+                            <div class="game-step__row">
+                                <button class="hint game-step__btn">
+                                    <span class="hint__icon">
+                                        <svg>
+                                            <use xlink:href="static/img/sprite.svg#thumbs-down"></use>
+                                        </svg>
+                                    </span>
+                                    <span class="hint__name">Пропуск <span class="hidden-md">вопроса</span></span>
+                                    <span class="hint__cost">- 500₽</span>
+                                </button>
+                                <div class="icon-question -xs">
+                                    <svg>
+                                        <use xlink:href="static/img/sprite.svg#question"></use>
+                                    </svg>
+                                    <span class="tooltip tooltip_bottom -right">Этот значок значит, что юзер — член</span>
+                                </div>
+                            </div>
+
+                            <div class="game-step__row">
+                                <button class="hint game-step__btn">
+                                    <span class="hint__icon">
+                                        <svg>
+                                            <use xlink:href="static/img/sprite.svg#time-loading"></use>
+                                        </svg>
+                                    </span>
+                                    <span class="hint__name"><span class="hidden-md">Еще минуту</span> <span class="visible-md">+ Минута</span></span>
+                                    <span class="hint__cost">- 500₽</span>
+                                </button>
+                                <div class="icon-question -xs">
+                                    <svg>
+                                        <use xlink:href="static/img/sprite.svg#question"></use>
+                                    </svg>
+                                    <span class="tooltip tooltip_bottom -right">Этот значок значит, что юзер — член</span>
+                                </div>
+                            </div>
+
+                            <div class="game-step__row -inactive">
+                                <button class="hint game-step__btn">
+                                    <span class="hint__icon">
+                                        <svg>
+                                            <use xlink:href="static/img/sprite.svg#message-read"></use>
+                                        </svg>
+                                    </span>
+                                    <span class="hint__name"><span class="hidden-md">Игру на паузу</span> <span class="visible-md">Пауза</span></span>
+                                    <span class="hint__cost">- 500₽</span>
+                                </button>
+                                <div class="icon-question -xs">
+                                    <svg>
+                                        <use xlink:href="static/img/sprite.svg#question"></use>
+                                    </svg>
+                                    <span class="tooltip tooltip_bottom -right">Этот значок значит, что юзер — член</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="game-step__round">
+                        <h4 class="game-step__heading">Раунды:</h4>
+                        <div class="game-step__round-list">
+                            <div class="round round_completed">
+                                <span class="round__number">1</span>
+                                <div class="round__star">
+                                    <svg>
+                                        <use xlink:href="static/img/sprite.svg#star"></use>
+                                    </svg>
+                                </div>
+                                <span class="round__reward">5 ₽</span>
+                            </div>
+                            <div class="round round_completed">
+                                <span class="round__number">2</span>
+                                <div class="round__star">
+                                    <svg>
+                                        <use xlink:href="static/img/sprite.svg#star"></use>
+                                    </svg>
+                                </div>
+                                <span class="round__reward">10 ₽</span>
+                            </div>
+                            <div class="round round_completed">
+                                <span class="round__number">3</span>
+                                <div class="round__star">
+                                    <svg>
+                                        <use xlink:href="static/img/sprite.svg#star"></use>
+                                    </svg>
+                                </div>
+                                <span class="round__reward">20 ₽</span>
+                            </div>
+                            <div class="round round_completed">
+                                <span class="round__number">4</span>
+                                <div class="round__star">
+                                    <svg>
+                                        <use xlink:href="static/img/sprite.svg#star"></use>
+                                    </svg>
+                                </div>
+                                <span class="round__reward">30 ₽</span>
+                            </div>
+                            <div class="round round_guaranteed round_completed">
+                                <span class="round__number">5</span>
+                                <div class="round__star">
+                                    <svg>
+                                        <use xlink:href="static/img/sprite.svg#star"></use>
+                                    </svg>
+                                    <svg>
+                                        <use xlink:href="static/img/sprite.svg#star"></use>
+                                    </svg>
+                                    <svg>
+                                        <use xlink:href="static/img/sprite.svg#star"></use>
+                                    </svg>
+                                </div>
+                                <span class="round__reward">100 ₽</span>
+                            </div>
+                            <div class="round round_completed">
+                                <span class="round__number">6</span>
+                                <div class="round__star">
+                                    <svg>
+                                        <use xlink:href="static/img/sprite.svg#star"></use>
+                                    </svg>
+                                    <svg>
+                                        <use xlink:href="static/img/sprite.svg#star"></use>
+                                    </svg>
+                                </div>
+                                <span class="round__reward">200 ₽</span>
+                            </div>
+                            <div class="round round_current">
+                                <span class="round__number">7</span>
+                                <div class="round__star">
+                                    <svg>
+                                        <use xlink:href="static/img/sprite.svg#star"></use>
+                                    </svg>
+                                    <svg>
+                                        <use xlink:href="static/img/sprite.svg#star"></use>
+                                    </svg>
+                                </div>
+                                <span class="round__reward">300 ₽</span>
+                            </div>
+                            <div class="round">
+                                <span class="round__number">8</span>
+                                <div class="round__star">
+                                    <svg>
+                                        <use xlink:href="static/img/sprite.svg#star"></use>
+                                    </svg>
+                                    <svg>
+                                        <use xlink:href="static/img/sprite.svg#star"></use>
+                                    </svg>
+                                </div>
+                                <span class="round__reward">400 ₽</span>
+                            </div>
+                            <div class="round">
+                                <span class="round__number">9</span>
+                                <div class="round__star">
+                                    <svg>
+                                        <use xlink:href="static/img/sprite.svg#star"></use>
+                                    </svg>
+                                    <svg>
+                                        <use xlink:href="static/img/sprite.svg#star"></use>
+                                    </svg>
+                                </div>
+                                <span class="round__reward">500 ₽</span>
+                            </div>
+                            <div class="round round_guaranteed">
+                                <span class="round__number">10</span>
+                                <div class="round__star">
+                                    <svg>
+                                        <use xlink:href="static/img/sprite.svg#star"></use>
+                                    </svg>
+                                    <svg>
+                                        <use xlink:href="static/img/sprite.svg#star"></use>
+                                    </svg>
+                                    <svg>
+                                        <use xlink:href="static/img/sprite.svg#star"></use>
+                                    </svg>
+                                    <svg>
+                                        <use xlink:href="static/img/sprite.svg#star"></use>
+                                    </svg>
+                                </div>
+                                <span class="round__reward">1000 ₽</span>
+                            </div>
+                            <div class="round">
+                                <span class="round__number">11</span>
+                                <div class="round__star">
+                                    <svg>
+                                        <use xlink:href="static/img/sprite.svg#star"></use>
+                                    </svg>
+                                    <svg>
+                                        <use xlink:href="static/img/sprite.svg#star"></use>
+                                    </svg>
+                                    <svg>
+                                        <use xlink:href="static/img/sprite.svg#star"></use>
+                                    </svg>
+                                </div>
+                                <span class="round__reward">2 000 ₽</span>
+                            </div>
+                            <div class="round">
+                                <span class="round__number">12</span>
+                                <div class="round__star">
+                                    <svg>
+                                        <use xlink:href="static/img/sprite.svg#star"></use>
+                                    </svg>
+                                    <svg>
+                                        <use xlink:href="static/img/sprite.svg#star"></use>
+                                    </svg>
+                                    <svg>
+                                        <use xlink:href="static/img/sprite.svg#star"></use>
+                                    </svg>
+                                </div>
+                                <span class="round__reward">3 000 ₽</span>
+                            </div>
+                            <div class="round">
+                                <span class="round__number">13</span>
+                                <div class="round__star">
+                                    <svg>
+                                        <use xlink:href="static/img/sprite.svg#star"></use>
+                                    </svg>
+                                    <svg>
+                                        <use xlink:href="static/img/sprite.svg#star"></use>
+                                    </svg>
+                                    <svg>
+                                        <use xlink:href="static/img/sprite.svg#star"></use>
+                                    </svg>
+                                </div>
+                                <span class="round__reward">5 000 ₽</span>
+                            </div>
+                            <div class="round">
+                                <span class="round__number">14</span>
+                                <div class="round__star">
+                                    <svg>
+                                        <use xlink:href="static/img/sprite.svg#star"></use>
+                                    </svg>
+                                    <svg>
+                                        <use xlink:href="static/img/sprite.svg#star"></use>
+                                    </svg>
+                                    <svg>
+                                        <use xlink:href="static/img/sprite.svg#star"></use>
+                                    </svg>
+                                    <svg>
+                                        <use xlink:href="static/img/sprite.svg#star"></use>
+                                    </svg>
+                                </div>
+                                <span class="round__reward">10 000 ₽</span>
+                            </div>
+                            <div class="round round_guaranteed">
+                                <span class="round__number">15</span>
+                                <div class="round__star">
+                                    <svg>
+                                        <use xlink:href="static/img/sprite.svg#star"></use>
+                                    </svg>
+                                    <svg>
+                                        <use xlink:href="static/img/sprite.svg#star"></use>
+                                    </svg>
+                                    <svg>
+                                        <use xlink:href="static/img/sprite.svg#star"></use>
+                                    </svg>
+                                    <svg>
+                                        <use xlink:href="static/img/sprite.svg#star"></use>
+                                    </svg>
+                                </div>
+                                <span class="round__reward">50 000 ₽</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="game-balance game-step__balance">
+                        <span class="game-balance__name">Игровой баланс:</span>
+                        <span class="game-balance__money">1 500 ₽</span>
+                        <button class="btn game-balance__deposit">+<span class="hidden-xs"> Попоплнить</span></button>
+                    </div>
+                    <div class="game-step__info">
+                        <p class="game-step__prize">Выигрыш по раундам:</p>
+                        <p class="game-step__sum">365 ₽</p>
+                    </div>
+                    <div class="game-step__info">
+                        <p class="game-step__prize">Несгораемая сумма</p>
+                        <p class="game-step__sum -save">100 ₽</p>
+                    </div>
+                    <div class="game-step__info -total">
+                        <p class="game-step__prize">Итого выигрыш</p>
+                        <p class="game-step__sum">165 ₽</p>
+                    </div>
+
+                    <button class="btn game-step__play">Начать заново</button>
+                </div>
+            </div>
+            //= blocks/footer.html
+        </div>
+    </div>
+    <script src="./static/js/script.min.js"></script>
+</body>
+</html>
