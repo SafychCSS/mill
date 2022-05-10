@@ -247,6 +247,7 @@ h1, h2, h3, h4, h5, h6 {
 
     width: 24px;
     height: 24px;
+    flex-shrink: 0;
 
     cursor: pointer;
 
@@ -264,11 +265,39 @@ h1, h2, h3, h4, h5, h6 {
         }
     }
 
+    &.-sm {
+        width: 18px;
+        height: 18px;
+
+        .tooltip {
+            &_bottom,
+            &_top {
+                &.-right {
+                    right: -23px;
+                }
+
+                &.-left {
+                    left: -22px;
+                }
+            }
+
+            &_left,
+            &_right {
+                &.-top {
+                    top: calc(50% + 3px);
+                }
+
+                &.-bottom {
+                    bottom: calc(50% + 3px);
+                }
+            }
+        }
+    }
+
     &.-xs {
         width: 13px;
         height: 13px;
         margin-left: 2px;
-        flex-shrink: 0;
 
         .tooltip {
             &_bottom,
@@ -296,8 +325,8 @@ h1, h2, h3, h4, h5, h6 {
     }
 
     @media (max-width: $screen-xs) {
-        width: 20px;
-        height: 20px;
+        width: 18px;
+        height: 18px;
     }
 }
 

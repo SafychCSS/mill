@@ -10,6 +10,7 @@
 @import './components/user';
 @import './components/user-line';
 
+/* page game */
 @import './components/game-logo';
 @import "./components/game-step";
 @import "./components/hint";
@@ -19,6 +20,9 @@
 @import './components/helper';
 @import './components/video-question';
 @import './components/play-audio';
+
+/* page cabinet */
+@import './components/table-history';
 
 @import './components/top-line';
 

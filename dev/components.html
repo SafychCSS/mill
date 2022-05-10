@@ -11,6 +11,9 @@
     <link rel="stylesheet" type="text/css" href="./static/css/dev-components.min.css">
     <title>Document</title>
     <style>
+        body {
+            background-color: #1F1B53 !important;
+        }
         .stub-wrapper {
             max-width: 2000px;
             margin: 20px auto;
@@ -1166,10 +1169,11 @@
         </div>
     </div>
 
+    <hr>
+
     <h2>audio</h2>
     <div class="stub-block">
         <div class="play-audio">
-            <audio id="player" src="./static/img/stub/1.mp3"></audio>
             <button class="play-audio__btn">
                 <svg>
                     <use xlink:href="static/img/sprite.svg#play-video"></use>
@@ -1181,6 +1185,156 @@
             <span class="play-audio__time">00:15</span>
         </div>
     </div>
+
+    <hr>
+
+    <h2>История вывода средств</h2>
+    <table class="history" style="max-width: 1120px">
+        <tr>
+            <th>Дата запроса</th>
+            <th>Дата списания</th>
+            <th>Сумма ₽</th>
+            <th>Статус</th>
+        </tr>
+        <tr>
+            <td>12.12.2021 - 16:36</td>
+            <td></td>
+            <td>5689</td>
+            <td>
+                <div class="history__status">
+                    <span>Выплата проверяется (до 15/03/2022)</span>
+                    <button class="btn btn_border history__btn">Отменить</button>
+                    <div class="icon-question -sm">
+                        <svg>
+                            <use xlink:href="static/img/sprite.svg#question"></use>
+                        </svg>
+                        <span class="tooltip tooltip_right">Этот значок значит, что юзер — член</span>
+                    </div>
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td>12.12.2021 - 16:36</td>
+            <td>12.12.2021 - 16:36</td>
+            <td>4598</td>
+            <td>
+                <div class="history__status -success">
+                    <span>Выполнено (14.02.2022)</span>
+                    <div class="icon-question -sm">
+                        <svg>
+                            <use xlink:href="static/img/sprite.svg#question"></use>
+                        </svg>
+                        <span class="tooltip tooltip_bottom -right">Этот значок значит, что юзер — член</span>
+                    </div>
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td>12.12.2021 - 16:36</td>
+            <td>12.12.2021 - 16:36</td>
+            <td>4598</td>
+            <td>
+                <div class="history__status -error">
+                    <span>Ошибка (Недостаточно средств)</span>
+                    <div class="icon-question -sm">
+                        <svg>
+                            <use xlink:href="static/img/sprite.svg#question"></use>
+                        </svg>
+                        <span class="tooltip tooltip_bottom -right">Этот значок значит, что юзер — член</span>
+                    </div>
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td>12.12.2021 - 16:36</td>
+            <td></td>
+            <td>4598</td>
+            <td>
+                <div class="history__status">
+                    <span>Отменена (Деньги вернулись на баланс)</span>
+                    <div class="icon-question -sm">
+                        <svg>
+                            <use xlink:href="static/img/sprite.svg#question"></use>
+                        </svg>
+                        <span class="tooltip tooltip_bottom -right">Этот значок значит, что юзер — член</span>
+                    </div>
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td>12.12.2021 - 16:36</td>
+            <td></td>
+            <td>4598</td>
+            <td>
+                <div class="history__status">
+                    <span>Отменена автоматически (Деньги вернулись на баланс)</span>
+                    <div class="icon-question -sm">
+                        <svg>
+                            <use xlink:href="static/img/sprite.svg#question"></use>
+                        </svg>
+                        <span class="tooltip tooltip_bottom -right">Этот значок значит, что юзер — член</span>
+                    </div>
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td>12.12.2021 - 16:36</td>
+            <td>12.12.2021 - 16:36</td>
+            <td>4598</td>
+            <td>
+                <div class="history__status -success">
+                    <span>Выполнено (14.02.2022)</span>
+                    <div class="icon-question -sm">
+                        <svg>
+                            <use xlink:href="static/img/sprite.svg#question"></use>
+                        </svg>
+                        <span class="tooltip tooltip_bottom -right">Этот значок значит, что юзер — член</span>
+                    </div>
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td>12.12.2021 - 16:36</td>
+            <td>12.12.2021 - 16:36</td>
+            <td>4598</td>
+            <td>
+                <div class="history__status -success">
+                    <span>Выполнено (14.02.2022)</span>
+                    <div class="icon-question -sm">
+                        <svg>
+                            <use xlink:href="static/img/sprite.svg#question"></use>
+                        </svg>
+                        <span class="tooltip tooltip_bottom -right">Этот значок значит, что юзер — член</span>
+                    </div>
+                </div>
+            </td>
+        </tr>
+    </table>
+    <ul class="pagination">
+        <li class="pagination__item">
+            <a class="pagination__link pagination__link_prev" href="#"></a>
+        </li>
+        <li class="pagination__item">
+            <a class="pagination__link" href="#">1</a>
+        </li>
+        <li class="pagination__item pagination__item_current">
+            2
+        </li>
+        <li class="pagination__item">
+            <a class="pagination__link" href="#">3</a>
+        </li>
+        <li class="pagination__item">
+            ...
+        </li>
+        <li class="pagination__item">
+            <a class="pagination__link" href="#">36</a>
+        </li>
+        <li class="pagination__item">
+            <a class="pagination__link pagination__link_next" href="#"></a>
+        </li>
+    </ul>
+
+    <h2>asdasd</h2>
 </div>
 
 <script src="./static/js/script.min.js"></script>
