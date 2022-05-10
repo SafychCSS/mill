@@ -1,0 +1,83 @@
+.card {
+    width: 100%;
+    font-size: 16px;
+
+    &.-error {
+        .card__status {
+            color: getcolor(red, primary);
+        }
+
+        .card__body {
+            border: 1px solid getcolor(red, primary);
+        }
+    }
+
+    &.-warning {
+        .card__status {
+            color: getcolor(yellow, dark);
+        }
+
+        .card__body {
+            border: 1px solid getcolor(yellow, dark);
+        }
+    }
+
+    &__heading {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: 8px;
+    }
+
+    &__status {
+        color: getcolor(green, medium);
+    }
+
+    &__default {
+        display: flex;
+        align-items: center;
+
+        svg {
+            width: 24px;
+            height: 24px;
+            margin-left: 10px;
+
+            fill: getcolor(base, white);
+        }
+    }
+
+    &__body {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 8px;
+        padding: 16px 24px 16px 20px;
+
+        font-weight: 600;
+
+        border: 1px solid getcolor(green, base);
+        border-radius: 16px;
+        background-color: getcolor(base, white-rgba12);
+    }
+
+    &__block {
+        display: flex;
+        align-items: center;
+        gap: 16px;
+    }
+
+    &__logo {}
+
+    &__number {
+    }
+
+    &__date {
+        padding-right: 65px;
+    }
+
+    &__btn {
+        @extend .text-gradient;
+        font-weight: 600;
+        cursor: pointer;
+    }
+}
