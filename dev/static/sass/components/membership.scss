@@ -1,0 +1,70 @@
+.membership {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 24px;
+    padding: 24px;
+
+    border-radius: 16px;
+    background-color: getcolor(base, white-rgba12);
+
+    &.-expired {
+        .membership__status-text {
+            opacity: .5;
+        }
+    }
+
+    &.-silver {
+        .membership__status-text {
+            color: getcolor(base, white);
+        }
+    }
+
+    &.-demo {
+        .membership__status-text {
+            color: getcolor(base, white);
+        }
+    }
+
+
+    &__info {
+        flex: 1;
+    }
+
+    &__status-text {
+        padding-left: 34px;
+    }
+
+    &__status {
+        padding-bottom: 16px;
+
+        font-size: 20px;
+        font-weight: 600;
+        color: getcolor(yellow, base);
+
+        border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+    }
+
+    &__row {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        margin-top: 18px;
+
+        .icon-question {
+            svg {
+                fill: getcolor(blue, medium);
+            }
+        }
+    }
+
+    &__action {
+        display: flex;
+        align-items: center;
+        gap: 24px;
+    }
+
+    &__next-pay {
+        margin-top: 18px;
+    }
+}

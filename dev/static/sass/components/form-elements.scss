@@ -104,7 +104,7 @@
         }
     }
 
-    input:checked ~ .checkbox__label .checkbox__btn {
+    input:checked ~ .checkbox__btn {
         &::before {
             background: $gd-base;
             transform: translate(14px, -50%);
