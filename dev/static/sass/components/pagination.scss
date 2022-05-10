@@ -1,0 +1,110 @@
+.pagination {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+
+    list-style: none;
+
+    &__item {
+        font-size: 16px;
+        line-height: 1.5;
+        font-weight: 500;
+        letter-spacing: 0.02em;
+
+        &_current {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            padding: 8px 20px;
+
+            border-radius: 24px;
+            background: $gd-base;
+        }
+    }
+
+    &__link {
+        &:not(.pagination__link_prev, .pagination__link_next) {
+            position: relative;
+            z-index: 2;
+
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            padding: 8px 20px;
+
+            font-size: 16px;
+            line-height: 1.5;
+            font-weight: 500;
+            letter-spacing: 0.02em;
+            text-decoration: none;
+            text-align: center;
+            color: getcolor(base, white);
+            white-space: nowrap;
+
+            background: transparent;
+            border: none;
+            border-radius: 24px;
+
+            cursor: pointer;
+
+            &::before {
+                position:absolute;
+                top: 0;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                content: '';
+
+                padding: 3px;
+
+                border-radius: inherit;
+                background: $gd-base;
+                -webkit-mask:
+                        linear-gradient(#fff 0 0) content-box,
+                        linear-gradient(#fff 0 0);
+                -webkit-mask-composite: xor;
+                mask-composite: exclude;
+            }
+
+            &::after {
+                position: absolute;
+                top: 0;
+                left: 0;
+                content: '';
+                z-index: 1;
+
+                width: 100%;
+                height: 100%;
+                padding: 3px;
+                opacity: 0;
+
+                border-radius: inherit;
+                background: $gd-base-reverse;
+                -webkit-mask:
+                        linear-gradient(#fff 0 0) content-box,
+                        linear-gradient(#fff 0 0);
+                -webkit-mask-composite: xor;
+                mask-composite: exclude;
+
+                transition: opacity .3s;
+            }
+
+            &:hover {
+                &::after {
+                    opacity: 1;
+                }
+            }
+        }
+
+        &_prev {
+            display: flex;
+        }
+
+        &_next {
+            display: flex;
+
+            transform-origin: center;
+            transform: rotate(180deg);
+        }
+    }
+}
