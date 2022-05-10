@@ -1,0 +1,62 @@
+.additional {
+    padding: 48px 80px;
+
+    text-align: center;
+
+    border-radius: 80px;
+    background-color: getcolor(base, white-rgba12);
+
+    &.-sm {
+        padding: 32px 32px 32px 52px;
+
+        text-align: left;
+        border-radius: 100px;
+
+        .additional__name {
+            flex-direction: row;
+        }
+    }
+
+    &.-rating {
+        .additional__text {
+            margin-top: 0;
+
+            font-size: 20px;
+            font-weight: 600;
+        }
+    }
+
+    &__row {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    &__info {}
+
+    &__name {
+        display: flex;
+        flex-direction: column;
+
+        font-size: 23px;
+        font-weight: 600;
+        color: getcolor(yellow, base);
+    }
+
+    &__text {
+        margin-top: 8px;
+    }
+
+    &__condition {
+        margin-top: 38px;
+
+        font-size: 20px;
+        font-weight: 600;
+    }
+
+    &__place {
+        color: getcolor(yellow, base);
+    }
+
+    &__btn {}
+}
