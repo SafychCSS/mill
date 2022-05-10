@@ -1,70 +1,92 @@
-.membership-cb {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 24px;
-    padding: 24px;
+.membership {
+    overflow: hidden;
 
-    border-radius: 16px;
-    background-color: getcolor(base, white-rgba12);
+    font-size: 16px;
+    font-weight: 500;
 
-    &.-expired {
-        .membership__status-text {
-            opacity: .5;
-        }
-    }
+    border: 1px solid getcolor(base, white-rgba4);
+    border-radius: 40px;
 
     &.-silver {
-        .membership__status-text {
-            color: getcolor(base, white);
+        .membership__name {
+            background-color: getcolor(base, white);
         }
     }
 
     &.-demo {
-        .membership__status-text {
-            color: getcolor(base, white);
+        .membership__name {
+            background-color: getcolor(blue, secondary);
+        }
+
+        .-accent {
+            color: getcolor(red, primary);
         }
     }
 
+    &__name {
+        padding: 16px;
+
+        font-weight: 600;
+        font-size: 18px;
+        text-align: center;
+        color: getcolor(base, black);
+
+        background-color: getcolor(yellow, base);
+    }
 
     &__info {
-        flex: 1;
+        margin: 0;
+        padding: 0;
+
+        list-style: none;
     }
 
-    &__status-text {
-        padding-left: 34px;
-    }
-
-    &__status {
-        padding-bottom: 16px;
-
-        font-size: 20px;
-        font-weight: 600;
-        color: getcolor(yellow, base);
-
-        border-bottom: 1px solid rgba(255, 255, 255, 0.5);
-    }
-
-    &__row {
+    &__line {
         display: flex;
-        align-items: center;
-        gap: 12px;
-        margin-top: 18px;
+        justify-content: space-between;
+        padding: 16px;
 
-        .icon-question {
-            svg {
-                fill: getcolor(blue, medium);
-            }
+        &:nth-child(even) {
+            background-color: getcolor(base, white-rgba12);
+        }
+
+        & .cost:last-child {
+            text-align: right;
         }
     }
 
-    &__action {
-        display: flex;
-        align-items: center;
-        gap: 24px;
+    & .-accent {
+        color: getcolor(green, light);
     }
 
-    &__next-pay {
-        margin-top: 18px;
+    &__form {
+        padding: 0 16px 16px;
+    }
+
+    &__sale {
+        margin-top: 16px;
+
+        text-align: center;
+        color: getcolor(green, secondary);
+    }
+
+    &__btn {
+        margin-top: 16px;
+        text-align: center;
+    }
+}
+
+.cost {
+    &__name {
+        font-size: 12px;
+        line-height: 22px;
+        font-weight: 300;
+    }
+
+    &__value {
+        font-size: 19px;
+        font-weight: 600;
+
+        color: getcolor(yellow, base);
     }
 }

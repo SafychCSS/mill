@@ -69,6 +69,11 @@
     padding-right: 50px;
 }
 
+select {
+    appearance: none;
+    background: url(../img/icon/select-arrow.svg) right 11px center no-repeat;
+}
+
 .checkbox {
     &__label {
         display: flex;
