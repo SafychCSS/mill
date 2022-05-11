@@ -3,6 +3,8 @@
     grid-template-columns: 1fr auto;
     grid-template-rows: auto 1fr auto;
     width: 100%;
+    min-height: 100%;
+    overflow: hidden;
 
     &__sidebar {
         grid-row: 1/4;

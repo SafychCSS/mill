@@ -224,12 +224,10 @@
     }
 
     &__status-link {
-        font-size: 22px;
         @extend .text-gradient;
-        transition: background-position .3s;
 
         &:hover {
-            background-position: center 200%;
+            background: $gd-base-reverse;
         }
     }
 

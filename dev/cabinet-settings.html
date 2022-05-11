@@ -1,0 +1,470 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@300;400;500;600;800&display=swap"
+          rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="./static/css/cabinet-settings.min.css">
+    <title>Document</title>
+</head>
+<body class="cabinet-dark">
+<div class="wrapper">
+    //= blocks/header-cabinet.html
+    <main class="main settings">
+        <div class="container">
+            <h3 class="title">Профиль</h3>
+            <form class="form" name="profile" action="/" method="post">
+                <div class="form__wrapper">
+                    <div class="form__field">
+                        <label class="form__label" for="name">Имя</label>
+                        <input class="input" id="name" type="text" value="Юзернейм Юзернеймович">
+                        <span class="form__error">Ошибка</span>
+                    </div>
+                    <div class="form__line">
+                        <div class="form__field -confirm">
+                            <label class="form__label" for="email">Email</label>
+                            <input class="input" id="email" type="text" value="useuse@gmail.com">
+                            <button class="form__confirm text-gradient">Подвердить email</button>
+                        </div>
+                        <div class="form__field -confirm">
+                            <label class="form__label" for="email">Телефон</label>
+                            <div class="form__input">
+                                <input class="input" id="phone" type="text" value="+7(999) 999-99-99">
+                                <div class="icon-accepted form__icon-ok">
+                                    <svg>
+                                        <use xlink:href="static/img/sprite.svg#checkmark"></use>
+                                    </svg>
+                                </div>
+                            </div>
+                            <button class="form__confirm text-gradient">Подвердить телефон</button>
+                        </div>
+                    </div>
+
+                    <div class="settings__social">
+                        <h4 class="title title_sm">Привязка социальных сетей</h4>
+                    </div>
+
+                    <div class="form__line -sm">
+                        <div class="form__field">
+                            <div class="btn-social">
+                                <a href="#" class="btn-social__link">
+                                        <span class="btn-social__icon -vk">
+                                            <svg>
+                                                <use xlink:href="static/img/sprite.svg#social-vk"></use>
+                                            </svg>
+                                        </span>
+                                    <span class="btn-social__name">Вконтакте</span>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="form__field -error">
+                            <div class="btn-social">
+                                <a href="#" class="btn-social__link">
+                                        <span class="btn-social__icon -fb">
+                                            <svg>
+                                                <use xlink:href="static/img/sprite.svg#social-fb"></use>
+                                            </svg>
+                                        </span>
+                                    <span class="btn-social__name">Facebook</span>
+                                </a>
+                            </div>
+                            <span class="form__error">Ошибка привязки</span>
+                        </div>
+                        <div class="form__field">
+                            <div class="btn-social">
+                                <a href="#" class="btn-social__link">
+                                        <span class="btn-social__icon -google">
+                                            <svg>
+                                                <use xlink:href="static/img/sprite.svg#social-google"></use>
+                                            </svg>
+                                        </span>
+                                    <span class="btn-social__name">Google</span>
+                                </a>
+                                <button class="icon-clear btn-social__clear" type="button">
+                                    <svg>
+                                        <use xlink:href="static/img/sprite.svg#clear"></use>
+                                    </svg>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="form__field">
+                            <div class="btn-social -inactive">
+                                <a href="#" class="btn-social__link">
+                                        <span class="btn-social__icon -mail">
+                                            <svg>
+                                                <use xlink:href="static/img/sprite.svg#social-mail"></use>
+                                            </svg>
+                                        </span>
+                                    <span class="btn-social__name">Mail.ru</span>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="form__field">
+                            <div class="btn-social -inactive">
+                                <a href="#" class="btn-social__link">
+                                        <span class="btn-social__icon -yandex">
+                                            <svg>
+                                                <use xlink:href="static/img/sprite.svg#social-yandex"></use>
+                                            </svg>
+                                        </span>
+                                    <span class="btn-social__name">Яндекс</span>
+                                </a>
+                            </div>
+                        </div>
+                        <button class="btn" type="submit">Сохранить</button>
+                    </div>
+                </div>
+            </form>
+
+            <div class="settings__password">
+                <h3 class="title">Изменение пароля</h3>
+                <form action="/" name="change-pd" method="post">
+                    <div class="form__wrapper">
+                        <div class="form__line -bottom">
+                            <div class="form__field">
+                                <label class="form__label" for="password">Старый пароль</label>
+                                <div class="form__input">
+                                    <input class="input" id="password" type="password">
+                                    <div class="icon-show-pwd form__show-pwd">
+                                        <svg>
+                                            <use xlink:href="static/img/sprite.svg#show-pwd"></use>
+                                        </svg>
+                                    </div>
+                                </div>
+                                <span class="form__error">Ошибка</span>
+                            </div>
+                            <div class="form__field">
+                                <label class="form__label" for="new-password">Новый пароль</label>
+                                <div class="form__input">
+                                    <input class="input" id="new-password" type="password">
+                                    <div class="icon-show-pwd form__show-pwd">
+                                        <svg>
+                                            <use xlink:href="static/img/sprite.svg#show-pwd"></use>
+                                        </svg>
+                                    </div>
+                                </div>
+                                <span class="form__error">Ошибка</span>
+                            </div>
+                            <div class="form__field">
+                                <label class="form__label" for="repeat-password">Новый пароль еще раз</label>
+                                <div class="form__input">
+                                    <input class="input" id="repeat-password" type="password">
+                                    <div class="icon-show-pwd form__show-pwd">
+                                        <svg>
+                                            <use xlink:href="static/img/sprite.svg#show-pwd"></use>
+                                        </svg>
+                                    </div>
+                                </div>
+                                <span class="form__error">Ошибка</span>
+                            </div>
+                            <button class="btn btn_border">Изменить</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+
+            <div class="settings__withdraw">
+                <h3 class="title">Вывод средств</h3>
+                <form class="form" action="/" method="post">
+                    <div class="form__wrapper">
+                        <div class="form__line -bottom">
+                            <div class="form__field">
+                                <span class="form__label">Доступно средтсв</span>
+                                <p class="settings__balance">23 000 ₽</p>
+                            </div>
+                            <div class="form__field -error settings__withdraw-sum">
+                                <label class="form__label" for="balance">Желаемая сумма вывода</label>
+                                <input class="input" id="balance" type="text">
+                                <span class="form__error">Недостаточно средств для вывода</span>
+                            </div>
+                            <button class="btn">Запросить</button>
+                            <p class="settings__balance-info">Минимальная сумма вывода 1000 рублей. Средства выводятся
+                                спустя 24 — 48 часов после запроса.</p>
+                        </div>
+                    </div>
+                </form>
+
+                <h4 class="title title_sm -line">История вывода средств</h4>
+                <table class="history">
+                    <tbody>
+                    <tr>
+                        <th>Дата запроса</th>
+                        <th>Дата списания</th>
+                        <th>Сумма ₽</th>
+                        <th>Статус</th>
+                    </tr>
+                    <tr>
+                        <td>12.12.2021 - 16:36</td>
+                        <td></td>
+                        <td>5689</td>
+                        <td>
+                            <div class="history__status">
+                                <span>Выплата проверяется (до 15/03/2022)</span>
+                                <button class="btn btn_border history__btn">Отменить</button>
+                                <div class="icon-question -sm">
+                                    <svg>
+                                        <use xlink:href="static/img/sprite.svg#question"></use>
+                                    </svg>
+                                    <span class="tooltip tooltip_right">Этот значок значит, что юзер — член</span>
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>12.12.2021 - 16:36</td>
+                        <td>12.12.2021 - 16:36</td>
+                        <td>4598</td>
+                        <td>
+                            <div class="history__status -success">
+                                <span>Выполнено (14.02.2022)</span>
+                                <div class="icon-question -sm">
+                                    <svg>
+                                        <use xlink:href="static/img/sprite.svg#question"></use>
+                                    </svg>
+                                    <span class="tooltip tooltip_bottom -right">Этот значок значит, что юзер — член</span>
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>12.12.2021 - 16:36</td>
+                        <td>12.12.2021 - 16:36</td>
+                        <td>4598</td>
+                        <td>
+                            <div class="history__status -error">
+                                <span>Ошибка (Недостаточно средств)</span>
+                                <div class="icon-question -sm">
+                                    <svg>
+                                        <use xlink:href="static/img/sprite.svg#question"></use>
+                                    </svg>
+                                    <span class="tooltip tooltip_bottom -right">Этот значок значит, что юзер — член</span>
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>12.12.2021 - 16:36</td>
+                        <td></td>
+                        <td>4598</td>
+                        <td>
+                            <div class="history__status">
+                                <span>Отменена (Деньги вернулись на баланс)</span>
+                                <div class="icon-question -sm">
+                                    <svg>
+                                        <use xlink:href="static/img/sprite.svg#question"></use>
+                                    </svg>
+                                    <span class="tooltip tooltip_bottom -right">Этот значок значит, что юзер — член</span>
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>12.12.2021 - 16:36</td>
+                        <td></td>
+                        <td>4598</td>
+                        <td>
+                            <div class="history__status">
+                                <span>Отменена автоматически (Деньги вернулись на баланс)</span>
+                                <div class="icon-question -sm">
+                                    <svg>
+                                        <use xlink:href="static/img/sprite.svg#question"></use>
+                                    </svg>
+                                    <span class="tooltip tooltip_bottom -right">Этот значок значит, что юзер — член</span>
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>12.12.2021 - 16:36</td>
+                        <td>12.12.2021 - 16:36</td>
+                        <td>4598</td>
+                        <td>
+                            <div class="history__status -success">
+                                <span>Выполнено (14.02.2022)</span>
+                                <div class="icon-question -sm">
+                                    <svg>
+                                        <use xlink:href="static/img/sprite.svg#question"></use>
+                                    </svg>
+                                    <span class="tooltip tooltip_bottom -right">Этот значок значит, что юзер — член</span>
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>12.12.2021 - 16:36</td>
+                        <td>12.12.2021 - 16:36</td>
+                        <td>4598</td>
+                        <td>
+                            <div class="history__status -success">
+                                <span>Выполнено (14.02.2022)</span>
+                                <div class="icon-question -sm">
+                                    <svg>
+                                        <use xlink:href="static/img/sprite.svg#question"></use>
+                                    </svg>
+                                    <span class="tooltip tooltip_bottom -right">Этот значок значит, что юзер — член</span>
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+                    </tbody>
+                </table>
+                <ul class="pagination settings__pagination">
+                    <li class="pagination__item">
+                        <a class="pagination__link pagination__link_prev" href="#">
+                            <img src="./static/img/icon/pagination-left.svg" alt="prev">
+                        </a>
+                    </li>
+                    <li class="pagination__item">
+                        <a class="pagination__link" href="#">1</a>
+                    </li>
+                    <li class="pagination__item pagination__item_current">
+                        2
+                    </li>
+                    <li class="pagination__item">
+                        <a class="pagination__link" href="#">3</a>
+                    </li>
+                    <li class="pagination__item">
+                        ...
+                    </li>
+                    <li class="pagination__item">
+                        <a class="pagination__link" href="#">36</a>
+                    </li>
+                    <li class="pagination__item">
+                        <a class="pagination__link pagination__link_next" href="#">
+                            <img src="./static/img/icon/pagination-left.svg" alt="next">
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="settings__card">
+                <h3 class="title">Сохранённые карты</h3>
+                <div class="card">
+                    <div class="card__heading">
+                        <p class="card__status">Активна</p>
+                        <p class="card__default">
+                            Карта умолчанию
+                            <svg>
+                                <use xlink:href="static/img/sprite.svg#checkmark"></use>
+                            </svg>
+                        </p>
+                    </div>
+                    <div class="card__body">
+                        <div class="card__block">
+                            <div class="card__logo">
+                                <img src="./static/img/icon/visa.svg" alt="visa">
+                            </div>
+                            <p class="card__number">
+                                <span>5698</span>
+                                <span>23**</span>
+                                <span>****</span>
+                                <span>9874</span>
+                            </p>
+                        </div>
+                        <p class="card__date">09/26</p>
+                        <button class="card__btn">Отвязать</button>
+                    </div>
+                </div>
+                <div class="card -warning">
+                    <div class="card__heading">
+                        <p class="card__status">Ошибка</p>
+                    </div>
+                    <div class="card__body">
+                        <div class="card__block">
+                            <div class="card__logo">
+                                <img src="./static/img/icon/visa.svg" alt="visa">
+                            </div>
+                            <p class="card__number">
+                                <span>5698</span>
+                                <span>23**</span>
+                                <span>****</span>
+                                <span>9874</span>
+                            </p>
+                        </div>
+                        <p class="card__date">09/26</p>
+                        <button class="card__btn">Отвязать</button>
+                    </div>
+                </div>
+                <div class="card -error">
+                    <div class="card__heading">
+                        <p class="card__status">Истек срок</p>
+                    </div>
+                    <div class="card__body">
+                        <div class="card__block">
+                            <div class="card__logo">
+                                <img src="./static/img/icon/visa.svg" alt="visa">
+                            </div>
+                            <p class="card__number">
+                                <span>5698</span>
+                                <span>23**</span>
+                                <span>****</span>
+                                <span>9874</span>
+                            </p>
+                        </div>
+                        <p class="card__date">09/26</p>
+                        <button class="card__btn">Отвязать</button>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card__heading">
+                        <p class="card__status">Активна</p>
+                    </div>
+                    <div class="card__body">
+                        <div class="card__block">
+                            <div class="card__logo">
+                                <img src="./static/img/icon/visa.svg" alt="visa">
+                            </div>
+                            <p class="card__number">
+                                <span>5698</span>
+                                <span>23**</span>
+                                <span>****</span>
+                                <span>9874</span>
+                            </p>
+                        </div>
+                        <p class="card__date">09/26</p>
+                        <button class="card__btn">Отвязать</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="settings__membership">
+                <h3 class="title">Управление членством в клубе</h3>
+                <div class="membership-cb">
+                    <div class="membership-cb__info">
+                        <p class="membership-cb__status">
+                            <span class="membership-cb__status-icon icon-status-gold"></span>
+                            <span class="membership-cb__status-text">У вас золотое членство в клубе до 16.12.2022</span>
+                        </p>
+                        <div class="membership-cb__row">
+                            <div class="checkbox">
+                                <label class="checkbox__label">
+                                    <input class="visibility-hidden" checked="" type="checkbox">
+                                    <span class="checkbox__btn">&nbsp;</span>
+                                    <span class="checkbox__title">Автоматическое продление</span>
+                                </label>
+                            </div>
+                            <div class="icon-question -sm">
+                                <svg>
+                                    <use xlink:href="static/img/sprite.svg#question"></use>
+                                </svg>
+                                <span class="tooltip tooltip_bottom -right">Этот значок значит, что юзер — член</span>
+                            </div>
+                        </div>
+                        <p class="membership-cb__next-pay">Следующее списание произойдет 16.12.2022 в 16:38</p>
+                    </div>
+                    <div class="membership-cb__action">
+                        <button class="btn btn_border">Отменить</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    //= blocks/footer-cabinet.html
+</div>
+<script src="./static/js/script.min.js"></script>
+</body>
+</html>

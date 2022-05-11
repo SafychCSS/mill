@@ -1,0 +1,53 @@
+.settings {
+    &__social {
+        margin-top: 24px;
+    }
+
+    &__password {
+        margin-top: 32px;
+    }
+
+    &__withdraw {
+        margin-top: 80px;
+    }
+
+    &__balance {
+        display: inline-block;
+        padding: 12px 24px;
+        align-self: flex-start;
+
+        font-size: 20px;
+        line-height: 24px;
+        font-weight: 500;
+        letter-spacing: 0.01em;
+        text-align: center;
+        white-space: nowrap;
+
+        border-radius: 28px;
+        background-color: getcolor(base, white-rgba1);
+    }
+
+    &__balance-info {
+        max-width: 460px;
+    }
+
+    &__withdraw-sum {
+        flex-grow: 2 !important;
+    }
+
+    &__pagination {
+        margin-top: 16px;
+    }
+
+    &__card {
+        margin-top: 40px;
+
+        & .card + .card {
+            margin-top: 24px;
+        }
+    }
+
+    &__membership {
+        margin-top: 40px;
+    }
+}

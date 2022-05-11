@@ -1,4 +1,25 @@
 .form {
+    &__line {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        gap: 32px;
+        margin-top: 16px;
+
+        .form__field {
+            margin-top: 0 !important;
+            flex: 1;
+        }
+
+        &.-sm {
+            gap: 16px;
+        }
+
+        &.-bottom {
+            align-items: flex-end;
+        }
+    }
+
     &__field {
         position: relative;
 
@@ -7,13 +28,22 @@
         }
 
         &.-error {
-            .input {
+            .input,
+            .btn-social {
                 border-color: getcolor(red, primary);
+            }
+
+            .btn-social {
+                opacity: .5;
             }
 
             .form__error {
                 display: block;
             }
+        }
+
+        &.-confirm {
+            margin-bottom: 26px;
         }
     }
 
@@ -24,9 +54,30 @@
         font-size: 13px;
         font-weight: 300;
         line-height: 22px;
+        white-space: nowrap;
+    }
+
+    &__input {
+        position: relative;
+    }
+
+    &__confirm {
+        position: absolute;
+        right: 0;
+
+        display: flex;
+        margin-top: 4px;
+
+        font-size: 13px;
+        font-weight: 600;
+        line-height: 22px;
+
+        cursor: pointer;
     }
 
     &__error {
+        position: absolute;
+
         display: none;
         margin-top: 4px;
 
@@ -47,6 +98,14 @@
     &__icon-entry {
         width: 22px;
         padding-left: 13px;
+    }
+
+    &__icon-ok {
+        position: absolute;
+        top: 50%;
+        right: 11px;
+
+        transform: translateY(-50%);
     }
 }
 
@@ -125,7 +184,7 @@ select {
     width: 100%;
 
     font-size: 14px;
-    line-height: 1.57;
+    line-height: 22px;
     text-align: left;
     color: getcolor(blue, dark);
 
@@ -133,9 +192,18 @@ select {
     border: 3px solid getcolor(grays, base);
     border-radius: 30px;
 
+    & + .form__error {
+        width: 100%;
+        text-align: center;
+    }
+
+    &.-inactive {
+        opacity: .5;
+    }
+
     &__link {
         display: block;
-        padding: 8px 13px 8px 37px;
+        padding: 10px 13px 10px 37px;
 
         color: getcolor(blue, dark);
 

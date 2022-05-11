@@ -1,0 +1,24 @@
+// @import './utils/fonts';
+@import './utils/vars';
+@import './utils/mixins';
+@import './utils/functions';
+@import './utils/base';
+
+@import './components/tooltip';
+@import './components/btn';
+
+@import './blocks/header-cabinet';
+@import './blocks/cabinet';
+@import './components/user';
+@import './components/user-line';
+@import './components/form-elements';
+
+@import './components/table-history';
+@import './components/pagination';
+@import './components/credit-card';
+@import './components/membership-cb';
+
+
+@import './components/settings';
+
+@import './blocks/footer-cabinet';

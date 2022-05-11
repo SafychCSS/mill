@@ -1,0 +1,35 @@
+.header {
+    &__top {
+        padding-top: 16px;
+        padding-bottom: 16px;
+    }
+
+    &__menu {
+        display: flex;
+        gap: 32px;
+        margin: 0;
+        padding: 0;
+
+        font-weight: 600;
+
+        list-style: none;
+
+        a {
+        }
+    }
+
+    &__user {
+        padding: 40px 0;
+        background-color: getcolor(base, black-rgba3);
+    }
+}
+
+.logo {
+    max-width: 160px;
+    display: inline-block;
+
+    font-size: 18px;
+    font-weight: 800;
+
+    color: getcolor(yellow, base);
+}
