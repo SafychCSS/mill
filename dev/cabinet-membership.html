@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@300;400;500;600;800&display=swap"
+          rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="./static/css/cabinet-membership.min.css">
+    <title>Document</title>
+</head>
+<body class="cabinet-dark">
+<div class="wrapper">
+    //= blocks/header-cabinet.html
+    <main class="main status">
+        <div class="container">
+            <h3 class="title">Членство в клубе</h3>
+            <div class="status__membership">
+                <div class="membership -demo">
+                    <p class="membership__name">Демо членство</p>
+                    <ul class="membership__info">
+                        <li class="membership__line">
+                            <span class="membership__key">Число игр</span>
+                            <span class="membership__value">10 игр</span>
+                        </li>
+                        <li class="membership__line">
+                            <span class="membership__key">Реклама</span>
+                            <span class="membership__value -accent">Есть реалама</span>
+                        </li>
+                        <li class="membership__line">
+                            <span class="membership__key">Штатная поддержка</span>
+                        </li>
+                        <li class="membership__line">
+                            <span class="membership__key -accent">Вывод средств не производится</span>
+                        </li>
+                        <li class="membership__line">
+                            <p class="membership__demo-info">Демо период рассчитан на ознакомление в игрой на 10-ти бесплатных играх, в демопериоде нельзя вывести выиграные средства.</p>
+                        </li>
+                    </ul>
+                    <form class="membership__form form" action="/" method="post">
+                        <div class="membership__btn">
+                            <button class="btn btn_border btn_full">Начать демо период</button>
+                        </div>
+                    </form>
+                </div>
+                <div class="membership -silver">
+                    <p class="membership__name">Серебряное членство</p>
+                    <ul class="membership__info">
+                        <li class="membership__line">
+                            <span class="membership__key">Число игр</span>
+                            <span class="membership__value">100 ирг / месяц</span>
+                        </li>
+                        <li class="membership__line">
+                            <span class="membership__key">Реклама</span>
+                            <span class="membership__value -accent">Без рекламы</span>
+                        </li>
+                        <li class="membership__line">
+                            <span class="membership__key">Штатная поддержка</span>
+                        </li>
+                        <li class="membership__line">
+                            <span class="membership__key">Проверка выплат</span>
+                            <span class="membership__value -accent">48 часов</span>
+                        </li>
+                        <li class="membership__line">
+                            <div class="cost">
+                                <p class="cost__name">Стоимость</p>
+                                <p class="cost__value">299 ₽ / мес.</p>
+                            </div>
+                            <div class="cost">
+                                <p class="cost__name">При оплате за год</p>
+                                <p class="cost__value">2 990 ₽</p>
+                            </div>
+                        </li>
+                    </ul>
+                    <form class="membership__form form" action="/" method="post">
+                        <div class="form__field">
+                            <label class="form__label" for="period">Срок доступа</label>
+                            <select class="input" name="period" id="period">
+                                <option value="12">12 месяцев</option>
+                                <option value="6">6 месяцев</option>
+                                <option value="3">3 месяца</option>
+                                <option value="1">1 месяц</option>
+                            </select>
+                        </div>
+                        <p class="membership__sale">Скидка -20%</p>
+                        <div class="membership__btn">
+                            <button class="btn btn_full">Оплатить</button>
+                        </div>
+                    </form>
+                </div>
+                <div class="membership">
+                    <p class="membership__name">Золотое членство</p>
+                    <ul class="membership__info">
+                        <li class="membership__line">
+                            <span class="membership__key">Число игр</span>
+                            <span class="membership__value -accent">Без ограничений</span>
+                        </li>
+                        <li class="membership__line">
+                            <span class="membership__key">Реклама</span>
+                            <span class="membership__value -accent">Без рекламы</span>
+                        </li>
+                        <li class="membership__line">
+                            <span class="membership__key">Приоритетная поддержка</span>
+                        </li>
+                        <li class="membership__line">
+                            <span class="membership__key">Проверка выплат</span>
+                            <span class="membership__value -accent">24 часа</span>
+                        </li>
+                        <li class="membership__line">
+                            <div class="cost">
+                                <p class="cost__name">Стоимость</p>
+                                <p class="cost__value">999 ₽ / мес.</p>
+                            </div>
+                            <div class="cost">
+                                <p class="cost__name">При оплате за год</p>
+                                <p class="cost__value">9 990 ₽</p>
+                            </div>
+                        </li>
+                    </ul>
+                    <form class="membership__form form" action="/" method="post">
+                        <div class="form__field">
+                            <label class="form__label" for="period">Срок доступа</label>
+                            <select class="input" name="period" id="period">
+                                <option value="12">12 месяцев</option>
+                                <option value="6">6 месяцев</option>
+                                <option value="3">3 месяца</option>
+                                <option value="1">1 месяц</option>
+                            </select>
+                        </div>
+                        <p class="membership__sale">Скидка -20%</p>
+                        <div class="membership__btn">
+                            <button class="btn btn_full">Оплатить</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+            <div class="status__additional">
+                <div class="additional -sm">
+                    <div class="additional__row">
+                        <div class="additional__info">
+                            <p class="additional__name"><span>Акция!&nbsp;</span> <span>Месяц Золотого членства в подарок</span></p>
+                            <p class="additional__text">Пригласи друзей в игру и получи месяц “Золотых” привелегий в подарок</p>
+                        </div>
+                        <button class="btn btn_gold additional__btn">Получить бесплатно!</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    //= blocks/footer-cabinet.html
+</div>
+<script src="./static/js/script.min.js"></script>
+</body>
+</html>

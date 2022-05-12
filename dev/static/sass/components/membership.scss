@@ -1,4 +1,6 @@
 .membership {
+    display: flex;
+    flex-direction: column;
     overflow: hidden;
 
     font-size: 16px;
@@ -44,7 +46,7 @@
     &__line {
         display: flex;
         justify-content: space-between;
-        padding: 16px;
+        padding: 16px 24px;
 
         &:nth-child(even) {
             background-color: getcolor(base, white-rgba12);
@@ -60,7 +62,13 @@
     }
 
     &__form {
-        padding: 0 16px 16px;
+        margin-top: auto;
+        padding: 0 24px 24px;
+    }
+
+    &__demo-info {
+        font-weight: 400;
+        line-height: 1.5;
     }
 
     &__sale {

@@ -1,0 +1,12 @@
+.status {
+    &__membership {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 34px;
+        margin-top: 33px;
+    }
+
+    &__additional {
+        margin-top: 40px;
+    }
+}
