@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@300;400;500;600;800&display=swap"
+          rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="./static/css/cabinet-faq.min.css">
+    <title>Document</title>
+</head>
+<body class="cabinet-dark">
+<div class="wrapper">
+    //= blocks/header-cabinet.html
+    <main class="main faq">
+        <div class="container">
+            <div class="faq__wrapper">
+                <h3 class="title faq__title">FAQ</h3>
+                <form class="faq__search" action="/" method="post">
+                    <div class="search">
+                        <input class="input search__input" type="text" name="search" placeholder="Поиск">
+                        <button class="search__btn">
+                            <svg>
+                                <use xlink:href="static/img/sprite.svg#loupe"></use>
+                            </svg>
+                        </button>
+                    </div>
+                </form>
+
+                <ul class="faq-categories faq__categories">
+                    <li class="faq-categories__item">
+                        <a class="faq-categories__link active" href="#">
+                            <svg>
+                                <use xlink:href="static/img/sprite.svg#menu-profile"></use>
+                            </svg>
+                            <span class="faq-categories__name">Проблемы с аккаунтом</span>
+                        </a>
+                    </li>
+                    <li class="faq-categories__item">
+                        <a class="faq-categories__link" href="#">
+                            <svg>
+                                <use xlink:href="static/img/sprite.svg#menu-profile"></use>
+                            </svg>
+                            <span class="faq-categories__name">Проблемы с пополнением</span>
+                        </a>
+                    </li>
+                    <li class="faq-categories__item">
+                        <a class="faq-categories__link" href="#">
+                            <svg>
+                                <use xlink:href="static/img/sprite.svg#menu-profile"></use>
+                            </svg>
+                            <span class="faq-categories__name">Проблемы с выводом</span>
+                        </a>
+                    </li>
+                    <li class="faq-categories__item">
+                        <a class="faq-categories__link" href="#">
+                            <svg>
+                                <use xlink:href="static/img/sprite.svg#menu-profile"></use>
+                            </svg>
+                            <span class="faq-categories__name">Проблемы с сайтом</span>
+                        </a>
+                    </li>
+                    <li class="faq-categories__item">
+                        <a class="faq-categories__link" href="#">
+                            <svg>
+                                <use xlink:href="static/img/sprite.svg#menu-profile"></use>
+                            </svg>
+                            <span class="faq-categories__name">Проблемы с головой</span>
+                        </a>
+                    </li>
+                    <li class="faq-categories__item">
+                        <a class="faq-categories__link" href="#">
+                            <svg>
+                                <use xlink:href="static/img/sprite.svg#menu-profile"></use>
+                            </svg>
+                            <span class="faq-categories__name">Философские вопросы</span>
+                        </a>
+                    </li>
+                </ul>
+                <div class="faq__answers">
+                    <ul class="faq-answers">
+                        <li class="faq-answers__item">
+                            <a class="faq-answers__link" href="#">Вы не можете использовать промокод</a>
+                        </li>
+                        <li class="faq-answers__item">
+                            <a class="faq-answers__link active" href="#">Вы не сделали ни одной ставки с предыдущего промокода</a>
+                        </li>
+                        <li class="faq-answers__item">
+                            <a class="faq-answers__link" href="#">Участие в розыгрыше и промокоды требуют приписку в нике</a>
+                        </li>
+                        <li class="faq-answers__item">
+                            <a class="faq-answers__link" href="#">Меня заблокировали Вконтакте/Discord</a>
+                        </li>
+                        <li class="faq-answers__item">
+                            <a class="faq-answers__link" href="#">Я исключен из чата</a>
+                        </li>
+                        <li class="faq-answers__item">
+                            <a class="faq-answers__link" href="#">Я получил блокировку VAC/трейд-бан</a>
+                        </li>
+                        <li class="faq-answers__item">
+                            <a class="faq-answers__link" href="#">Я получил блокировку VAC/трейд-бан</a>
+                        </li>
+                        <li class="faq-answers__item">
+                            <a class="faq-answers__link" href="#">Я получил блокировку VAC/трейд-бан</a>
+                        </li>
+                    </ul>
+                    <button class="btn faq__btn-more">Показать еще</button>
+                </div>
+            </div>
+        </div>
+    </main>
+    //= blocks/footer-cabinet.html
+</div>
+<script src="./static/js/script.min.js"></script>
+</body>
+</html>
