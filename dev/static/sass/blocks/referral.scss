@@ -1,0 +1,9 @@
+.referral {
+    display: flex;
+    align-items: center;
+
+    &__wrapper {
+        max-width: 784px;
+        margin: 0 auto;
+    }
+}
