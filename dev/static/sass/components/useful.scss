@@ -1,0 +1,42 @@
+.useful {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    padding: 8px 8px 8px 32px;
+
+    background-color: getcolor(base, white-rgba08);
+    border-radius: 54px;
+
+    &__text {
+        font-size: 14px;
+    }
+
+    &__action {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+    }
+
+    &__icon {
+        width: 24px;
+        height: 24px;
+
+        cursor: pointer;
+
+        svg {
+            width: 100%;
+            height: 100%;
+
+            fill: getcolor(blue, semilight);
+        }
+    }
+
+    &__like {
+        font-size: 14px;
+        color: getcolor(green, semilight);
+    }
+
+    &__btn {
+        margin-left: auto;
+    }
+}
