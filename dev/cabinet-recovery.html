@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@300;400;500;600;800&display=swap"
+          rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="./static/css/cabinet-faq.min.css">
+    <title>Document</title>
+</head>
+<body class="cabinet-dark">
+<div class="wrapper">
+    //= blocks/header-cabinet.html
+    <main class="main">
+        <div class="container">
+            <h3 class="title">Придумайте пароль</h3>
+            <form action="/" class="form" method="post">
+                <div class="form__line">
+                    <div class="form__field">
+                        <label class="form__label" for="password">Новый пароль</label>
+                        <div class="form__input">
+                            <input class="input" id="password" type="password">
+                            <div class="icon-show-pwd form__show-pwd">
+                                <svg>
+                                    <use xlink:href="./static/img/sprite.svg#show-pwd"></use>
+                                </svg>
+                            </div>
+                        </div>
+                        <span class="form__error">Ошибка</span>
+                    </div>
+                    <div class="form__field">
+                        <label class="form__label" for="password-repeat">Повторите новый пароль</label>
+                        <div class="form__input">
+                            <input class="input" id="password-repeat" type="password">
+                            <div class="icon-show-pwd form__show-pwd">
+                                <svg>
+                                    <use xlink:href="./static/img/sprite.svg#show-pwd"></use>
+                                </svg>
+                            </div>
+                        </div>
+                        <span class="form__error">Ошибка</span>
+                    </div>
+                </div>
+                <button class="btn form__btn-recovery">Сохранить пароль</button>
+            </form>
+        </div>
+    </main>
+    //= blocks/footer-cabinet.html
+</div>
+<script src="./static/js/script.min.js"></script>
+</body>
+</html>
