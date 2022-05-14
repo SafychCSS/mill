@@ -7,6 +7,16 @@
 
     background: getcolor(base, black-rgba3);
 
+    &__mobile-menu {
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        z-index: 100;
+
+        display: none;
+    }
+
     @media (max-width: $screen-md) {
     }
 
@@ -14,6 +24,9 @@
     }
 
     @media (max-width: $screen-xs) {
+        &__mobile-menu {
+            display: block;
+        }
     }
 }
 

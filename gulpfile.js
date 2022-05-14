@@ -234,7 +234,7 @@ exports.default = series(
     parallel(stylesDev, scriptDev, html, fonts, imagesDev),
     parallel(watchFile, serve)
 );
-exports.build = series(clean, parallel(stylesBuild, scriptBuild, html, fonts, /*imagesBuild*/));
+exports.build = series(clean, parallel(stylesBuild, scriptBuild, html, fonts, imagesDev/*imagesBuild*/));
 
 exports.spritepng = createSpritePng;
 exports.spritesvgcolor = createSpriteSvgColor;

@@ -1,0 +1,50 @@
+.mobile-menu {
+    display: flex;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+
+    list-style: none;
+
+    box-shadow: 0 -4px 14px getcolor(base, black-rgba8);
+
+    &__item {
+        flex: 1;
+    }
+
+    &__link {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 4px;
+        padding-top: 8px;
+        padding-bottom: 8px;
+
+        background: $gd-base;
+
+        &:hover {
+            background: linear-gradient(180deg, #DB00FF 0%, #8000FF 229.07%);
+        }
+    }
+
+    &__icon {
+        display: inline-block;
+        width: 24px;
+        height: 24px;
+
+        svg {
+            width: 100%;
+            height: 100%;
+
+            fill: getcolor(base, white);
+        }
+    }
+
+    &__name {
+        display: inline-block;
+
+        font-size: 10px;
+        line-height: 12px;
+        font-weight: 500;
+    }
+}
