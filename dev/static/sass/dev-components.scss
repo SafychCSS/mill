@@ -3,6 +3,7 @@
 @import './utils/mixins';
 @import './utils/functions';
 @import './utils/base';
+@import './utils/base-cabinet';
 
 @import './components/tooltip';
 @import './components/btn';
@@ -34,5 +35,12 @@
 
 @import './components/top-line';
 @import './components/form-elements';
+@import './blocks/cabinet';
+@import './blocks/status';
+@import './blocks/settings';
+@import './blocks/rating';
+@import './blocks/referral';
+@import './blocks/faq';
+@import './blocks/info-page';
 @import './blocks/footer-guest';
 
