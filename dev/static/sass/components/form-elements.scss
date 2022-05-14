@@ -41,10 +41,6 @@
                 display: block;
             }
         }
-
-        &.-confirm {
-            margin-bottom: 26px;
-        }
     }
 
     &__label {
@@ -64,9 +60,7 @@
     &__confirm {
         position: absolute;
         right: 0;
-
-        display: flex;
-        margin-top: 4px;
+        bottom: -24px;
 
         font-size: 13px;
         font-weight: 600;
@@ -79,7 +73,6 @@
         position: absolute;
 
         display: none;
-        margin-top: 4px;
 
         font-size: 13px;
         font-weight: 300;
@@ -111,6 +104,34 @@
     &__btn-recovery {
         margin-top: 32px;
     }
+
+    @media (max-width: $screen-cabinet-md) {
+        &__line {
+            gap: 24px;
+        }
+    }
+
+    @media (max-width: $screen-xs) {
+        &__line {
+            flex-direction: column;
+            align-items: stretch;
+            gap: 16px;
+        }
+
+        &__field {
+            &.-error {
+                margin-bottom: 20px;
+            }
+        }
+
+        &__label {
+            font-size: 10px;
+        }
+
+        &__error {
+            font-size: 10px;
+        }
+    }
 }
 
 .input {
@@ -126,6 +147,11 @@
     background-color: getcolor(base, white);
     border: 3px solid getcolor(grays, base);
     border-radius: 30px;
+
+    @media (max-width: $screen-xs) {
+        font-size: 14px;
+        line-height: 26px;
+    }
 }
 
 .input[type=password] {
@@ -142,6 +168,7 @@ select {
         display: flex;
         align-items: center;
         gap: 10px;
+
         cursor: pointer;
     }
 
@@ -177,9 +204,15 @@ select {
             background: $gd-base;
             transform: translate(14px, -50%);
         }
+
+        & + .checkbox__title {
+            color: getcolor(base, white);
+        }
     }
 
-    &__title {}
+    &__title {
+        color: getcolor(base, white-rgba5);
+    }
 }
 
 .btn-social {
@@ -192,10 +225,6 @@ select {
     text-align: left;
     color: getcolor(blue, dark);
 
-    background-color: getcolor(base, white);
-    border: 3px solid getcolor(grays, base);
-    border-radius: 30px;
-
     & + .form__error {
         width: 100%;
         text-align: center;
@@ -206,12 +235,16 @@ select {
     }
 
     &__link {
+        width: 100%;
         display: block;
         padding: 10px 13px 10px 37px;
 
         color: getcolor(blue, dark);
+        text-align: left;
 
-        cursor: pointer;
+        background-color: getcolor(base, white);
+        border: 3px solid getcolor(grays, base);
+        border-radius: 30px;
     }
 
     &__icon {
@@ -301,6 +334,13 @@ select {
         top: 50%;
 
         transform: translate(0, -50%);
+    }
+
+    @media (max-width: $screen-xs) {
+        &__link {
+            padding-top: 6px;
+            padding-bottom: 6px;
+        }
     }
 }
 

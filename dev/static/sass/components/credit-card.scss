@@ -66,7 +66,9 @@
         gap: 16px;
     }
 
-    &__logo {}
+    &__logo {
+        flex-shrink: 0;
+    }
 
     &__number {
     }
@@ -79,5 +81,31 @@
         @extend .text-gradient;
         font-weight: 600;
         cursor: pointer;
+    }
+
+    @media (max-width: $screen-xs) {
+        font-size: 12px;
+
+        &__number {
+            display: flex;
+            flex-direction: column;
+        }
+
+        &__date {
+            padding-right: 0;
+        }
+
+        &__btn {
+            font-size: 14px;
+        }
+
+        &__default {
+
+            svg {
+                width: 20px;
+                height: 20px;
+                margin-left: 6px;
+            }
+        }
     }
 }

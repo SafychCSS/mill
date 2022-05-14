@@ -9,33 +9,30 @@
     background-color: getcolor(base, white-rgba12);
 
     &.-expired {
-        .membership__status-text {
+        .membership-cb__status-text {
             opacity: .5;
         }
     }
 
     &.-silver {
-        .membership__status-text {
+        .membership-cb__status-text {
             color: getcolor(base, white);
         }
     }
 
     &.-demo {
-        .membership__status-text {
+        .membership-cb__status-text {
             color: getcolor(base, white);
         }
     }
-
 
     &__info {
         flex: 1;
     }
 
-    &__status-text {
-        padding-left: 34px;
-    }
-
     &__status {
+        display: flex;
+        align-items: center;
         padding-bottom: 16px;
 
         font-size: 20px;
@@ -43,6 +40,17 @@
         color: getcolor(yellow, base);
 
         border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+    }
+
+    &__status-text {
+        padding-left: 10px;
+    }
+
+    &__status-icon {
+        width: 24px;
+        height: 24px;
+        display: inline-block;
+        flex-shrink: 0;
     }
 
     &__row {
@@ -66,5 +74,27 @@
 
     &__next-pay {
         margin-top: 18px;
+    }
+
+    @media (max-width: $screen-cabinet-md) {
+        &__action {
+            flex-direction: column;
+            align-items: flex-end;
+        }
+    }
+
+    @media (max-width: $screen-xs) {
+        flex-direction: column;
+        font-size: 12px;
+
+        &__action {
+            gap: 16px;
+            width: 100%;
+            align-items: stretch;
+        }
+
+        &__status {
+            font-size: 14px;
+        }
     }
 }

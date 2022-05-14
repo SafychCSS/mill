@@ -40,8 +40,8 @@
         <button class="btn btn_border btn_sound -mute"><span class="icon-sound -mute">&nbsp;</span></button>
 
         <div class="stub-block">
-            <a href="#" class="btn btn_money -withdraw">Вывести</a>
-            <a href="#" class="btn btn_money -deposit">Пополнить</a>
+            <button class="btn btn_money -withdraw">Вывести</button>
+            <button class="btn btn_money -deposit">Пополнить</button>
         </div>
         <div class="stub-block">
             <a href="#" class="btn btn_full">Сохранить</a>
@@ -418,7 +418,7 @@
                         <p class="user-line__balance-name">Свободный баланс:</p>
                         <p class="user-line__money">3 000 ₽</p>
                     </div>
-                    <a href="#" class="btn btn_money -withdraw">Вывести</a>
+                    <button class="btn btn_money -withdraw">Вывести</button>
                 </div>
 
                 <div class="user-line__deposit">
@@ -426,7 +426,7 @@
                         <p class="user-line__balance-name">Игровой баланс:</p>
                         <p class="user-line__money">1 500 ₽</p>
                     </div>
-                    <a href="#" class="btn btn_money -deposit">Пополнить</a>
+                    <button class="btn btn_money -deposit">Пополнить</button>
                 </div>
             </div>
         </div>
@@ -595,14 +595,14 @@
                 </div>
                 <div class="form__field">
                     <div class="btn-social">
-                        <a href="#" class="btn-social__link">
+                        <div class="btn-social__link">
                             <span class="btn-social__icon -fb">
                                 <svg>
                                     <use xlink:href="./static/img/sprite.svg#social-fb"></use>
                                 </svg>
                             </span>
                             <span class="btn-social__name">Facebook</span>
-                        </a>
+                        </div>
                         <button class="icon-clear btn-social__clear" type="button">
                             <svg>
                                 <use xlink:href="./static/img/sprite.svg#clear"></use>
@@ -612,14 +612,14 @@
                 </div>
                 <div class="form__field">
                     <div class="btn-social">
-                        <a href="#" class="btn-social__link">
+                        <div class="btn-social__link">
                             <span class="btn-social__icon -google">
                                 <svg>
                                     <use xlink:href="./static/img/sprite.svg#social-google"></use>
                                 </svg>
                             </span>
                             <span class="btn-social__name">Google</span>
-                        </a>
+                        </div>
                         <button class="icon-clear btn-social__clear" type="button">
                             <svg>
                                 <use xlink:href="./static/img/sprite.svg#clear"></use>
@@ -629,14 +629,14 @@
                 </div>
                 <div class="form__field">
                     <div class="btn-social">
-                        <a href="#" class="btn-social__link">
+                        <div class="btn-social__link">
                             <span class="btn-social__icon -mail">
                                 <svg>
                                     <use xlink:href="./static/img/sprite.svg#social-mail"></use>
                                 </svg>
                             </span>
                             <span class="btn-social__name">Mail.ru</span>
-                        </a>
+                        </div>
                         <button class="icon-clear btn-social__clear" type="button">
                             <svg>
                                 <use xlink:href="./static/img/sprite.svg#clear"></use>
@@ -646,14 +646,14 @@
                 </div>
                 <div class="form__field">
                     <div class="btn-social">
-                        <a href="#" class="btn-social__link">
+                        <div class="btn-social__link">
                             <span class="btn-social__icon -yandex">
                                 <svg>
                                     <use xlink:href="./static/img/sprite.svg#social-yandex"></use>
                                 </svg>
                             </span>
                             <span class="btn-social__name">Яндекс</span>
-                        </a>
+                        </div>
                         <button class="icon-clear btn-social__clear" type="button">
                             <svg>
                                 <use xlink:href="./static/img/sprite.svg#clear"></use>
@@ -663,14 +663,14 @@
                 </div>
                 <div class="form__field">
                     <div class="btn-social">
-                        <a href="#" class="btn-social__link">
+                        <div class="btn-social__link">
                             <span class="btn-social__icon -letter">
                                 <svg>
                                     <use xlink:href="./static/img/sprite.svg#social-letter"></use>
                                 </svg>
                             </span>
                             <span class="btn-social__name">Через почту</span>
-                        </a>
+                        </div>
                         <button class="icon-clear btn-social__clear" type="button">
                             <svg>
                                 <use xlink:href="./static/img/sprite.svg#clear"></use>
@@ -680,18 +680,13 @@
                 </div>
                 <div class="form__field">
                     <div class="btn-social">
-                        <a href="#" class="btn-social__link">
+                        <button class="btn-social__link">
                             <span class="btn-social__icon -phone">
                                 <svg>
                                     <use xlink:href="./static/img/sprite.svg#phone"></use>
                                 </svg>
                             </span>
                             <span class="btn-social__name">Через телефон</span>
-                        </a>
-                        <button class="icon-clear btn-social__clear" type="button">
-                            <svg>
-                                <use xlink:href="./static/img/sprite.svg#clear"></use>
-                            </svg>
                         </button>
                     </div>
                 </div>
@@ -1426,7 +1421,7 @@
                         </p>
                     </div>
                     <p class="card__date">09/26</p>
-                    <button class="card__btn">Отвязать</button>
+                    <button class="card__btn"><span class="text-gradient">Отвязать</span></button>
                 </div>
             </div>
             <div class="card -warning">
@@ -1446,7 +1441,7 @@
                         </p>
                     </div>
                     <p class="card__date">09/26</p>
-                    <button class="card__btn">Отвязать</button>
+                    <button class="card__btn"><span class="text-gradient">Отвязать</span></button>
                 </div>
             </div>
             <div class="card -error">
@@ -1466,7 +1461,7 @@
                         </p>
                     </div>
                     <p class="card__date">09/26</p>
-                    <button class="card__btn">Отвязать</button>
+                    <button class="card__btn"><span class="text-gradient">Отвязать</span></button>
                 </div>
             </div>
             <div class="card">
@@ -1486,7 +1481,7 @@
                         </p>
                     </div>
                     <p class="card__date">09/26</p>
-                    <button class="card__btn">Отвязать</button>
+                    <button class="card__btn"><span class="text-gradient">Отвязать</span></button>
                 </div>
             </div>
         </div>

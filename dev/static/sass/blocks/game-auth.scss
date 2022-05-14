@@ -5,6 +5,7 @@
     width: 100%;
     min-height: 100%;
     overflow: hidden;
+    flex: 1;
 
     &__sidebar {
         grid-row: 1/4;

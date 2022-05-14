@@ -30,4 +30,12 @@
             background-color: getcolor(base, white-rgba3);
         }
     }
+
+    @media (max-width: $screen-xs) {
+        font-size: 16px;
+
+        &.-line {
+            margin-top: 24px;
+        }
+    }
 }

@@ -22,6 +22,56 @@
         padding: 40px 0;
         background-color: getcolor(base, black-rgba3);
     }
+
+    @media (max-width: $screen-cabinet-md) {
+        &_cabinet {
+            .row {
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+
+            .user_header {
+                margin-left: 30px;
+                .user__name {
+                    max-width: 200px;
+                    margin-top: 0;
+
+                    font-size: 14px;
+                }
+            }
+
+            .user__logout {
+                margin-left: 8px;
+            }
+
+            .logo {
+                max-width: 100%;
+                width: 100%;
+                margin-bottom: 12px;
+
+                text-align: center;
+            }
+        }
+    }
+
+    @media (max-width: $screen-xs) {
+        .logo {
+            max-width: 150px;
+            margin-bottom: 0;
+
+            font-size: 16px;
+        }
+
+        &__menu {
+            display: none;
+        }
+
+        &_cabinet {
+            .user_header {
+                display: none;
+            }
+        }
+    }
 }
 
 .logo {

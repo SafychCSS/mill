@@ -1,6 +1,6 @@
 .settings {
     &__social {
-        margin-top: 24px;
+        margin-top: 40px;
     }
 
     &__password {
@@ -12,7 +12,6 @@
     }
 
     &__balance {
-        display: inline-block;
         padding: 12px 24px;
         align-self: flex-start;
 
@@ -49,5 +48,53 @@
 
     &__membership {
         margin-top: 40px;
+    }
+
+    @media (max-width: $screen-cabinet-md) {
+        &__social-line.-sm {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            gap: 35px 24px;
+        }
+
+        &__password-line {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 24px;
+        }
+
+        &__withdraw-line {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 24px;
+        }
+    }
+
+    @media (max-width: $screen-xs) {
+        &__social-line.-sm,
+        &__password-line,
+        &__withdraw-line {
+            grid-template-columns: 1fr;
+            gap: 16px;
+        }
+
+        &__withdraw {
+            margin-top: 32px;
+        }
+
+        &__balance {
+            padding-top: 10px;
+            padding-bottom: 10px;
+
+            font-size: 16px;
+        }
+
+        &__balance-info {
+            font-size: 16px;
+        }
+
+        &__history {
+            overflow: scroll;
+        }
     }
 }

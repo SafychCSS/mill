@@ -11,7 +11,7 @@
     <link rel="stylesheet" type="text/css" href="./static/css/cabinet-settings.min.css">
     <title>Document</title>
 </head>
-<body class="cabinet-dark">
+<body>
 <div class="wrapper">
     //= blocks/header-cabinet.html
     <main class="main settings">
@@ -25,97 +25,102 @@
                         <span class="form__error">Ошибка</span>
                     </div>
                     <div class="form__line">
-                        <div class="form__field -confirm">
+                        <div class="form__field">
                             <label class="form__label" for="email">Email</label>
-                            <input class="input" id="email" type="text" value="useuse@gmail.com">
-                            <button class="form__confirm text-gradient">Подвердить email</button>
+                            <input class="input" id="email" type="email" inputmode="email" value="useuse@gmail.com">
+                            <button class="form__confirm"><span class="text-gradient">Подвердить email</span></button>
                         </div>
-                        <div class="form__field -confirm">
+                        <div class="form__field">
                             <label class="form__label" for="email">Телефон</label>
                             <div class="form__input">
-                                <input class="input" id="phone" type="text" value="+7(999) 999-99-99">
+                                <input class="input" id="phone" type="tel" inputmode="tel" value="+7(999) 999-99-99">
                                 <div class="icon-accepted form__icon-ok">
                                     <svg>
                                         <use xlink:href="./static/img/sprite.svg#checkmark"></use>
                                     </svg>
                                 </div>
                             </div>
-                            <button class="form__confirm text-gradient">Подвердить телефон</button>
+                            <button class="form__confirm"><span class="text-gradient">Подвердить телефон</span></button>
                         </div>
                     </div>
 
                     <div class="settings__social">
                         <h4 class="title title_sm">Привязка социальных сетей</h4>
-                    </div>
 
-                    <div class="form__line -sm">
-                        <div class="form__field">
-                            <div class="btn-social">
-                                <a href="#" class="btn-social__link">
+                        <div class="form__line -sm settings__social-line">
+                            <div class="form__field">
+                                <div class="btn-social">
+                                    <div class="btn-social__link">
                                         <span class="btn-social__icon -vk">
                                             <svg>
                                                 <use xlink:href="./static/img/sprite.svg#social-vk"></use>
                                             </svg>
                                         </span>
-                                    <span class="btn-social__name">Вконтакте</span>
-                                </a>
+                                        <span class="btn-social__name">Вконтакте</span>
+                                    </div>
+                                    <button class="icon-clear btn-social__clear" type="button">
+                                        <svg>
+                                            <use xlink:href="./static/img/sprite.svg#clear"></use>
+                                        </svg>
+                                    </button>
+                                </div>
                             </div>
-                        </div>
-                        <div class="form__field -error">
-                            <div class="btn-social">
-                                <a href="#" class="btn-social__link">
+                            <div class="form__field -error">
+                                <div class="btn-social">
+                                    <a href="#" class="btn-social__link">
                                         <span class="btn-social__icon -fb">
                                             <svg>
                                                 <use xlink:href="./static/img/sprite.svg#social-fb"></use>
                                             </svg>
                                         </span>
-                                    <span class="btn-social__name">Facebook</span>
-                                </a>
+                                        <span class="btn-social__name">Facebook</span>
+                                    </a>
+                                </div>
+                                <span class="form__error">Ошибка привязки</span>
                             </div>
-                            <span class="form__error">Ошибка привязки</span>
-                        </div>
-                        <div class="form__field">
-                            <div class="btn-social">
-                                <a href="#" class="btn-social__link">
+                            <div class="form__field">
+                                <div class="btn-social">
+                                    <div class="btn-social__link">
                                         <span class="btn-social__icon -google">
                                             <svg>
                                                 <use xlink:href="./static/img/sprite.svg#social-google"></use>
                                             </svg>
                                         </span>
-                                    <span class="btn-social__name">Google</span>
-                                </a>
-                                <button class="icon-clear btn-social__clear" type="button">
-                                    <svg>
-                                        <use xlink:href="./static/img/sprite.svg#clear"></use>
-                                    </svg>
-                                </button>
+                                        <span class="btn-social__name">Google</span>
+                                    </div>
+                                    <button class="icon-clear btn-social__clear" type="button">
+                                        <svg>
+                                            <use xlink:href="./static/img/sprite.svg#clear"></use>
+                                        </svg>
+                                    </button>
+                                </div>
                             </div>
-                        </div>
-                        <div class="form__field">
-                            <div class="btn-social -inactive">
-                                <a href="#" class="btn-social__link">
+                            <div class="form__field">
+                                <div class="btn-social -inactive">
+                                    <a href="#" class="btn-social__link">
                                         <span class="btn-social__icon -mail">
                                             <svg>
                                                 <use xlink:href="./static/img/sprite.svg#social-mail"></use>
                                             </svg>
                                         </span>
-                                    <span class="btn-social__name">Mail.ru</span>
-                                </a>
+                                        <span class="btn-social__name">Mail.ru</span>
+                                    </a>
+                                </div>
                             </div>
-                        </div>
-                        <div class="form__field">
-                            <div class="btn-social -inactive">
-                                <a href="#" class="btn-social__link">
+                            <div class="form__field">
+                                <div class="btn-social -inactive">
+                                    <a href="#" class="btn-social__link">
                                         <span class="btn-social__icon -yandex">
                                             <svg>
                                                 <use xlink:href="./static/img/sprite.svg#social-yandex"></use>
                                             </svg>
                                         </span>
-                                    <span class="btn-social__name">Яндекс</span>
-                                </a>
+                                        <span class="btn-social__name">Яндекс</span>
+                                    </a>
+                                </div>
                             </div>
+                            <button class="btn" type="submit">Сохранить</button>
                         </div>
-                        <button class="btn" type="submit">Сохранить</button>
                     </div>
                 </div>
             </form>
@@ -124,7 +129,7 @@
                 <h3 class="title">Изменение пароля</h3>
                 <form action="/" name="change-pd" method="post">
                     <div class="form__wrapper">
-                        <div class="form__line -bottom">
+                        <div class="form__line -bottom settings__password-line">
                             <div class="form__field">
                                 <label class="form__label" for="password">Старый пароль</label>
                                 <div class="form__input">
@@ -170,148 +175,148 @@
             <div class="settings__withdraw">
                 <h3 class="title">Вывод средств</h3>
                 <form class="form" action="/" method="post">
-                    <div class="form__wrapper">
-                        <div class="form__line -bottom">
-                            <div class="form__field">
-                                <span class="form__label">Доступно средтсв</span>
-                                <p class="settings__balance">23 000 ₽</p>
-                            </div>
-                            <div class="form__field -error settings__withdraw-sum">
-                                <label class="form__label" for="balance">Желаемая сумма вывода</label>
-                                <input class="input" id="balance" type="text">
-                                <span class="form__error">Недостаточно средств для вывода</span>
-                            </div>
-                            <button class="btn">Запросить</button>
-                            <p class="settings__balance-info">Минимальная сумма вывода 1000 рублей. Средства выводятся
-                                спустя 24 — 48 часов после запроса.</p>
+                    <div class="form__line -bottom settings__withdraw-line">
+                        <div class="form__field">
+                            <span class="form__label">Доступно средтсв</span>
+                            <p class="settings__balance">23 000 ₽</p>
                         </div>
+                        <div class="form__field -error settings__withdraw-sum">
+                            <label class="form__label" for="balance">Желаемая сумма вывода</label>
+                            <input class="input" id="balance" type="text">
+                            <span class="form__error">Недостаточно средств для вывода</span>
+                        </div>
+                        <button class="btn">Запросить</button>
+                        <p class="settings__balance-info">Минимальная сумма вывода 1000 рублей. Средства выводятся
+                            спустя 24 — 48 часов после запроса.</p>
                     </div>
                 </form>
 
                 <h4 class="title title_sm -line">История вывода средств</h4>
-                <table class="history">
-                    <tbody>
-                    <tr>
-                        <th>Дата запроса</th>
-                        <th>Дата списания</th>
-                        <th>Сумма ₽</th>
-                        <th>Статус</th>
-                    </tr>
-                    <tr>
-                        <td>12.12.2021 - 16:36</td>
-                        <td></td>
-                        <td>5689</td>
-                        <td>
-                            <div class="history__status">
-                                <span>Выплата проверяется (до 15/03/2022)</span>
-                                <button class="btn btn_border history__btn">Отменить</button>
-                                <div class="icon-question -sm">
-                                    <svg>
-                                        <use xlink:href="./static/img/sprite.svg#question"></use>
-                                    </svg>
-                                    <span class="tooltip tooltip_right">Этот значок значит, что юзер — член</span>
+                <div class="settings__history">
+                    <table class="history">
+                        <tbody>
+                        <tr>
+                            <th>Дата запроса</th>
+                            <th>Дата списания</th>
+                            <th>Сумма ₽</th>
+                            <th>Статус</th>
+                        </tr>
+                        <tr>
+                            <td>12.12.2021 - 16:36</td>
+                            <td></td>
+                            <td>5689</td>
+                            <td>
+                                <div class="history__status">
+                                    <span>Выплата проверяется (до 15/03/2022)</span>
+                                    <button class="btn btn_border history__btn">Отменить</button>
+                                    <div class="icon-question -sm">
+                                        <svg>
+                                            <use xlink:href="./static/img/sprite.svg#question"></use>
+                                        </svg>
+                                        <span class="tooltip tooltip_right">Этот значок значит, что юзер — член</span>
+                                    </div>
                                 </div>
-                            </div>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>12.12.2021 - 16:36</td>
-                        <td>12.12.2021 - 16:36</td>
-                        <td>4598</td>
-                        <td>
-                            <div class="history__status -success">
-                                <span>Выполнено (14.02.2022)</span>
-                                <div class="icon-question -sm">
-                                    <svg>
-                                        <use xlink:href="./static/img/sprite.svg#question"></use>
-                                    </svg>
-                                    <span class="tooltip tooltip_bottom -right">Этот значок значит, что юзер — член</span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>12.12.2021 - 16:36</td>
+                            <td>12.12.2021 - 16:36</td>
+                            <td>4598</td>
+                            <td>
+                                <div class="history__status -success">
+                                    <span>Выполнено (14.02.2022)</span>
+                                    <div class="icon-question -sm">
+                                        <svg>
+                                            <use xlink:href="./static/img/sprite.svg#question"></use>
+                                        </svg>
+                                        <span class="tooltip tooltip_bottom -right">Этот значок значит, что юзер — член</span>
+                                    </div>
                                 </div>
-                            </div>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>12.12.2021 - 16:36</td>
-                        <td>12.12.2021 - 16:36</td>
-                        <td>4598</td>
-                        <td>
-                            <div class="history__status -error">
-                                <span>Ошибка (Недостаточно средств)</span>
-                                <div class="icon-question -sm">
-                                    <svg>
-                                        <use xlink:href="./static/img/sprite.svg#question"></use>
-                                    </svg>
-                                    <span class="tooltip tooltip_bottom -right">Этот значок значит, что юзер — член</span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>12.12.2021 - 16:36</td>
+                            <td>12.12.2021 - 16:36</td>
+                            <td>4598</td>
+                            <td>
+                                <div class="history__status -error">
+                                    <span>Ошибка (Недостаточно средств)</span>
+                                    <div class="icon-question -sm">
+                                        <svg>
+                                            <use xlink:href="./static/img/sprite.svg#question"></use>
+                                        </svg>
+                                        <span class="tooltip tooltip_bottom -right">Этот значок значит, что юзер — член</span>
+                                    </div>
                                 </div>
-                            </div>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>12.12.2021 - 16:36</td>
-                        <td></td>
-                        <td>4598</td>
-                        <td>
-                            <div class="history__status">
-                                <span>Отменена (Деньги вернулись на баланс)</span>
-                                <div class="icon-question -sm">
-                                    <svg>
-                                        <use xlink:href="./static/img/sprite.svg#question"></use>
-                                    </svg>
-                                    <span class="tooltip tooltip_bottom -right">Этот значок значит, что юзер — член</span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>12.12.2021 - 16:36</td>
+                            <td></td>
+                            <td>4598</td>
+                            <td>
+                                <div class="history__status">
+                                    <span>Отменена (Деньги вернулись на баланс)</span>
+                                    <div class="icon-question -sm">
+                                        <svg>
+                                            <use xlink:href="./static/img/sprite.svg#question"></use>
+                                        </svg>
+                                        <span class="tooltip tooltip_bottom -right">Этот значок значит, что юзер — член</span>
+                                    </div>
                                 </div>
-                            </div>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>12.12.2021 - 16:36</td>
-                        <td></td>
-                        <td>4598</td>
-                        <td>
-                            <div class="history__status">
-                                <span>Отменена автоматически (Деньги вернулись на баланс)</span>
-                                <div class="icon-question -sm">
-                                    <svg>
-                                        <use xlink:href="./static/img/sprite.svg#question"></use>
-                                    </svg>
-                                    <span class="tooltip tooltip_bottom -right">Этот значок значит, что юзер — член</span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>12.12.2021 - 16:36</td>
+                            <td></td>
+                            <td>4598</td>
+                            <td>
+                                <div class="history__status">
+                                    <span>Отменена автоматически (Деньги вернулись на баланс)</span>
+                                    <div class="icon-question -sm">
+                                        <svg>
+                                            <use xlink:href="./static/img/sprite.svg#question"></use>
+                                        </svg>
+                                        <span class="tooltip tooltip_bottom -right">Этот значок значит, что юзер — член</span>
+                                    </div>
                                 </div>
-                            </div>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>12.12.2021 - 16:36</td>
-                        <td>12.12.2021 - 16:36</td>
-                        <td>4598</td>
-                        <td>
-                            <div class="history__status -success">
-                                <span>Выполнено (14.02.2022)</span>
-                                <div class="icon-question -sm">
-                                    <svg>
-                                        <use xlink:href="./static/img/sprite.svg#question"></use>
-                                    </svg>
-                                    <span class="tooltip tooltip_bottom -right">Этот значок значит, что юзер — член</span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>12.12.2021 - 16:36</td>
+                            <td>12.12.2021 - 16:36</td>
+                            <td>4598</td>
+                            <td>
+                                <div class="history__status -success">
+                                    <span>Выполнено (14.02.2022)</span>
+                                    <div class="icon-question -sm">
+                                        <svg>
+                                            <use xlink:href="./static/img/sprite.svg#question"></use>
+                                        </svg>
+                                        <span class="tooltip tooltip_bottom -right">Этот значок значит, что юзер — член</span>
+                                    </div>
                                 </div>
-                            </div>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>12.12.2021 - 16:36</td>
-                        <td>12.12.2021 - 16:36</td>
-                        <td>4598</td>
-                        <td>
-                            <div class="history__status -success">
-                                <span>Выполнено (14.02.2022)</span>
-                                <div class="icon-question -sm">
-                                    <svg>
-                                        <use xlink:href="./static/img/sprite.svg#question"></use>
-                                    </svg>
-                                    <span class="tooltip tooltip_bottom -right">Этот значок значит, что юзер — член</span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>12.12.2021 - 16:36</td>
+                            <td>12.12.2021 - 16:36</td>
+                            <td>4598</td>
+                            <td>
+                                <div class="history__status -success">
+                                    <span>Выполнено (14.02.2022)</span>
+                                    <div class="icon-question -sm">
+                                        <svg>
+                                            <use xlink:href="./static/img/sprite.svg#question"></use>
+                                        </svg>
+                                        <span class="tooltip tooltip_bottom -right">Этот значок значит, что юзер — член</span>
+                                    </div>
                                 </div>
-                            </div>
-                        </td>
-                    </tr>
-                    </tbody>
-                </table>
+                            </td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
                 <ul class="pagination settings__pagination">
                     <li class="pagination__item">
                         <a class="pagination__link pagination__link_prev" href="#">
@@ -366,7 +371,7 @@
                             </p>
                         </div>
                         <p class="card__date">09/26</p>
-                        <button class="card__btn">Отвязать</button>
+                        <button class="card__btn"><span class="text-gradient">Отвязать</span></button>
                     </div>
                 </div>
                 <div class="card -warning">
@@ -386,7 +391,7 @@
                             </p>
                         </div>
                         <p class="card__date">09/26</p>
-                        <button class="card__btn">Отвязать</button>
+                        <button class="card__btn"><span class="text-gradient">Отвязать</span></button>
                     </div>
                 </div>
                 <div class="card -error">
@@ -406,7 +411,7 @@
                             </p>
                         </div>
                         <p class="card__date">09/26</p>
-                        <button class="card__btn">Отвязать</button>
+                        <button class="card__btn"><span class="text-gradient">Отвязать</span></button>
                     </div>
                 </div>
                 <div class="card">
@@ -426,7 +431,7 @@
                             </p>
                         </div>
                         <p class="card__date">09/26</p>
-                        <button class="card__btn">Отвязать</button>
+                        <button class="card__btn"><span class="text-gradient">Отвязать</span></button>
                     </div>
                 </div>
             </div>
@@ -458,6 +463,35 @@
                     </div>
                     <div class="membership-cb__action">
                         <button class="btn btn_border">Отменить</button>
+                    </div>
+                </div>
+
+                <div class="membership-cb -silver">
+                    <div class="membership-cb__info">
+                        <p class="membership-cb__status">
+                            <span class="membership-cb__status-icon icon-status-silver"></span>
+                            <span class="membership-cb__status-text">У вас серебряное членство в клубе до 16.12.2021</span>
+                        </p>
+                        <div class="membership-cb__row">
+                            <div class="checkbox">
+                                <label class="checkbox__label">
+                                    <input class="visibility-hidden" type="checkbox">
+                                    <span class="checkbox__btn">&nbsp;</span>
+                                    <span class="checkbox__title">Автоматическое продление</span>
+                                </label>
+                            </div>
+                            <div class="icon-question -sm">
+                                <svg>
+                                    <use xlink:href="./static/img/sprite.svg#question"></use>
+                                </svg>
+                                <span class="tooltip tooltip_bottom -right">Этот значок значит, что юзер — член</span>
+                            </div>
+                        </div>
+                        <p class="membership-cb__next-pay">Следующее списание произойдет 16.12.2022 в 16:38</p>
+                    </div>
+                    <div class="membership-cb__action">
+                        <button class="btn btn_border">Отменить</button>
+                        <button class="btn">Повысить уровень</button>
                     </div>
                 </div>
             </div>

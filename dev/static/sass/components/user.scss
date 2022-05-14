@@ -44,11 +44,7 @@
 
         .user__name {
             max-width: 300px;
-            overflow: hidden;
-
             font-size: 18px;
-            white-space: nowrap;
-            text-overflow: ellipsis;
         }
     }
 
@@ -182,11 +178,15 @@
 
     &__name {
         grid-area: user-name;
+        max-width: 460px;
         margin-top: -3px;
+        overflow: hidden;
 
         font-size: 32px;
         font-weight: 600;
         line-height: 1.2;
+        white-space: nowrap;
+        text-overflow: ellipsis;
     }
 
     &__block {
@@ -215,7 +215,17 @@
     &__games-number {
         margin-left: 32px;
         padding-left: 30px;
+
         font-size: 19px;
+        font-weight: 500;
+
+        &.icon-medal-game {
+            &::before {
+                top: 50%;
+                bottom: auto;
+                transform: translateY(-50%);
+            }
+        }
     }
 
     &__status-expires {

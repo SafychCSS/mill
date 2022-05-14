@@ -102,4 +102,8 @@
         font-size: 13px;
         line-height: 16px;
     }
+
+    @media (max-width: $screen-xs) {
+        white-space: nowrap;
+    }
 }
