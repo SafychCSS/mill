@@ -30,7 +30,7 @@
         color: getcolor(yellow, base);
     }
 
-    @media (max-width: $screen-cabinet-md) {
+    @media (max-width: $screen-sm) {
         flex-direction: column;
         align-items: center;
 

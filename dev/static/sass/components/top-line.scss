@@ -1,15 +1,12 @@
 .top-line {
     $this: &;
 
-    display: grid;
-    grid-template-columns: 1fr auto;
+    display: flex;
     align-items: center;
     justify-content: space-between;
     gap: 15px;
 
     &.-all-time {
-        grid-template-columns: auto 1fr repeat(4, auto);
-
         #{$this}__name {
             font-size: 14px;
         }
@@ -21,6 +18,26 @@
         .user__name {
             font-size: 18px;
         }
+    }
+
+    &__user,
+    &__info,
+    &__game,
+    &__prize {
+        display: flex;
+        align-items: center;
+    }
+
+    &__user {
+        gap: 15px;
+    }
+
+    &__info {
+        white-space: nowrap;
+    }
+
+    &__game {
+        gap: 6px;
     }
 
     &__place {
@@ -56,6 +73,81 @@
 
         span {
             color: getcolor(yellow, base);
+        }
+    }
+
+    @media (max-width: $screen-cabinet-md) {
+        &.-all-time {
+            #{$this}__name {
+                font-size: 12px;
+            }
+
+            #{$this}__value {
+                font-size: 18px;
+            }
+
+            & .-list .user {
+                &__name {
+                    font-size: 16px;
+                    white-space: normal;
+                }
+
+                &__status {
+                    font-size: 12px;
+                }
+            }
+        }
+    }
+
+    @media (max-width: $screen-sm) {
+        &.-all-time {
+            #{$this}__info {
+                flex-direction: column;
+                gap: 10px;
+            }
+
+            #{$this}__item {
+                min-width: 150px;
+                text-align: center;
+                &.-prize-main,
+                &.-prize-today {
+                    margin-left: 0;
+                }
+            }
+
+            #{$this}__game,
+            #{$this}__prize {
+                gap: 0;
+            }
+        }
+    }
+
+    @media (max-width: $screen-xs) {
+        &.-all-time {
+            flex-direction: column;
+            align-items: flex-start;
+
+            & .-list .user {
+                &__name {
+                    font-size: 12px;
+                }
+
+                &__status {
+                    font-size: 10px;
+                }
+            }
+
+            #{$this}__value {
+                margin-top: 0;
+            }
+
+            #{$this}__name {
+                font-size: 10px;
+            }
+
+            #{$this}__info {
+                margin-left: 10px;
+            }
         }
     }
 }
