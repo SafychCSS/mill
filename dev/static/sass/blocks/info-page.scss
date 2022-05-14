@@ -7,7 +7,16 @@
     p {
         margin: 24px 0;
 
-        font-size: 16px;
         line-height: 26px;
+    }
+
+    @media (max-width: $screen-xs) {
+        &__title {
+            font-size: 14px;
+        }
+
+        p {
+            font-size: 12px;
+        }
     }
 }
