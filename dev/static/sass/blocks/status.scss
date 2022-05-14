@@ -9,4 +9,32 @@
     &__additional {
         margin-top: 40px;
     }
+
+    @media (max-width: $screen-cabinet-md) {
+        .additional__name {
+            flex-direction: column !important;
+        }
+    }
+
+    @media (max-width: $screen-sm) {
+        max-width: 700px;
+        margin: 0 auto;
+        &__membership {
+            grid-template-columns: 1fr;
+        }
+
+        .additional {
+            &.-sm {
+                padding: 24px;
+            }
+
+            &__row {
+                flex-direction: column;
+            }
+
+            &__btn {
+                margin-top: 16px;
+            }
+        }
+    }
 }
