@@ -19,6 +19,12 @@
             .tooltip {
                 display: none;
             }
+
+            .hint:hover {
+                &::after {
+                    content: unset;
+                }
+            }
         }
 
         &.-helpers {

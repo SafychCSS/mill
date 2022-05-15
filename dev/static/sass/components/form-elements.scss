@@ -105,6 +105,34 @@
         margin-top: 32px;
     }
 
+    &__deposit {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+    }
+
+    &__deposit-label {
+        span {
+            display: inline-block;
+            padding: 8px 16px;
+
+            font-size: 14px;
+            line-height: 17px;
+            font-weight: 500;
+            letter-spacing: 0.02em;
+
+            background: rgba(255, 178, 30, 0.5);
+            border-radius: 24px;
+
+            cursor: pointer;
+        }
+
+        input:checked ~ span {
+            color: getcolor(base, dark);
+            background: getcolor(yellow, base);
+        }
+    }
+
     @media (max-width: $screen-cabinet-md) {
         &__line {
             gap: 24px;
@@ -130,6 +158,12 @@
 
         &__error {
             font-size: 10px;
+        }
+
+        &__deposit-label {
+            span {
+                padding: 8px 12px;
+            }
         }
     }
 }

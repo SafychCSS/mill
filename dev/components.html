@@ -12,7 +12,7 @@
     <title>Document</title>
     <style>
         body {
-            background-color: #1F1B53 !important;
+            background-color: #2f2c53 !important;
         }
 
         .stub-wrapper {
@@ -1406,7 +1406,7 @@
         <hr>
         <h2>карты</h2>
         <div class="stub-block">
-            <div class="card">
+            <div class="card -active">
                 <div class="card__heading">
                     <p class="card__status">Активна</p>
                     <p class="card__default">
@@ -1472,7 +1472,7 @@
                     <button class="card__btn"><span class="text-gradient">Отвязать</span></button>
                 </div>
             </div>
-            <div class="card">
+            <div class="card -active">
                 <div class="card__heading">
                     <p class="card__status">Активна</p>
                 </div>
@@ -1946,6 +1946,874 @@
 
 
     <h2>Modal</h2>
+
+    <h3>хз что это</h3>
+    <div class="stub-block">
+        <div class="modal modal_sm">
+            <p class="modal__title modal__title_sm">Если вам не помог данный ответ вы можете обратиться в службу поддержки</p>
+
+            <button class="btn btn_full modal__btn">Задать вопрос</button>
+            <button class="modal__close">
+                <svg>
+                    <use xlink:href="./static/img/sprite.svg#close"></use>
+                </svg>
+            </button>
+        </div>
+    </div>
+
+    <h3>Отключить автопродление</h3>
+    <div class="stub-block">
+        <div class="modal modal_sm">
+            <p class="modal__title">Отключить автопродление услуги членства в клубе</p>
+            <div class="modal__offset">
+                <p class="modal__heading">Если вы прекратите членство - останетесь без члена. Но до конца оплаченного периода можете пользоваться услугами</p>
+            </div>
+
+            <div class="modal__action">
+                <button class="btn btn_border">Долой</button>
+                <button class="btn btn_full">Остаться с членом</button>
+            </div>
+            <button class="modal__close">
+                <svg>
+                    <use xlink:href="./static/img/sprite.svg#close"></use>
+                </svg>
+            </button>
+        </div>
+    </div>
+
+    <h3>Подверждение телефона в кабинете</h3>
+    <div class="stub-block">
+        <div class="modal">
+            <p class="modal__title">Код подтверждения отправлен</p>
+
+            <form class="form modal__confirm" action="/" method="post" name="phone-confirm">
+                <div class="form__field" >
+                    <label class="form__label" for="phone-confirm">Введите код подверждения</label>
+                    <input name="confirm-phone" class="input" id="phone-confirm" type="text" inputmode="numeric">
+                    <span class="form__label">Отправить новый код через 48 сек.</span>
+                </div>
+            </form>
+
+            <button class="btn btn_full modal__btn -offset-lg">Подтвердить</button>
+            <button class="modal__close">
+                <svg>
+                    <use xlink:href="./static/img/sprite.svg#close"></use>
+                </svg>
+            </button>
+        </div>
+    </div>
+
+    <h3>Подверждение почты</h3>
+    <div class="stub-block">
+        <div class="modal">
+            <p class="modal__title">Подверждение почты</p>
+
+            <form class="form modal__confirm" action="/" method="post" name="email-confirm">
+                <div class="form__field" >
+                    <label class="form__label" for="email-confirm">Ведите код отпарленый вам на email для проверки</label>
+                    <input name="confirm-email" class="input" id="email-confirm" type="text" inputmode="numeric">
+                </div>
+            </form>
+
+            <button class="btn btn_full modal__btn -offset-lg">Подтвердить</button>
+            <button class="modal__close">
+                <svg>
+                    <use xlink:href="./static/img/sprite.svg#close"></use>
+                </svg>
+            </button>
+        </div>
+    </div>
+
+    <h3>Итого к оплате</h3>
+    <div class="stub-block">
+        <div class="modal-pay">
+
+            <div class="modal-pay__heading">
+                <div class="modal-pay__about">
+                    <p class="modal-pay__title">Итого к оплате</p>
+                    <p class="modal-pay__text">Продолжая, вы соглашаетесь с условиями <a href="#">договора-оферты</a></p>
+                </div>
+                <div class="modal-pay__sum">
+                    <p class="modal-pay__title">500 ₽</p>
+                    <p class="modal-pay__text">С учетом НДС</p>
+                </div>
+            </div>
+
+            <div class="card -active">
+                <div class="card__heading">
+                    <p class="card__default">
+                        Карта умолчанию
+                        <svg>
+                            <use xlink:href="./static/img/sprite.svg#checkmark"></use>
+                        </svg>
+                    </p>
+                </div>
+                <div class="card__body">
+                    <div class="card__block">
+                        <div class="card__logo">
+                            <img src="./static/img/icon/visa.svg" alt="visa">
+                        </div>
+                        <p class="card__number">
+                            <span>5698</span>
+                            <span>23**</span>
+                            <span>****</span>
+                            <span>9874</span>
+                        </p>
+                    </div>
+                    <p class="card__sum">500 ₽</p>
+                    <button class="btn">Оплатить в 1 клик</button>
+                </div>
+            </div>
+
+            <div class="card -active">
+                <div class="card__body">
+                    <div class="card__block">
+                        <div class="card__logo">
+                            <img src="./static/img/icon/visa.svg" alt="visa">
+                        </div>
+                        <p class="card__number">
+                            <span>5698</span>
+                            <span>23**</span>
+                            <span>****</span>
+                            <span>9874</span>
+                        </p>
+                    </div>
+                    <p class="card__sum">500 ₽</p>
+                    <button class="btn">Оплатить в 1 клик</button>
+                </div>
+            </div>
+
+            <p class="modal-pay__title -online">Оплатить онлайн</p>
+
+            <div class="card">
+                <div class="card__body">
+                    <div class="card__block">
+                        <div class="card__logo">
+                            <img src="./static/img/icon/yoomoney.svg" alt="yoomoney">
+                            <span>ЮMoney</span>
+                        </div>
+                    </div>
+                    <p class="card__sum">500 ₽</p>
+                    <button class="btn">К оплате</button>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card__body">
+                    <div class="card__block">
+                        <div class="card__logo">
+                            <img src="./static/img/icon/yoomoney.svg" alt="yoomoney">
+                            <span>ЮMoney</span>
+                        </div>
+                    </div>
+                    <p class="card__sum">500 ₽</p>
+                    <button class="btn">К оплате</button>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card__body">
+                    <div class="card__block">
+                        <div class="card__logo">
+                            <img src="./static/img/icon/yoomoney.svg" alt="yoomoney">
+                            <span>ЮMoney</span>
+                        </div>
+                    </div>
+                    <p class="card__sum">500 ₽</p>
+                    <button class="btn">К оплате</button>
+                </div>
+            </div>
+
+            <button class="modal__close">
+                <svg>
+                    <use xlink:href="./static/img/sprite.svg#close"></use>
+                </svg>
+            </button>
+        </div>
+    </div>
+
+    <h3>Начать заново</h3>
+    <div class="stub-block">
+        <div class="modal modal_sm">
+            <p class="modal__title">Вы уверены?</p>
+            <div class="modal__offset">
+                <p class="modal__heading">Вы можете прервать текущую игру и начать новую. При этом эта игра не будет отображаться у вас в рейтинге, как проигранная</p>
+            </div>
+
+            <div class="modal__action">
+                <button class="btn btn_border btn_full">Отмена</button>
+                <button class="btn btn_full">Да</button>
+            </div>
+            <button class="modal__close">
+                <svg>
+                    <use xlink:href="./static/img/sprite.svg#close"></use>
+                </svg>
+            </button>
+        </div>
+    </div>
+
+    <h3>Регистрация</h3>
+    <div class="stub-block">
+        <div class="modal">
+            <p class="modal__title">Регистрация</p>
+
+            <div class="modal__offset">
+                <form action="/" method="post" name="registration" class="form">
+                    <div class="form__field">
+                        <div class="btn-social">
+                            <a href="#" class="btn-social__link">
+                            <span class="btn-social__icon -vk">
+                                <svg>
+                                    <use xlink:href="./static/img/sprite.svg#social-vk"></use>
+                                </svg>
+                            </span>
+                                <span class="btn-social__name">Вконтакте</span>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="form__field">
+                        <div class="btn-social">
+                            <div class="btn-social__link">
+                            <span class="btn-social__icon -fb">
+                                <svg>
+                                    <use xlink:href="./static/img/sprite.svg#social-fb"></use>
+                                </svg>
+                            </span>
+                                <span class="btn-social__name">Facebook</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form__field">
+                        <div class="btn-social">
+                            <div class="btn-social__link">
+                            <span class="btn-social__icon -google">
+                                <svg>
+                                    <use xlink:href="./static/img/sprite.svg#social-google"></use>
+                                </svg>
+                            </span>
+                                <span class="btn-social__name">Google</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form__field">
+                        <div class="btn-social">
+                            <div class="btn-social__link">
+                            <span class="btn-social__icon -mail">
+                                <svg>
+                                    <use xlink:href="./static/img/sprite.svg#social-mail"></use>
+                                </svg>
+                            </span>
+                                <span class="btn-social__name">Mail.ru</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form__field">
+                        <div class="btn-social">
+                            <div class="btn-social__link">
+                            <span class="btn-social__icon -yandex">
+                                <svg>
+                                    <use xlink:href="./static/img/sprite.svg#social-yandex"></use>
+                                </svg>
+                            </span>
+                                <span class="btn-social__name">Яндекс</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form__field">
+                        <div class="btn-social">
+                            <div class="btn-social__link">
+                            <span class="btn-social__icon -letter">
+                                <svg>
+                                    <use xlink:href="./static/img/sprite.svg#social-letter"></use>
+                                </svg>
+                            </span>
+                                <span class="btn-social__name">Через почту</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form__field">
+                        <div class="btn-social">
+                            <button class="btn-social__link">
+                            <span class="btn-social__icon -phone">
+                                <svg>
+                                    <use xlink:href="./static/img/sprite.svg#phone"></use>
+                                </svg>
+                            </span>
+                                <span class="btn-social__name">Через телефон</span>
+                            </button>
+                        </div>
+                    </div>
+                    <button class="btn btn_border btn_full modal__btn -offset-xs">Вход</button>
+                </form>
+            </div>
+
+            <button class="modal__close">
+                <svg>
+                    <use xlink:href="./static/img/sprite.svg#close"></use>
+                </svg>
+            </button>
+        </div>
+    </div>
+
+    <h3>Вход</h3>
+    <div class="stub-block">
+        <div class="modal">
+            <p class="modal__title">Вход</p>
+
+            <div class="modal__offset">
+                <form action="/" method="post" name="registration" class="form">
+                    <div class="form__field">
+                        <div class="btn-social">
+                            <a href="#" class="btn-social__link">
+                            <span class="btn-social__icon -vk">
+                                <svg>
+                                    <use xlink:href="./static/img/sprite.svg#social-vk"></use>
+                                </svg>
+                            </span>
+                                <span class="btn-social__name">Вконтакте</span>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="form__field">
+                        <div class="btn-social">
+                            <div class="btn-social__link">
+                            <span class="btn-social__icon -fb">
+                                <svg>
+                                    <use xlink:href="./static/img/sprite.svg#social-fb"></use>
+                                </svg>
+                            </span>
+                                <span class="btn-social__name">Facebook</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form__field">
+                        <div class="btn-social">
+                            <div class="btn-social__link">
+                            <span class="btn-social__icon -google">
+                                <svg>
+                                    <use xlink:href="./static/img/sprite.svg#social-google"></use>
+                                </svg>
+                            </span>
+                                <span class="btn-social__name">Google</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form__field">
+                        <div class="btn-social">
+                            <div class="btn-social__link">
+                            <span class="btn-social__icon -mail">
+                                <svg>
+                                    <use xlink:href="./static/img/sprite.svg#social-mail"></use>
+                                </svg>
+                            </span>
+                                <span class="btn-social__name">Mail.ru</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form__field">
+                        <div class="btn-social">
+                            <div class="btn-social__link">
+                            <span class="btn-social__icon -yandex">
+                                <svg>
+                                    <use xlink:href="./static/img/sprite.svg#social-yandex"></use>
+                                </svg>
+                            </span>
+                                <span class="btn-social__name">Яндекс</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form__field">
+                        <div class="btn-social">
+                            <div class="btn-social__link">
+                            <span class="btn-social__icon -letter">
+                                <svg>
+                                    <use xlink:href="./static/img/sprite.svg#social-letter"></use>
+                                </svg>
+                            </span>
+                                <span class="btn-social__name">Почта или телефон</span>
+                            </div>
+                        </div>
+                    </div>
+                    <button class="btn btn_full modal__btn">Войти</button>
+                    <a href="#" class="modal__forgot text-gradient">Забыли пароль?</a>
+                    <button class="btn btn_border btn_full modal__btn">Регистрация</button>
+                </form>
+            </div>
+
+            <button class="modal__close">
+                <svg>
+                    <use xlink:href="./static/img/sprite.svg#close"></use>
+                </svg>
+            </button>
+        </div>
+    </div>
+
+    <h3>Вход</h3>
+    <div class="stub-block">
+        <div class="modal">
+            <p class="modal__title">Вход</p>
+
+            <div class="modal__offset">
+                <form action="/" method="post" name="registration" class="form">
+                    <div class="form__field">
+                        <label class="form__label" for="email">Почта или телефон</label>
+                        <input class="input" id="email" type="text" inputmode="email">
+                        <span class="form__error">Ошибка</span>
+                    </div>
+                    <div class="form__field">
+                        <label class="form__label" for="password">Пароль</label>
+                        <div class="form__input">
+                            <input class="input" id="password" type="password">
+                            <div class="icon-show-pwd form__show-pwd">
+                                <svg>
+                                    <use xlink:href="./static/img/sprite.svg#show-pwd"></use>
+                                </svg>
+                            </div>
+                        </div>
+                        <span class="form__error">Ошибка</span>
+                    </div>
+                    <button class="btn btn_full modal__btn -offset-lg">Войти</button>
+                    <a href="#" class="modal__forgot text-gradient">Забыли пароль?</a>
+                </form>
+            </div>
+
+            <button class="modal__close">
+                <svg>
+                    <use xlink:href="./static/img/sprite.svg#close"></use>
+                </svg>
+            </button>
+        </div>
+    </div>
+
+    <h3>Восстановление</h3>
+    <div class="stub-block">
+        <div class="modal">
+            <p class="modal__title">Восстановление пароля</p>
+
+            <div class="modal__offset">
+                <form action="/" method="post" name="registration" class="form">
+                    <div class="form__field">
+                        <label class="form__label" for="email">Почта или телефон</label>
+                        <input class="input" id="email" type="text" inputmode="email">
+                        <span class="form__error">Ошибка</span>
+                    </div>
+                    <button class="btn btn_full modal__btn -offset-lg">Восстановить</button>
+                </form>
+            </div>
+
+            <button class="modal__close">
+                <svg>
+                    <use xlink:href="./static/img/sprite.svg#close"></use>
+                </svg>
+            </button>
+        </div>
+    </div>
+
+    <h3>Регистрация почта</h3>
+    <div class="stub-block">
+        <div class="modal">
+            <p class="modal__title">Регистрация</p>
+
+            <div class="modal__offset">
+                <form action="/" method="post" name="registration" class="form">
+                    <div class="form__field">
+                        <label class="form__label" for="name">Имя</label>
+                        <input class="input" id="name" type="text">
+                        <span class="form__error">Ошибка</span>
+                    </div>
+
+                    <div class="form__field">
+                        <label class="form__label" for="email">Почта</label>
+                        <input class="input" id="email" type="text" inputmode="email">
+                        <span class="form__error">Ошибка</span>
+                    </div>
+
+                    <div class="form__field -error">
+                        <label class="form__label" for="password">Пароль</label>
+                        <div class="form__input">
+                            <input class="input" id="password" type="password">
+                            <div class="icon-show-pwd form__show-pwd">
+                                <svg>
+                                    <use xlink:href="./static/img/sprite.svg#show-pwd"></use>
+                                </svg>
+                            </div>
+                        </div>
+                        <span class="form__error">Ошибка</span>
+                    </div>
+
+                    <div class="form__field">
+                        <label class="form__label" for="password-repeat">Повторите пароль</label>
+                        <div class="form__input">
+                            <input class="input" id="password-repeat" type="password">
+                            <div class="icon-show-pwd form__show-pwd">
+                                <svg>
+                                    <use xlink:href="./static/img/sprite.svg#show-pwd"></use>
+                                </svg>
+                            </div>
+                        </div>
+                        <span class="form__error">Ошибка</span>
+                    </div>
+                    <button class="btn btn_full modal__btn -offset-lg">Зарегистрироваться</button>
+                </form>
+            </div>
+
+            <button class="modal__close">
+                <svg>
+                    <use xlink:href="./static/img/sprite.svg#close"></use>
+                </svg>
+            </button>
+        </div>
+    </div>
+
+    <h3>Регистрация телефон</h3>
+    <div class="stub-block">
+        <div class="modal">
+            <p class="modal__title">Регистрация</p>
+
+            <div class="modal__offset">
+                <form action="/" method="post" name="registration" class="form">
+                    <div class="form__field">
+                        <label class="form__label" for="phone">Номер телефона</label>
+                        <input class="input" id="phone" type="text" placeholder="+7 (XXX) XXX XX XX" inputmode="tel">
+                        <span class="form__error">Ошибка</span>
+                    </div>
+                    <button class="btn btn_full modal__btn -offset-lg">Зарегистрироваться</button>
+                </form>
+            </div>
+
+            <button class="modal__close">
+                <svg>
+                    <use xlink:href="./static/img/sprite.svg#close"></use>
+                </svg>
+            </button>
+        </div>
+    </div>
+
+    <h3>Код подтверждения отправлен</h3>
+    <div class="stub-block">
+        <div class="modal">
+            <p class="modal__title">Код подтверждения отправлен</p>
+
+            <div class="modal__offset">
+                <form action="/" method="post" name="code-confirm" class="form">
+                    <div class="form__field">
+                        <label class="form__label" for="confirm-code">Введите код подверждения</label>
+                        <input class="input" id="confirm-code" type="text" inputmode="numeric">
+                        <span class="form__label">Отправить новый код через 48 сек.</span>
+                    </div>
+                    <button class="btn btn_full modal__btn -offset-lg">Подтвердить</button>
+                </form>
+            </div>
+
+            <button class="modal__close">
+                <svg>
+                    <use xlink:href="./static/img/sprite.svg#close"></use>
+                </svg>
+            </button>
+        </div>
+    </div>
+
+    <h3>Придумайте пароль</h3>
+    <div class="stub-block">
+        <div class="modal">
+            <p class="modal__title">Придумайте пароль</p>
+
+            <div class="modal__offset">
+                <form action="/" method="post" name="create-password" class="form">
+                    <div class="form__field -error">
+                        <label class="form__label" for="password">Пароль</label>
+                        <div class="form__input">
+                            <input class="input" id="password" type="password">
+                            <div class="icon-show-pwd form__show-pwd">
+                                <svg>
+                                    <use xlink:href="./static/img/sprite.svg#show-pwd"></use>
+                                </svg>
+                            </div>
+                        </div>
+                        <span class="form__error">Ошибка</span>
+                    </div>
+
+                    <div class="form__field">
+                        <label class="form__label" for="password-repeat">Повторите пароль</label>
+                        <div class="form__input">
+                            <input class="input" id="password-repeat" type="password">
+                            <div class="icon-show-pwd form__show-pwd">
+                                <svg>
+                                    <use xlink:href="./static/img/sprite.svg#show-pwd"></use>
+                                </svg>
+                            </div>
+                        </div>
+                        <span class="form__error">Ошибка</span>
+                    </div>
+                    <button class="btn btn_full modal__btn -offset-lg">Заершить регистрацию</button>
+                </form>
+            </div>
+
+            <button class="modal__close">
+                <svg>
+                    <use xlink:href="./static/img/sprite.svg#close"></use>
+                </svg>
+            </button>
+        </div>
+    </div>
+
+    <h3>Го в члены?</h3>
+    <div class="stub-block">
+        <div class="modal modal_md">
+            <p class="modal__title modal__title_sm -text-center">Вы сыграли 10 игр. <br/>Для продолжения игр вам необходимо стать членом клуба.</p>
+
+            <button class="btn btn_full modal__btn">Выбрать тип членства</button>
+            <button class="modal__close">
+                <svg>
+                    <use xlink:href="./static/img/sprite.svg#close"></use>
+                </svg>
+            </button>
+        </div>
+    </div>
+
+    <h3>Начать игру</h3>
+    <div class="stub-block">
+        <div class="modal modal_sm">
+            <p class="modal__title">Начать игру</p>
+
+            <p class="modal__title modal__title_sm -offset">Стоимость одной попытки участи — 100 рублей.</p>
+            <p class="modal__title modal__title_sm -offset">Ваш игровой баланс: 0 рублей — необходимо поплнить баланс.</p>
+
+            <div class="modal__offset">
+                <form action="/" method="post" class="form" name="deposit">
+                    <div class="form__field">
+                        <label class="form__label" for="confirm-code">Ввведите сумму</label>
+                        <input class="input" id="confirm-code" type="text" inputmode="numeric" value="500">
+                        <span class="form__error">Ошибка</span>
+                    </div>
+
+                    <div class="modal__offset">
+                        <p class="form__label">Пополнить на сумму:</p>
+                        <div class="form__deposit">
+                            <label class="form__deposit-label">
+                                <input class="input visibility-hidden" name="deposit-sum" type="radio" value="100">
+                                <span>100₽</span>
+                            </label>
+                            <label class="form__deposit-label">
+                                <input class="input visibility-hidden" name="deposit-sum" type="radio" value="300">
+                                <span>300₽</span>
+                            </label>
+                            <label class="form__deposit-label">
+                                <input class="input visibility-hidden" checked name="deposit-sum" type="radio" value="500">
+                                <span>500₽</span>
+                            </label>
+                            <label class="form__deposit-label">
+                                <input class="input visibility-hidden" name="deposit-sum" type="radio" value="1000">
+                                <span>1 000₽</span>
+                            </label>
+                        </div>
+                    </div>
+                </form>
+            </div>
+
+            <div class="modal__action">
+                <button class="btn btn_border btn_full">Отменить</button>
+                <button class="btn btn_full">Пополнить</button>
+            </div>
+            <button class="modal__close">
+                <svg>
+                    <use xlink:href="./static/img/sprite.svg#close"></use>
+                </svg>
+            </button>
+        </div>
+    </div>
+
+    <h3>Пополнить иргровой баланс</h3>
+    <div class="stub-block">
+        <div class="modal modal_sm">
+            <p class="modal__title">Пополнить иргровой баланс</p>
+
+            <div class="modal__offset">
+                <form action="/" method="post" class="form" name="deposit">
+                    <div class="form__field">
+                        <label class="form__label" for="confirm-code">Ввведите сумму</label>
+                        <input class="input" id="confirm-code" type="text" inputmode="numeric" value="500">
+                        <span class="form__error">Ошибка</span>
+                    </div>
+
+                    <div class="modal__offset">
+                        <p class="form__label">Пополнить на сумму:</p>
+                        <div class="form__deposit">
+                            <label class="form__deposit-label">
+                                <input class="input visibility-hidden" name="deposit-sum" type="radio" value="100">
+                                <span>100₽</span>
+                            </label>
+                            <label class="form__deposit-label">
+                                <input class="input visibility-hidden" name="deposit-sum" type="radio" value="300">
+                                <span>300₽</span>
+                            </label>
+                            <label class="form__deposit-label">
+                                <input class="input visibility-hidden" checked name="deposit-sum" type="radio" value="500">
+                                <span>500₽</span>
+                            </label>
+                            <label class="form__deposit-label">
+                                <input class="input visibility-hidden" name="deposit-sum" type="radio" value="1000">
+                                <span>1 000₽</span>
+                            </label>
+                        </div>
+                    </div>
+                </form>
+            </div>
+
+            <div class="modal__action">
+                <button class="btn btn_border btn_full">Отменить</button>
+                <button class="btn btn_full">Пополнить</button>
+            </div>
+            <button class="modal__close">
+                <svg>
+                    <use xlink:href="./static/img/sprite.svg#close"></use>
+                </svg>
+            </button>
+        </div>
+    </div>
+
+
+    <h3>Игровой баланс опустел</h3>
+    <div class="stub-block">
+        <div class="modal modal_md">
+            <p class="modal__title -text-center">Необходимо пополнить игровой баланс, чтобы иметь возможность покупать подсказки.</p>
+
+            <div class="modal__offset">
+                <form action="/" method="post" class="form" name="deposit">
+                    <div class="form__field">
+                        <label class="form__label" for="confirm-code">Ввведите сумму</label>
+                        <input class="input" id="confirm-code" type="text" inputmode="numeric" value="500">
+                        <span class="form__error">Ошибка</span>
+                    </div>
+
+                    <div class="modal__offset">
+                        <p class="form__label">Пополнить на сумму:</p>
+                        <div class="form__deposit">
+                            <label class="form__deposit-label">
+                                <input class="input visibility-hidden" name="deposit-sum" type="radio" value="100">
+                                <span>100₽</span>
+                            </label>
+                            <label class="form__deposit-label">
+                                <input class="input visibility-hidden" name="deposit-sum" type="radio" value="300">
+                                <span>300₽</span>
+                            </label>
+                            <label class="form__deposit-label">
+                                <input class="input visibility-hidden" checked name="deposit-sum" type="radio" value="500">
+                                <span>500₽</span>
+                            </label>
+                            <label class="form__deposit-label">
+                                <input class="input visibility-hidden" name="deposit-sum" type="radio" value="1000">
+                                <span>1 000₽</span>
+                            </label>
+                        </div>
+                    </div>
+                </form>
+            </div>
+
+            <button class="btn btn_full modal__btn">Пополнить баланс</button>
+            <button class="modal__close">
+                <svg>
+                    <use xlink:href="./static/img/sprite.svg#close"></use>
+                </svg>
+            </button>
+        </div>
+    </div>
+
+    <h3>Верный ответ</h3>
+    <div class="stub-block">
+        <div class="modal modal_md">
+            <p class="modal__title -text-center -accent">Баланс пополнен</p>
+
+            <div class="modal__offset">
+                <p class="modal__sum">1 500 ₽</p>
+                <p class="modal__heading -text-center">Успешно добавлены к вашему свободному балансу</p>
+            </div>
+
+            <button class="btn btn_full modal__btn">Понятно</button>
+            <button class="modal__close">
+                <svg>
+                    <use xlink:href="./static/img/sprite.svg#close"></use>
+                </svg>
+            </button>
+        </div>
+    </div>
+
+    <h3>Верный ответ</h3>
+    <div class="stub-block">
+        <div class="modal modal_md">
+            <p class="modal__title -text-center -accent">Поздравляем!<br> Это правильный ответ!</p>
+
+            <div class="modal__offset">
+                <p class="modal__heading -text-center">Ваш текущий выигрыш составляет</p>
+                <p class="modal__sum">1 500 ₽</p>
+                <div class="modal__action">
+                    <button class="btn btn_border btn_full">Забрать деньги</button>
+                    <button class="btn btn_full">Продожлить игру</button>
+                </div>
+            </div>
+
+            <div class="modal__offset -lg">
+                <p class="modal__title modal__title_sm -text-center">Ваш текущий игровой баланс составляет</p>
+                <p class="modal__current-balance">1 500 ₽</p>
+                <p class="modal__text -text-center">Рекомендуем пополнить его сейчас, между раундами, чтобы иметь возможность докупать подсказки во время игры.</p>
+            </div>
+
+            <form action="/" method="post" class="form" name="deposit">
+                <div class="form__field">
+                    <label class="form__label" for="confirm-code">Ввведите сумму</label>
+                    <input class="input" id="confirm-code" type="text" inputmode="numeric" value="500">
+                    <span class="form__error">Ошибка</span>
+                </div>
+
+                <div class="modal__offset -sm">
+                    <p class="form__label">Пополнить на сумму:</p>
+                    <div class="form__deposit">
+                        <label class="form__deposit-label">
+                            <input class="input visibility-hidden" name="deposit-sum" type="radio" value="100">
+                            <span>100₽</span>
+                        </label>
+                        <label class="form__deposit-label">
+                            <input class="input visibility-hidden" name="deposit-sum" type="radio" value="300">
+                            <span>300₽</span>
+                        </label>
+                        <label class="form__deposit-label">
+                            <input class="input visibility-hidden" checked name="deposit-sum" type="radio" value="500">
+                            <span>500₽</span>
+                        </label>
+                        <label class="form__deposit-label">
+                            <input class="input visibility-hidden" name="deposit-sum" type="radio" value="1000">
+                            <span>1 000₽</span>
+                        </label>
+                    </div>
+                </div>
+                <button class="btn btn_full modal__btn">Пополнить баланс</button>
+            </form>
+            <button class="modal__close">
+                <svg>
+                    <use xlink:href="./static/img/sprite.svg#close"></use>
+                </svg>
+            </button>
+        </div>
+    </div>
+
+    <h3>Неправильный ответ</h3>
+    <div class="stub-block">
+        <div class="modal modal_md">
+            <p class="modal__title -text-center -error">Сожалеем<br> На этот раз не повезло :(</p>
+
+            <div class="modal__action">
+                <button class="btn btn_border btn_full">Личный кабинет</button>
+                <button class="btn btn_full">Еще игра</button>
+            </div>
+            <button class="modal__close">
+                <svg>
+                    <use xlink:href="./static/img/sprite.svg#close"></use>
+                </svg>
+            </button>
+        </div>
+    </div>
+
+
 </div>
 
 <script src="./static/js/script.min.js"></script>
