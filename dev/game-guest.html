@@ -159,7 +159,112 @@
             </div>
             //= blocks/footer.html
         </div>
+        <div class="modal micromodal-slide" id="modal-reg" aria-hidden="true">
+            <div class="modal__wrapper">
+                <div class="modal__container" role="dialog">
+                    <p class="modal__title">Регистрация</p>
+
+                    <div class="modal__offset">
+                        <form action="/" method="post" name="registration" class="form">
+                            <div class="form__field">
+                                <div class="btn-social">
+                                    <a href="#" class="btn-social__link">
+                                    <span class="btn-social__icon -vk">
+                                        <svg>
+                                            <use xlink:href="./static/img/sprite.svg#social-vk"></use>
+                                        </svg>
+                                    </span>
+                                        <span class="btn-social__name">Вконтакте</span>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="form__field">
+                                <div class="btn-social">
+                                    <div class="btn-social__link">
+                                    <span class="btn-social__icon -fb">
+                                        <svg>
+                                            <use xlink:href="./static/img/sprite.svg#social-fb"></use>
+                                        </svg>
+                                    </span>
+                                        <span class="btn-social__name">Facebook</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form__field">
+                                <div class="btn-social">
+                                    <div class="btn-social__link">
+                                    <span class="btn-social__icon -google">
+                                        <svg>
+                                            <use xlink:href="./static/img/sprite.svg#social-google"></use>
+                                        </svg>
+                                    </span>
+                                        <span class="btn-social__name">Google</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form__field">
+                                <div class="btn-social">
+                                    <div class="btn-social__link">
+                                    <span class="btn-social__icon -mail">
+                                        <svg>
+                                            <use xlink:href="./static/img/sprite.svg#social-mail"></use>
+                                        </svg>
+                                    </span>
+                                        <span class="btn-social__name">Mail.ru</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form__field">
+                                <div class="btn-social">
+                                    <div class="btn-social__link">
+                                    <span class="btn-social__icon -yandex">
+                                        <svg>
+                                            <use xlink:href="./static/img/sprite.svg#social-yandex"></use>
+                                        </svg>
+                                    </span>
+                                        <span class="btn-social__name">Яндекс</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form__field">
+                                <div class="btn-social">
+                                    <div class="btn-social__link">
+                                    <span class="btn-social__icon -letter">
+                                        <svg>
+                                            <use xlink:href="./static/img/sprite.svg#social-letter"></use>
+                                        </svg>
+                                    </span>
+                                        <span class="btn-social__name">Через почту</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form__field">
+                                <div class="btn-social">
+                                    <button class="btn-social__link">
+                                    <span class="btn-social__icon -phone">
+                                        <svg>
+                                            <use xlink:href="./static/img/sprite.svg#phone"></use>
+                                        </svg>
+                                    </span>
+                                        <span class="btn-social__name">Через телефон</span>
+                                    </button>
+                                </div>
+                            </div>
+                            <button class="btn btn_border btn_full modal__btn -offset-xs">Вход</button>
+                        </form>
+                    </div>
+
+                    <button class="modal__close" data-micromodal-close>
+                        <svg>
+                            <use xlink:href="./static/img/sprite.svg#close"></use>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+            <div class="modal__overlay" tabindex="-1" data-micromodal-close></div>
+        </div>
     </div>
+    <script src="https://unpkg.com/micromodal/dist/micromodal.min.js"></script>
     <script src="./static/js/script.min.js"></script>
 </body>
 </html>

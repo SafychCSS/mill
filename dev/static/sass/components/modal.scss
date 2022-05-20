@@ -1,16 +1,43 @@
 .modal {
-    position: relative;
+    &__wrapper {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
 
-    max-width: 340px;
-    padding: 40px;
-    background: radial-gradient(110.5% 160.57% at 48.23% 19.03%, #5300DA 0%, #16002D 100%);
-
-    &_sm {
-        max-width: 456px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
     }
 
-    &_md {
-        max-width: 503px;
+    &__container {
+        z-index: 999;
+
+        width: 100%;
+        max-width: 340px;
+        padding: 40px;
+
+        background: radial-gradient(110.5% 160.57% at 48.23% 19.03%, #5300DA 0%, #16002D 100%);
+
+        &_sm {
+            max-width: 456px;
+        }
+
+        &_md {
+            max-width: 503px;
+        }
+    }
+
+    &__overlay {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        z-index: 998;
+
+        background: rgba(0,0,0,0.6);
     }
 
     .form {
@@ -223,11 +250,39 @@
 }
 
 .modal-pay {
-    position: relative;
-    max-width: 740px;
-    padding: 40px;
+    &__wrapper {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
 
-    background: getcolor(blue, base);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    &__container {
+        position: relative;
+        z-index: 999;
+
+        width: 100%;
+        max-width: 740px;
+        padding: 40px;
+
+        background: getcolor(blue, base);
+    }
+
+    &__overlay {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        z-index: 998;
+
+        background: rgba(0,0,0,0.6);
+    }
 
     .card__default {
         margin-left: auto;
@@ -311,4 +366,53 @@
             }
         }
     }
+}
+
+.micromodal-slide {
+    display: none;
+}
+
+.micromodal-slide.is-open {
+    display: block;
+}
+
+.micromodal-slide[aria-hidden="false"] .modal__overlay {
+    animation: mmfadeIn .3s cubic-bezier(0.0, 0.0, 0.2, 1);
+}
+
+.micromodal-slide[aria-hidden="false"] .modal__container {
+    animation: mmslideIn .3s cubic-bezier(0, 0, .2, 1);
+}
+
+.micromodal-slide[aria-hidden="true"] .modal__overlay {
+    animation: mmfadeOut .3s cubic-bezier(0.0, 0.0, 0.2, 1);
+}
+
+.micromodal-slide[aria-hidden="true"] .modal__container {
+    animation: mmslideOut .3s cubic-bezier(0, 0, .2, 1);
+}
+
+.micromodal-slide .modal__container,
+.micromodal-slide .modal__overlay {
+    will-change: transform;
+}
+
+@keyframes mmfadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes mmfadeOut {
+    from { opacity: 1; }
+    to { opacity: 0; }
+}
+
+@keyframes mmslideIn {
+    from { transform: translateY(15%); }
+    to { transform: translateY(0); }
+}
+
+@keyframes mmslideOut {
+    from { transform: translateY(0); }
+    to { transform: translateY(-10%); }
 }
