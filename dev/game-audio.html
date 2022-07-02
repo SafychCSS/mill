@@ -74,16 +74,18 @@
                         <div class="question">
                             <p>Как называется российская премия в области национальной географии и экологии?</p>
 
+                            <audio id="player" class="visibility-hidden" controls type="mp3" src="./static/12333333.mp3"></audio>
+
                             <div class="play-audio question__audio">
-                                <button class="play-audio__btn">
+                                <button class="play-audio__btn js-play-audio">
                                     <svg>
                                         <use xlink:href="./static/img/sprite.svg#play-video"></use>
                                     </svg>
                                 </button>
-                                <div class="play-audio__line">
-                                    <div class="play-audio__line-active" style="width: 35%;"></div>
+                                <div class="play-audio__line js-audio-line">
+                                    <div class="play-audio__line-active js-audio-progress" style="width: 0;"></div>
                                 </div>
-                                <span class="play-audio__time">00:15</span>
+                                <span class="play-audio__time js-audio-time">00:00</span>
                             </div>
                         </div>
                     </div>
@@ -451,5 +453,60 @@
         </div>
     </div>
     <script src="./static/js/script.min.js"></script>
+    <script>
+        const player = document.getElementById('player');
+
+        function toTime(seconds) {
+            const date = new Date(null);
+            date.setSeconds(seconds);
+            return date.toISOString().substr(14, 5);
+        }
+
+        const btnPlayAudio = document.querySelector('.js-play-audio');
+        const audioProgress = document.querySelector('.js-audio-progress');
+        const audioLine = document.querySelector('.js-audio-line');
+        const audioTime = document.querySelector('.js-audio-time');
+
+        let duration = 0;
+        let percent = 0;
+        player.addEventListener('loadedmetadata', () => {
+            duration = Math.trunc(player.duration);
+            percent = duration / 100;
+            audioTime.textContent = toTime(duration);
+        });
+
+        let timerId;
+        let progress = 0;
+
+        audioLine.addEventListener('click', (e) => {
+            const w = e.currentTarget.clientWidth;
+            const percentWidth = e.offsetX / w * 100;
+            const setTime = duration / 100 * percentWidth;
+
+            audioProgress.style.width = percentWidth + '%';
+            progress = percentWidth;
+            player.currentTime = setTime;
+        });
+
+        btnPlayAudio.addEventListener('click', (e) => {
+            const percent = 100 / duration;
+            if (player.paused) {
+                player.play();
+                timerId = setInterval(() => {
+                    audioTime.textContent = toTime(duration - Math.trunc(player.currentTime));
+                    progress += percent;
+                    audioProgress.style.width = progress + '%';
+                    if (player.ended) {
+                        audioProgress.style.width = '0%';
+                        progress = 0;
+                        clearInterval(timerId);
+                    }
+                }, 1000)
+            } else {
+                player.pause();
+                clearInterval(timerId);
+            }
+        });
+    </script>
 </body>
 </html>
